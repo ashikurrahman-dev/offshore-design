@@ -1,0 +1,668 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 h-screen font-sans">
+    <header class="bg-white shadow-md w-full fixed top-0 z-50 ">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo Section -->
+            <a class="flex items-center space-x-3" href="index.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zyPdjOcQe1xhUSnp4KaZZ_q6BOt0XKr2KQ&s"
+                    alt="Danpite Tech Logo" class="h-12 w-12 rounded-lg object-cover">
+                <span class="text-2xl font-bold text-gray-800 tracking-tight">Danpite Tech</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 flex items-center space-x-1 py-2">
+                        Services
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 top-full mt-1 w-64 bg-white shadow-xl rounded-lg border border-gray-100 
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="py-2">
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">Photo Color Correction</div>
+                                <div class="text-sm text-gray-500">Professional color enhancement</div>
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">Photo Retouching</div>
+                                <div class="text-sm text-gray-500">Advanced image enhancement</div>
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">Background Removal</div>
+                                <div class="text-sm text-gray-500">Clean background editing</div>
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">Ghost Mannequin</div>
+                                <div class="text-sm text-gray-500">Product photography effects</div>
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">E-commerce Image Editing</div>
+                                <div class="text-sm text-gray-500">Online store optimization</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing -->
+                <a href="pricing.html" class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Pricing
+                </a>
+
+                <!-- Portfolio Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 flex items-center space-x-1 py-2">
+                        Portfolio
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 top-full mt-1 w-48 bg-white shadow-xl rounded-lg border border-gray-100 
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="py-2">
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                Recent Work
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                Before & After
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                Case Studies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <a href="about.html" class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    About Us
+                </a>
+
+                <!-- Contact Us -->
+                <a href="contact.html" class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Contact Us
+                </a>
+
+                <!-- CTA Button -->
+                <a href="#" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 
+                           transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105">
+                    Free Trial
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="lg:hidden flex flex-col space-y-1 p-2">
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+            <div class="px-6 py-4 space-y-4">
+                <!-- Mobile Services -->
+                <div class="space-y-2">
+                    <button id="mobileServicesBtn"
+                        class="flex items-center justify-between w-full text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                        Services
+                        <svg id="mobileServicesIcon" class="w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="mobileServicesMenu" class="hidden pl-4 space-y-2 border-l-2 border-blue-100">
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Photo
+                            Color Correction</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Photo
+                            Retouching</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Background
+                            Removal</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Ghost
+                            Mannequin</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">E-commerce
+                            Image Editing</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                    Pricing
+                </a>
+
+                <!-- Mobile Portfolio -->
+                <div class="space-y-2">
+                    <button id="mobilePortfolioBtn"
+                        class="flex items-center justify-between w-full text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                        Portfolio
+                        <svg id="mobilePortfolioIcon" class="w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="mobilePortfolioMenu" class="hidden pl-4 space-y-2 border-l-2 border-blue-100">
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Recent
+                            Work</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Before &
+                            After</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Case
+                            Studies</a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                    About Us
+                </a>
+
+                <a href="contact.html" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                    Contact Us
+                </a>
+
+                <a href="#"
+                    class="block w-full text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    Free Trial
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- form  -->
+    <section class="container mx-auto px-4 py-12 mt-24">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Side - Content -->
+                <div class="space-y-8">
+                    <div>
+                        <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+                        <span class="text-blue-600">Get in touch</span> with us
+                        </h1>
+                        <h3 class="text-5xl font-bold mt-6 text-gray-600">
+                        We're looking forward to hearing from you!
+                        </h3>
+
+                    </div>
+
+                    <!-- image -->
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/contact-us-hero-illustration.svg"
+                        alt="" class="pt-4">
+                </div>
+
+                <!-- Right Side - Form -->
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <form class="space-y-6">
+
+                        <!-- Name and Phone Row -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <input type="text" placeholder="Your name*"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Your Phone No.*"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Email and Website Row -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <input type="email" placeholder="Your email ID*"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                            </div>
+                            <div>
+                                <input type="url" placeholder="Your Website URL"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Service Selection -->
+                        <div>
+                            <select
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-gray-500">
+                                <option value="">Select service</option>
+                                <option value="background-removal">Background Removal</option>
+                                <option value="color-correction">Color Correction</option>
+                                <option value="retouching">Photo Retouching</option>
+                                <option value="clipping-path">Clipping Path</option>
+                                <option value="shadow-creation">Shadow Creation</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <textarea placeholder="Your Message" rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"></textarea>
+                        </div>
+
+                        <!-- File Upload Area -->
+                        <div
+                            class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-400 transition-colors cursor-pointer">
+                            <input type="file" multiple accept="image/*" class="hidden" id="file-upload">
+                            <label for="file-upload" class="cursor-pointer">
+                                <div class="space-y-2">
+                                    <div class="text-gray-600">
+                                        <span class="font-semibold">Drag & Drop Files Here</span>
+                                        <br>or<br>
+                                        <span class="text-blue-600 hover:text-blue-700 font-semibold">Browse
+                                            Files</span>
+                                    </div>
+                                    <div class="text-sm text-gray-500" id="file-count">0 of 5</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Cloud Link Note -->
+                        <div class="text-sm text-gray-600 text-center">
+                            If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or
+                            WeTransfer)
+                        </div>
+
+                        <!-- Cloud Link Input -->
+                        <div>
+                            <input type="url" placeholder="Paste the link here"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-lg transition duration-200 transform hover:scale-[1.02] shadow-lg">
+                            SUBMIT
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- communication -->
+        <div class="bg-white p-6 rounded-lg shadow max-w-7xl mx-auto mt-10 border border-gray-100">
+            <div class="flex items-center space-x-2 text-blue-700 mb-4">
+                <div class="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center">
+                    <span class="text-white text-xs">?</span>
+                </div>
+                <h3 class="text-lg text-slate-900 font-bold">Our Quick Communication</h3>
+            </div>
+            <p class="text-gray-600 mb-6">24/7 support team is an always available helping hand, day or night!</p>
+            <div class="grid grid-cols-4 gap-4 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                        <i class="fa-solid fa-phone text-blue-600"></i>
+                    </div>
+                    <p class="text-sm">Tap/Click to Call</p>
+                    <p class="text-slate-900 font-medium">+1 315 636 4807</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                        <i class="fa-brands fa-skype text-blue-600"></i>
+                    </div>
+                    <p class="text-sm">Tap/Click to Call</p>
+                    <p class="text-slate-900 font-medium">offshore.clipping</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                        <i class="fa-solid fa-envelope text-blue-600"></i>
+                    </div>
+                    <p class="text-sm">Tap/Click to Email</p>
+                    <p class="text-slate-900 font-medium">contact@offshoreclipping.com</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                        <i class="fa-brands fa-whatsapp text-blue-600"></i>
+                    </div>
+                    <p class="text-sm">Tap/Click to Call</p>
+                    <p class="text-slate-900 font-medium">+1 315 636 4807</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- location -->
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <!-- Title -->
+        <h1 class="text-5xl font-bold  text-gray-900 mb-12">Our Office Location</h1>
+        
+        <!-- Office Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- United States Office -->
+            <div class="bg-white rounded-lg shadow p-8 text-center">
+                <h2 class="text-2xl font-bold text-blue-600 mb-2">United States</h2>
+                <p class="text-gray-600 mb-6">(Client Support)</p>
+                
+                <div class="space-y-2 mb-8">
+                    <p class="text-gray-700">40-49 71st St, Woodside</p>
+                    <p class="text-gray-700">NewYork, NY 11377</p>
+                </div>
+                
+                <a href="#" class="inline-block text-blue-500 hover:text-blue-600 font-medium mb-6 transition-colors">
+                    See our location
+                </a>
+                
+                <div class="flex items-center justify-center space-x-3">
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">+1-315-636-4807</span>
+                </div>
+            </div>
+            
+            <!-- Bangladesh Office -->
+            <div class="bg-white rounded-lg shadow p-8 text-center">
+                <h2 class="text-2xl font-bold text-blue-600 mb-2">Bangladesh</h2>
+                <p class="text-gray-600 mb-6">(Head Office - Main Production Team)</p>
+                
+                <div class="space-y-2 mb-8">
+                    <p class="text-gray-700">House No. 1/5, Block-D</p>
+                    <p class="text-gray-700">Lalmatia, Dhaka-1207</p>
+                </div>
+                
+                <a href="#" class="inline-block text-blue-500 hover:text-blue-600 font-medium mb-6 transition-colors">
+                    See our location
+                </a>
+                
+                <div class="flex items-center justify-center space-x-3">
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">+1-315-636-4807</span>
+                </div>
+            </div>
+            
+            <!-- India Office -->
+            <div class="bg-white rounded-lg shadow p-8 text-center">
+                <h2 class="text-2xl font-bold text-blue-600 mb-2">India</h2>
+                <p class="text-gray-600 mb-6">(Partial Production Team)</p>
+                
+                <div class="space-y-2 mb-8">
+                    <p class="text-gray-700">214/A,Sonarpur, Kolkata 700150</p>
+                    <p class="text-gray-700">West Bengal, India</p>
+                </div>
+                
+                <a href="#" class="inline-block text-blue-500 hover:text-blue-600 font-medium mb-6 transition-colors">
+                    See our location
+                </a>
+                
+                <div class="flex items-center justify-center space-x-3">
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">+1-315-636-4807</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- faq -->
+    <section class="bg-white py-16 px-4 relative overflow-hidden">
+        <!-- Background decorative circle -->
+        <div
+            class="absolute right-0 top-0 w-96 h-96 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full transform translate-x-32 -translate-y-16 opacity-90">
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <!-- Header -->
+            <div class="flex justify-between items-start mb-12">
+                <div>
+                    <h2 class="text-5xl font-bold text-gray-900 mb-4">
+                        Frequently Asked Questions
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Let us know what troubles you. Give us a message; we will get back to you soon.
+                    </p>
+                </div>
+                <button
+                    class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-200 whitespace-nowrap ml-8">
+                    Get In Touch
+                </button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <input type="checkbox" id="faq1" class="faq-checkbox">
+                <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
+                    <label for="faq1"
+                        class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
+                        <span class="text-lg font-semibold text-gray-900 pr-4">
+                            1. What are your turnaround times?
+                        </span>
+                        <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </label>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6">
+                            <div class="text-gray-700 leading-relaxed">
+                                Our standard turnaround time is 24-48 hours for most photo editing projects. Rush orders
+                                can be completed within 12 hours for an additional fee.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <input type="checkbox" id="faq2" class="faq-checkbox">
+                <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
+                    <label for="faq2"
+                        class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
+                        <span class="text-lg font-semibold text-gray-900 pr-4">
+                            2. Do you offer bulk image discounts?
+                        </span>
+                        <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </label>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6">
+                            <div class="text-gray-700 leading-relaxed">
+                                Yes! We offer attractive discounts for bulk orders. Orders of 50+ images receive a 15%
+                                discount, 100+ images get 25% off, and 500+ images receive a 35% discount.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <input type="checkbox" id="faq3" class="faq-checkbox">
+                <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
+                    <label for="faq3"
+                        class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
+                        <span class="text-lg font-semibold text-gray-900 pr-4">
+                            3. What file formats do you accept?
+                        </span>
+                        <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </label>
+                    <div class="faq-content">
+                        <div class="px-6 pb-6">
+                            <div class="text-gray-700 leading-relaxed">
+                                We accept all major image formats including JPEG, PNG, TIFF, RAW files (CR2, NEF, ARW,
+                                etc.), and PSD files. We can work with images up to 100MB in size.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="py-12">
+        <div class="container max-w-7xl mx-auto px-6">
+
+            <!-- Featured Websites Section -->
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 text-center mb-10">
+                We are featured on these websites
+            </h2>
+            <div class="flex flex-wrap justify-center items-center gap-10 mb-10 pb-10">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photo.com_.png" alt="IPHOTO.COM"
+                    class="h-10 object-contain">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
+                    alt="Photography Course" class="h-10 object-contain">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
+                    class="h-10 object-contain">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
+                    alt="Photography Course" class="h-12 object-contain">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
+                    class="h-10 object-contain">
+            </div>
+
+            <!-- Promotional Section -->
+            <div class="flex flex-col md:flex-row items-center  bg-gray-900 text-white rounded-lg overflow-hidden">
+                <div class="w-full md:w-1/2">
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/09/CS-1.png" alt="CS"
+                        class="w-full h-auto object-cover">
+                </div>
+                <div class="w-full md:w-1/2 p-6">
+                    <blockquote class="text-lg italic mb-4">
+                        &ldquo;Transform Your Photos and Make Them Look Amazing &mdash; Try Our Photo Editing Solution
+                        Now!&rdquo;
+                    </blockquote>
+                    <p class="mb-6">
+                        Clipping your product images high-end editorial, and lucrative at your offshore.
+                        Stand yourself out from the crowd with high-end edited photos. Let Visitors Come!
+                    </p>
+                    <a href=""
+                        class="bg-white text-slate-900 px-4 py-3 text-bold text-lg  rounded-full hover:bg-gray-300 transition">
+                        Contact us
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-10">
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <div>
+                <a class="flex items-center space-x-3" href="#">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zyPdjOcQe1xhUSnp4KaZZ_q6BOt0XKr2KQ&s"
+                        alt="Logo" class="h-10 rounded">
+                    <span class="text-2xl font-bold text-blue-400 tracking-tight">Danpite Tech</span>
+                </a>
+                <p class="text-medium leading-relaxed">
+                    A digital photo editing platform, fast & efficient, for photographers & businesses.
+                </p>
+            </div>
+
+            <div class="space-y-2">
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Get In Touch</h3>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    40-49 71st St, Woodside, New York NY 11377, United States
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    +1 315 636 4807
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-envelope"></i>
+                    contact@offshoreclipping.com
+                </p>
+
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Useful Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Home</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">About</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Services</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Portfolio</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Blog</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Color Correction</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">E-commerce Image Editing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class=" max-w-7xl mx-auto border-t flex items-center justify-between border-gray-700 mt-8 pt-4 text-center">
+            <p class="text-medium">A Concern of Danpite Tech | Copyright 2015 - 2025</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="text-medium hover:text-gray-400 transition">Terms & Conditions</a>
+                <a href="#" class="text-medium hover:text-gray-400 transition">Privacy Policy</a>
+            </div>
+            <div class="flex justify-center space-x-4 mt-3 text-lg">
+                <a href="#" class="hover:text-gray-400 transition" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

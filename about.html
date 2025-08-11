@@ -1,0 +1,756 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 h-screen font-sans">
+    <header class="bg-white shadow-md w-full fixed top-0 z-50 ">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo Section -->
+            <a class="flex items-center space-x-3" href="index.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zyPdjOcQe1xhUSnp4KaZZ_q6BOt0XKr2KQ&s"
+                    alt="Danpite Tech Logo" class="h-12 w-12 rounded-lg object-cover">
+                <span class="text-2xl font-bold text-gray-800 tracking-tight">Danpite Tech</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 flex items-center space-x-1 py-2">
+                        Services
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 top-full mt-1 w-64 bg-white shadow-xl rounded-lg border border-gray-100 
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="py-2">
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">Photo Color Correction</div>
+                                <div class="text-sm text-gray-500">Professional color enhancement</div>
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">Photo Retouching</div>
+                                <div class="text-sm text-gray-500">Advanced image enhancement</div>
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">Background Removal</div>
+                                <div class="text-sm text-gray-500">Clean background editing</div>
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">Ghost Mannequin</div>
+                                <div class="text-sm text-gray-500">Product photography effects</div>
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                <div class="font-medium">E-commerce Image Editing</div>
+                                <div class="text-sm text-gray-500">Online store optimization</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing -->
+                <a href="pricing.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Pricing
+                </a>
+
+                <!-- Portfolio Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 flex items-center space-x-1 py-2">
+                        Portfolio
+                        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 top-full mt-1 w-48 bg-white shadow-xl rounded-lg border border-gray-100 
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+                                transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+                        <div class="py-2">
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                Recent Work
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                Before & After
+                            </a>
+                            <a href="#"
+                                class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
+                                Case Studies
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <a href="#" class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    About Us
+                </a>
+
+                <!-- Contact Us -->
+                <a href="contact.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Contact Us
+                </a>
+
+                <!-- CTA Button -->
+                <a href="#" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 
+                           transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105">
+                    Free Trial
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="lg:hidden flex flex-col space-y-1 p-2">
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+            <div class="px-6 py-4 space-y-4">
+                <!-- Mobile Services -->
+                <div class="space-y-2">
+                    <button id="mobileServicesBtn"
+                        class="flex items-center justify-between w-full text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                        Services
+                        <svg id="mobileServicesIcon" class="w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="mobileServicesMenu" class="hidden pl-4 space-y-2 border-l-2 border-blue-100">
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Photo
+                            Color Correction</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Photo
+                            Retouching</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Background
+                            Removal</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Ghost
+                            Mannequin</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">E-commerce
+                            Image Editing</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                    Pricing
+                </a>
+
+                <!-- Mobile Portfolio -->
+                <div class="space-y-2">
+                    <button id="mobilePortfolioBtn"
+                        class="flex items-center justify-between w-full text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                        Portfolio
+                        <svg id="mobilePortfolioIcon" class="w-4 h-4 transition-transform duration-200" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="mobilePortfolioMenu" class="hidden pl-4 space-y-2 border-l-2 border-blue-100">
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Recent
+                            Work</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Before &
+                            After</a>
+                        <a href="#"
+                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Case
+                            Studies</a>
+                    </div>
+                </div>
+
+                <a href="#" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                    About Us
+                </a>
+
+                <a href="#" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
+                    Contact Us
+                </a>
+
+                <a href="#"
+                    class="block w-full text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    Free Trial
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- about -->
+    <div class="max-w-7xl mx-auto px-4 py-16 mt-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Side - Text Content -->
+            <div class="space-y-6">
+                <div>
+                    <p class="text-lg text-gray-600 font-medium mb-2">ABOUT US</p>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                        WITH A TEAM OF<br>
+                        OVER 350+ EXPERT
+                    </h2>
+                </div>
+
+                <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    <p>
+                        Offshore Clipping Path is a premier photo editing company that provides
+                        <span class="font-semibold text-gray-900">hand-drawn, high-quality and affordable photoshop
+                            services</span>.
+                        With a team of over 350+ experts, we offer a wide range of services including clipping path,
+                        color correction, background removal, and more.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Side - YouTube Video -->
+            <div class="relative">
+                <div class="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                    <!-- YouTube Video Embed -->
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/RGaW82k4dK4" title="About Us Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+
+                <!-- Decorative elements (optional) -->
+                <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full opacity-20 -z-10"></div>
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-50 rounded-full opacity-30 -z-10"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- client -->
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Side - Statistics -->
+            <div class="space-y-6">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Awards -->
+                    <div class=" p-6 ">
+                        <div class="text-4xl font-bold text-gray-900 mb-2">05+</div>
+                        <div class="text-sm font-medium text-gray-600 uppercase tracking-wide">AWARDS REWARDED</div>
+                    </div>
+
+                    <!-- Years of Experience -->
+                    <div class="bg-blue-600 text-white p-6 rounded-lg">
+                        <div class="text-4xl font-bold mb-2">13+</div>
+                        <div class="text-sm font-medium uppercase tracking-wide opacity-90">YEARS OF EXPERIENCE</div>
+                    </div>
+
+                    <!-- Happy Clients -->
+                    <div class="bg-blue-600 text-white p-6 rounded-lg">
+                        <div class="text-4xl font-bold mb-2">27000+</div>
+                        <div class="text-sm font-medium uppercase tracking-wide opacity-90">HAPPY CLIENTS</div>
+                    </div>
+
+                    <!-- Edited Images -->
+                    <div class=" p-6">
+                        <div class="text-4xl font-bold text-gray-900 mb-2">6.5M</div>
+                        <div class="text-sm font-medium text-gray-600 uppercase tracking-wide">EDITED IMAGES</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Text Content -->
+            <div class="space-y-6">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                    Let's work together
+                </h2>
+
+                <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    <p>
+                        Transform your ordinary images into stunning works of art with our expert photo editing
+                        services.
+                        Let's work together to bring your vision to life and elevate your images to the next level.
+                    </p>
+
+                    <p>
+                        Our clients include professional photographers, photo agencies, and e-commerce businesses who
+                        appreciate
+                        <span class="font-semibold text-gray-900">our fast turnaround, transparent pricing, and 24/7
+                            customer support</span>.
+                        Let us help you grow your business with our unlimited revision policy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-6 max-w-7xl">
+        <!-- First Section: Left Text, Right Image -->
+        <div class="flex flex-col md:flex-row items-center justify-between ">
+            <div class="w-full md:w-1/2 px-4">
+                <h2 class="text-2xl font-semibold text-gray-700">A great story starts with a great team</h2>
+                <p class="text-gray-600 mt-4 text-lg">Make your story a success with the help of our talented photo
+                    editing team. Contact us today and let's bring your vision to life together. Our experts will
+                    elevate your images and make your vision a reality. Let's start your great story together.</p>
+            </div>
+            <div class="w-full md:w-1/2 p-4">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2024/07/Our-mission-is-to-help-you-grow-your-busines.png"
+                    alt="Team Meeting" class="rounded shadow">
+            </div>
+        </div>
+
+        <!-- Second Section: Left Image, Right Text -->
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="w-full md:w-1/2 px-4">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2024/07/Our-mission-is-to-help-you-grow-your-busines.png"
+                    alt="Office Team" class="rounded-lg shadow">
+            </div>
+            <div class="w-full md:w-1/2 p-4">
+                <h2 class="text-2xl font-semibold text-gray-700">Our mission is to help you grow your business</h2>
+                <p class="text-gray-600 mt-4 text-lg">Our mission is to provide exceptional photo editing services that
+                    will help you grow your business. From image clipping path to custom retouching, we've got you
+                    covered. We are always ready to take your business to the next level.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-blue-50 p-6">
+        <div class="container mx-auto max-w-7xl">
+            <h1 class="text-4xl font-bold text-gray-900 text-center mb-12">The value that drive everything</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Humble -->
+                <div
+                    class="bg-white hover:bg-blue-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Humble</h3>
+                    </div>
+                    <p>
+                        We strive to achieve a nice balance between work and life - treating our clients with the utmost
+                        respect while striving for their business success. We believe clients' success is our success.
+                    </p>
+                </div>
+
+                <!-- Card 2: Honesty & Integrity -->
+                <div
+                    class="bg-white hover:bg-green-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823.922-4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Honesty & Integrity</h3>
+                    </div>
+                    <p>
+                        We view honesty and integrity as a key fundamental of our professional life.
+                    </p>
+                </div>
+
+                <!-- Card 3: Exceptional Service -->
+                <div
+                    class="bg-white hover:bg-purple-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Exceptional Service</h3>
+                    </div>
+                    <p>
+                        We believe in treating our Photoshop experts, employees, clients, and stakeholders with the
+                        utmost respect. We desire to create a meaningful experience with every interaction of our
+                        business.
+                    </p>
+                </div>
+
+                <!-- Card 4: Professionalism -->
+                <div class="bg-white hover:bg-red-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Professionalism</h3>
+                    </div>
+                    <p>
+                        We live for responsibility and accountability as creative professionals.
+                    </p>
+                </div>
+
+                <!-- Card 5: Operational Excellence -->
+                <div
+                    class="bg-white hover:bg-orange-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Operational Excellence</h3>
+                    </div>
+                    <p>
+                        We value improvement and introspection in everything that we do from image editing to customer
+                        support.
+                    </p>
+                </div>
+
+                <!-- Card 6: Genuine -->
+                <div
+                    class="bg-white hover:bg-pink-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Genuine</h3>
+                    </div>
+                    <p>
+                        Each of our professionals needs to be who we are in addition to our values. Being honest in
+                        combination with our values means that we should live our values both at work and at home.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- team -->
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                The amazing team behind our company
+            </h2>
+            <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                A peek at our well-seasoned guardians of the company who have been guiding us to
+                provide the best service and ensure quality at its best for the clients.
+            </p>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Team Member 1 -->
+            <div class="text-center group">
+                <div class="relative inline-block mb-6 team-card">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Sumon-Chowdhury-1.png"
+                            alt="Sumon Chowdhury" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Sumon Chowdhury</h3>
+                <p class="text-gray-600 mb-4">Managing Director</p>
+                <a href="#"
+                    class="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="text-center group">
+                <div class="relative inline-block mb-6 team-card">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Sumon-Chowdhury-1.png"
+                            alt="Nayan Chowdhury" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Nayan Chowdhury</h3>
+                <p class="text-gray-600 mb-4">Chief Executive Officer</p>
+                <a href="#"
+                    class="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="text-center group">
+                <div class="relative inline-block mb-6 team-card">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Sumon-Chowdhury-1.png"
+                            alt="Ruzel Hasan" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Ruzel Hasan</h3>
+                <p class="text-gray-600 mb-4">Assistant General Manager</p>
+                <a href="#"
+                    class="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="text-center group">
+                <div class="relative inline-block mb-6 team-card">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Sumon-Chowdhury-1.png"
+                            alt="Saleh Ahmed" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Saleh Ahmed</h3>
+                <p class="text-gray-600 mb-4">Production Manager</p>
+                <a href="#"
+                    class="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="text-center group">
+                <div class="relative inline-block mb-6 team-card">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Sumon-Chowdhury-1.png"
+                            alt="Team Member" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Team Member</h3>
+                <p class="text-gray-600 mb-4">Position Title</p>
+                <a href="#"
+                    class="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="text-center group">
+                <div class="relative inline-block mb-6 team-card">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Sumon-Chowdhury-1.png"
+                            alt="Team Member" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Team Member</h3>
+                <p class="text-gray-600 mb-4">Position Title</p>
+                <a href="#"
+                    class="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Team Member 7 -->
+            <div class="text-center group">
+                <div class="relative inline-block mb-6 team-card">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Sumon-Chowdhury-1.png"
+                            alt="Team Member" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Team Member</h3>
+                <p class="text-gray-600 mb-4">Position Title</p>
+                <a href="#"
+                    class="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Team Member 8 -->
+            <div class="text-center group">
+                <div class="relative inline-block mb-6 team-card">
+                    <div
+                        class="w-48 h-48 mx-auto rounded-full overflow-hidden relative z-10 group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Sumon-Chowdhury-1.png"
+                            alt="Team Member" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Team Member</h3>
+                <p class="text-gray-600 mb-4">Position Title</p>
+                <a href="#"
+                    class="inline-flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- office culture -->
+    <div class="container mx-auto p-6 max-w-7xl">
+        <!-- Title & Description -->
+        <div class="text-start mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Our Office Culture</h1>
+            <p class="text-gray-600 text-lg max-w-2xl o">
+                We are a large team with people of different cultures merged together. By serving our clients, we
+                upskill ourselves. Take a look at our diversified and comfy workspace.
+            </p>
+        </div>
+
+        <!-- Image -->
+        <img src="https://offshoreclipping.com/wp-content/uploads/2024/07/Our-Office-Culture.png" alt="">
+
+    </div>
+
+
+    <!-- footer section -->
+    <section class="py-12">
+        <div class="container max-w-7xl mx-auto px-6">
+
+            <!-- Featured Websites Section -->
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 text-center mb-10">
+                We are featured on these websites
+            </h2>
+            <div class="flex flex-wrap justify-center items-center gap-10 mb-10 pb-10">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photo.com_.png" alt="IPHOTO.COM"
+                    class="h-10 object-contain">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
+                    alt="Photography Course" class="h-10 object-contain">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
+                    class="h-10 object-contain">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
+                    alt="Photography Course" class="h-12 object-contain">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
+                    class="h-10 object-contain">
+            </div>
+
+            <!-- Promotional Section -->
+            <div class="flex flex-col md:flex-row items-center text-white overflow-hidden">
+                <div class="w-full md:w-1/2">
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/09/CS-1.png" alt="CS"
+                        class="w-full h-auto object-cover">
+                </div>
+                <div class="w-full md:w-1/2 p-6 bg-gray-900">
+                    <blockquote class="text-lg italic mb-2">
+                        &ldquo;Transform Your Photos and Make Them Look Amazing &mdash; Try Our Photo Editing Solution
+                        Now!&rdquo;
+                    </blockquote>
+                    <p class="mb-6">
+                        Clipping your product images high-end editorial, and lucrative at your offshore.
+                        Stand yourself out from the crowd with high-end edited photos. Let Visitors Come!
+                    </p>
+                    <a href="#"
+                        class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                        <!-- Icon -->
+
+                        Contact Us
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-10">
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <div>
+                <a class="flex items-center space-x-3" href="#">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zyPdjOcQe1xhUSnp4KaZZ_q6BOt0XKr2KQ&s"
+                        alt="Logo" class="h-10 rounded">
+                    <span class="text-2xl font-bold text-blue-400 tracking-tight">Danpite Tech</span>
+                </a>
+                <p class="text-medium leading-relaxed">
+                    A digital photo editing platform, fast & efficient, for photographers & businesses.
+                </p>
+            </div>
+
+            <div class="space-y-2">
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Get In Touch</h3>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    40-49 71st St, Woodside, New York NY 11377, United States
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    +1 315 636 4807
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-envelope"></i>
+                    contact@offshoreclipping.com
+                </p>
+
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Useful Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Home</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">About</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Services</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Portfolio</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Blog</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Color Correction</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">E-commerce Image Editing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class=" max-w-7xl mx-auto border-t flex items-center justify-between border-gray-700 mt-8 pt-4 text-center">
+            <p class="text-medium">A Concern of Danpite Tech | Copyright 2015 - 2025</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="text-medium hover:text-gray-400 transition">Terms & Conditions</a>
+                <a href="#" class="text-medium hover:text-gray-400 transition">Privacy Policy</a>
+            </div>
+            <div class="flex justify-center space-x-4 mt-3 text-lg">
+                <a href="#" class="hover:text-gray-400 transition" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

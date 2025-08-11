@@ -1,0 +1,41 @@
+ /* Custom styles for FAQ functionality */
+        .faq-checkbox {
+            display: none;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .faq-checkbox:checked+.faq-item .faq-content {
+            max-height: 500px;
+        }
+
+        .faq-checkbox:checked+.faq-item {
+            border-color: #93c5fd;
+            background-color: #eff6ff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-checkbox:checked+.faq-item .plus-icon {
+            transform: rotate(45deg);
+            color: #2563eb;
+        }
+
+        .faq-checkbox:checked+.faq-item .faq-header {
+            background-color: transparent;
+        }
+
+        .plus-icon {
+            transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+
+        .faq-header:hover {
+            background-color: #f9fafb;
+        }
+
+        .faq-checkbox:checked+.faq-item .faq-header:hover {
+            background-color: transparent;
+        }
