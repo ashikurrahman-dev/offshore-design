@@ -16,14 +16,17 @@
             opacity: 0;
             transform: translateY(-10px);
         }
+
         .dropdown-enter-active {
             opacity: 1;
             transform: translateY(0);
             transition: all 0.3s ease;
         }
+
         .mobile-menu-enter {
             transform: translateX(-100%);
         }
+
         .mobile-menu-enter-active {
             transform: translateX(0);
             transition: transform 0.3s ease;
@@ -57,10 +60,10 @@
                                 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
                                 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                         <div class="py-2">
-                            <a href="#"
+                            <a href="photo-editing-services.html"
                                 class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
-                                <div class="font-medium">Photo Color Correction</div>
-                                <div class="text-sm text-gray-500">Professional color enhancement</div>
+                                <div class="font-medium">Photo Editing Services</div>
+                                <div class="text-sm text-gray-500"> professional image editing services.</div>
                             </a>
                             <a href="#"
                                 class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
@@ -135,26 +138,39 @@
                 </a>
 
                 <!-- CTA Button -->
-                <a href="#"
+                <a href="free-trial.html"
                     class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Free Trial >
+                    Free Trial
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                        width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                    </svg>
                 </a>
             </nav>
 
             <!-- Mobile Menu Button -->
             <div class="lg:hidden flex items-center space-x-3">
                 <!-- Mobile CTA Button -->
-                <a href="#"
+                <a href="free-trial.html"
                     class="inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
                     Free Trial
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                        width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                    </svg>
                 </a>
-                
+
                 <!-- Hamburger Button -->
-                <button id="mobile-menu-button" class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
-                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <button id="mobile-menu-button"
+                    class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -162,7 +178,8 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden fixed inset-y-0 left-0 w-80 max-w-full bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div id="mobile-menu"
+            class="lg:hidden fixed inset-y-0 left-0 w-80 max-w-full bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
             <div class="flex flex-col h-full">
                 <!-- Mobile Menu Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200">
@@ -171,7 +188,8 @@
                             alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
                         <span class="text-xl font-bold text-gray-800 tracking-tight">Danpite Tech</span>
                     </a>
-                    <button id="mobile-menu-close" class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                    <button id="mobile-menu-close"
+                        class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -182,79 +200,104 @@
                 <nav class="flex-1 px-6 py-4 overflow-y-auto">
                     <!-- Services Section -->
                     <div class="border-b border-gray-100">
-                        <button id="mobile-services-toggle" class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
+                        <button id="mobile-services-toggle"
+                            class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
                             Services
-                            <svg id="services-arrow" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <svg id="services-arrow" class="w-5 h-5 transition-transform duration-200" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div id="mobile-services-menu" class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
-                                Photo Color Correction
+                        <div id="mobile-services-menu"
+                            class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
+                            <a href="photo-editing-services.html"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Photo Editing Services
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Photo Retouching
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Background Removal
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Ghost Mannequin
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 E-commerce Image Editing
                             </a>
                         </div>
                     </div>
 
                     <!-- Pricing -->
-                    <a href="pricing.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                    <a href="pricing.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         Pricing
                     </a>
 
                     <!-- Portfolio Section -->
                     <div class="border-b border-gray-100">
-                        <button id="mobile-portfolio-toggle" class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
+                        <button id="mobile-portfolio-toggle"
+                            class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
                             Portfolio
-                            <svg id="portfolio-arrow" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <svg id="portfolio-arrow" class="w-5 h-5 transition-transform duration-200" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div id="mobile-portfolio-menu" class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                        <div id="mobile-portfolio-menu"
+                            class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Recent Work
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Before & After
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Case Studies
                             </a>
                         </div>
                     </div>
 
                     <!-- About Us -->
-                    <a href="about.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                    <a href="about.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         About Us
                     </a>
 
                     <!-- Contact Us -->
-                    <a href="contact.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                    <a href="contact.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         Contact Us
                     </a>
                 </nav>
 
                 <!-- Mobile Menu Footer -->
                 <div class="p-6 border-t border-gray-200">
-                    <a href="#" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
-                        Start Free Trial >
+                    <a href="free-trial.html"
+                        class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
+                        Start Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
                     </a>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu-overlay" class="lg:hidden fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 ease-in-out z-40"></div>
+        <div id="mobile-menu-overlay"
+            class="lg:hidden fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 ease-in-out z-40">
+        </div>
     </header>
 
     <!-- about -->
@@ -1002,7 +1045,7 @@
             <div>
                 <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Color Correction</a></li>
+                    <li><a href="photo-editing-services.html" class="text-medium hover:text-gray-400 transition">Photo Editing Services</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>

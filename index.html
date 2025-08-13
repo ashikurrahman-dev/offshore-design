@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
         .background-color {
@@ -16,14 +17,17 @@
             opacity: 0;
             transform: translateY(-10px);
         }
+
         .dropdown-enter-active {
             opacity: 1;
             transform: translateY(0);
             transition: all 0.3s ease;
         }
+
         .mobile-menu-enter {
             transform: translateX(-100%);
         }
+
         .mobile-menu-enter-active {
             transform: translateX(0);
             transition: transform 0.3s ease;
@@ -57,10 +61,10 @@
                                 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
                                 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                         <div class="py-2">
-                            <a href="#"
+                            <a href="photo-editing-services.html"
                                 class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
-                                <div class="font-medium">Photo Color Correction</div>
-                                <div class="text-sm text-gray-500">Professional color enhancement</div>
+                                <div class="font-medium">Photo Editing Services</div>
+                                <div class="text-sm text-gray-500"> professional image editing services.</div>
                             </a>
                             <a href="#"
                                 class="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200">
@@ -135,26 +139,39 @@
                 </a>
 
                 <!-- CTA Button -->
-                <a href="#"
+                <a href="free-trial.html"
                     class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Free Trial >
+                    Free Trial
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                        width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                    </svg>
                 </a>
             </nav>
 
             <!-- Mobile Menu Button -->
             <div class="lg:hidden flex items-center space-x-3">
                 <!-- Mobile CTA Button -->
-                <a href="#"
+                <a href="free-trial.html"
                     class="inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
                     Free Trial
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                        width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                    </svg>
                 </a>
-                
+
                 <!-- Hamburger Button -->
-                <button id="mobile-menu-button" class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
-                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <button id="mobile-menu-button"
+                    class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -162,7 +179,8 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden fixed inset-y-0 left-0 w-80 max-w-full bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+        <div id="mobile-menu"
+            class="lg:hidden fixed inset-y-0 left-0 w-80 max-w-full bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
             <div class="flex flex-col h-full">
                 <!-- Mobile Menu Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200">
@@ -171,7 +189,8 @@
                             alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
                         <span class="text-xl font-bold text-gray-800 tracking-tight">Danpite Tech</span>
                     </a>
-                    <button id="mobile-menu-close" class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                    <button id="mobile-menu-close"
+                        class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -182,79 +201,104 @@
                 <nav class="flex-1 px-6 py-4 overflow-y-auto">
                     <!-- Services Section -->
                     <div class="border-b border-gray-100">
-                        <button id="mobile-services-toggle" class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
+                        <button id="mobile-services-toggle"
+                            class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
                             Services
-                            <svg id="services-arrow" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <svg id="services-arrow" class="w-5 h-5 transition-transform duration-200" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div id="mobile-services-menu" class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
-                                Photo Color Correction
+                        <div id="mobile-services-menu"
+                            class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
+                            <a href="photo-editing-services.html"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Photo Editing Services
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Photo Retouching
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Background Removal
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Ghost Mannequin
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 E-commerce Image Editing
                             </a>
                         </div>
                     </div>
 
                     <!-- Pricing -->
-                    <a href="pricing.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                    <a href="pricing.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         Pricing
                     </a>
 
                     <!-- Portfolio Section -->
                     <div class="border-b border-gray-100">
-                        <button id="mobile-portfolio-toggle" class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
+                        <button id="mobile-portfolio-toggle"
+                            class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
                             Portfolio
-                            <svg id="portfolio-arrow" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <svg id="portfolio-arrow" class="w-5 h-5 transition-transform duration-200" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
-                        <div id="mobile-portfolio-menu" class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                        <div id="mobile-portfolio-menu"
+                            class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Recent Work
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Before & After
                             </a>
-                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
                                 Case Studies
                             </a>
                         </div>
                     </div>
 
                     <!-- About Us -->
-                    <a href="about.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                    <a href="about.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         About Us
                     </a>
 
                     <!-- Contact Us -->
-                    <a href="contact.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                    <a href="contact.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         Contact Us
                     </a>
                 </nav>
 
                 <!-- Mobile Menu Footer -->
                 <div class="p-6 border-t border-gray-200">
-                    <a href="#" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
-                        Start Free Trial >
+                    <a href="free-trial.html"
+                        class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
+                        Start Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
                     </a>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu-overlay" class="lg:hidden fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 ease-in-out z-40"></div>
+        <div id="mobile-menu-overlay"
+            class="lg:hidden fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 ease-in-out z-40">
+        </div>
     </header>
 
     <!-- hero section -->
@@ -279,9 +323,14 @@
                     image editing service that will make your product photography pop.
                 </p>
                 <div class="space-x-4 pt-6">
-                    <a href="#"
+                    <a href="free-trial.html"
                         class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        Free Trial >
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
                     </a>
                     <a href="contact.html"
                         class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
@@ -300,7 +349,7 @@
 
     <!-- card section -->
     <section class="max-w-7xl mx-auto py-8 px-6">
-        <div class="flex flex-col md:flex-row items-center justify-between mb-12 text-center md:text-left">
+        <div class="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
             <div>
                 <p class="text-green-600 font-semibold text-lg">Danpite Tech</p>
                 <p class="text-gray-700  text-lg">Reviews 99 <span class=""><i
@@ -312,35 +361,40 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-blue-600 shadow-md rounded-3xl p-6 text-center hover:shadow-lg transition">
-                <div class="text-4xl font-bold text-white">
-                    <i class="fas fa-award text-white text-4xl mb-3"></i> 05+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4">
+            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
+                <div class="text-3xl font-bold text-white flex flex-col items-center">
+                    <i class="fas fa-award text-white text-3xl mb-2"></i>
+                    <span>05+</span>
                 </div>
-                <p class="text-lg text-white mt-1">Awards Rewarded</p>
+                <p class="text-base text-white mt-1">Awards Rewarded</p>
             </div>
 
-            <div class="bg-blue-600 shadow-md rounded-3xl p-6 text-center hover:shadow-lg transition">
-                <div class="text-4xl font-bold text-white">
-                    <i class="fas fa-calendar-check text-white text-4xl mb-3"></i> 13+
+            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
+                <div class="text-3xl font-bold text-white flex flex-col items-center">
+                    <i class="fas fa-calendar-check text-white text-3xl mb-2"></i>
+                    <span>13+</span>
                 </div>
-                <p class="text-lg text-white mt-1">Years of Image Experience in Clipping and Beyond</p>
+                <p class="text-sm text-white mt-1">Years of Image Experience</p>
             </div>
 
-            <div class="bg-blue-600 shadow-md rounded-3xl p-6 text-center hover:shadow-lg transition">
-                <div class="text-4xl font-bold text-white">
-                    <i class="fas fa-image text-white text-4xl mb-3"></i> 750+
+            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
+                <div class="text-3xl font-bold text-white flex flex-col items-center">
+                    <i class="fas fa-image text-white text-3xl mb-2"></i>
+                    <span>750+</span>
                 </div>
-                <p class="text-sm text-white mt-1">Completed Photo Retouching Projects</p>
+                <p class="text-sm text-white mt-1">Completed Retouching Projects</p>
             </div>
 
-            <div class="bg-blue-600 shadow-md rounded-3xl p-6 text-center hover:shadow-lg transition">
-                <div class="text-4xl font-bold text-white">
-                    <i class="fas fa-users text-white text-4xl mb-3"></i> 1200+
+            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
+                <div class="text-3xl font-bold text-white flex flex-col items-center">
+                    <i class="fas fa-users text-white text-3xl mb-2"></i>
+                    <span>1200+</span>
                 </div>
-                <p class="text-lg text-white mt-1">Happy Clients</p>
+                <p class="text-base text-white mt-1">Happy Clients</p>
             </div>
         </div>
+
     </section>
 
     <section class="background-color w-full py-12">
@@ -415,7 +469,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="space-y-2 text-center md:text-left">
+                <div class="card space-y-2 text-center md:text-left">
                     <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Cost-and-Time-Saving.svg" alt=""
                         class="mx-auto md:mx-0">
                     <h3 class="text-slate-900 text-xl font-bold">Clip Costs and Save Time</h3>
@@ -423,14 +477,14 @@
                         timeline.
                     </p>
                 </div>
-                <div class="space-y-2 text-center md:text-left">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Cost-and-Time-Saving.svg" alt=""
+                <div class=" card space-y-2 text-center md:text-left">
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/High-Quality-Photos.svg" alt=""
                         class=" mx-auto md:mx-0">
                     <h3 class="text-slate-900 text-xl font-bold">Unmatched Precision</h3>
                     <p class="text-slate-700">Our skilled team ensures pixel-perfect clipping paths every time.</p>
                 </div>
-                <div class="space-y-2 text-center md:text-left">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Cost-and-Time-Saving.svg" alt=""
+                <div class="card space-y-2 text-center md:text-left">
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Assured-Data-Privacy.svg" alt=""
                         class="mx-auto md:mx-0">
                     <h3 class="text-slate-900 text-xl font-bold">Global Client Trust</h3>
                     <p class="text-slate-700">Trusted by clients worldwide for over a decade of excellence.</p>
@@ -471,7 +525,7 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 relative">
+                <div class="card md:w-1/2 mb-8 md:mb-0 relative">
                     <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Cliping-Path.png" alt="" class="">
                 </div>
 
@@ -517,15 +571,20 @@
                         <li>Single-Layer and Multiple Clipping Path Workflows.</li>
                     </ul>
                 </div>
-                <div class="md:w-1/2 mb-8 md:mb-0 relative">
+                <div class="card md:w-1/2 mb-8 md:mb-0 relative">
                     <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Photo-Retouching.png" alt=""
                         class="">
                 </div>
             </div>
             <div class="space-x-4 flex items-center justify-center">
-                <a href="#"
+                <a href="free-trial.html"
                     class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Free Trial >
+                    Free Trial
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                        width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                    </svg>
                 </a>
                 <a href="#"
                     class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
@@ -564,7 +623,26 @@
                             fill="#0072DD"></path>
                     </g>
                 </svg>
-                <h3 class="text-3xl font-bold text-slate-900">A High-Quality Product Image — Every Time</h3>
+                <h3 class="text-3xl font-bold text-slate-900">Send a Sample</h3>
+                <p class="text-lg text-slate-900">Initially, you'll upload your images, which can be in various formats
+                    such as PNG, JPEG or PSD. This sample allows us to understand your specific needs and the level of
+                    detail involved in your project.
+                </p>
+            </div>
+            <div class="space-y-2 hover:bg-cyan-100 hover:shadow-lg hover:rounded-2xl p-4 ">
+                <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="53" height="53" rx="8" fill="#F0F5FF"></rect>
+                    <path
+                        d="M35.2804 22.379L34.1607 22.6355L33.6742 23.122C34.5714 24.5423 35.0465 26.1883 35.044 27.8681C35.044 32.7866 31.0549 36.7737 26.1355 36.7737C21.2161 36.7737 17.227 32.7859 17.227 27.8681C17.227 22.9503 21.2161 18.9627 26.1355 18.9627C27.812 18.9601 29.4549 19.4327 30.8735 20.3257L31.362 19.8374L31.6184 18.7181C31.6542 18.5623 31.7039 18.4101 31.7669 18.2633C30.0601 17.2606 28.1157 16.7333 26.136 16.7362C19.9855 16.7361 15 21.7201 15 27.8679C15 34.0158 19.9855 39 26.1355 39C32.2855 39 37.271 34.0159 37.271 27.8679C37.2739 25.8852 36.7445 23.9379 35.7381 22.2294C35.5904 22.293 35.4372 22.3431 35.2804 22.379Z"
+                        fill="#0072DD"></path>
+                    <path
+                        d="M26.1364 23.4151C26.6179 23.4146 27.0963 23.4923 27.5529 23.6451L29.2444 21.9546C28.2861 21.4505 27.2192 21.1879 26.1364 21.1896C22.4464 21.1896 19.4551 24.1799 19.4551 27.8687C19.4551 31.5574 22.4464 34.5479 26.1364 34.5479C29.8263 34.5479 32.8176 31.5576 32.8176 27.8687C32.8193 26.7816 32.5544 25.7107 32.046 24.7498L30.3563 26.4394C30.5119 26.8996 30.5911 27.3822 30.5906 27.868C30.5906 30.3273 28.5964 32.3208 26.1364 32.3208C23.6763 32.3208 21.6821 30.3273 21.6821 27.868C21.6821 25.4088 23.6763 23.4151 26.1364 23.4151Z"
+                        fill="#0072DD"></path>
+                    <path
+                        d="M26.1351 25.6416C25.6576 25.6417 25.1929 25.7951 24.8093 26.0792C24.4257 26.3634 24.1436 26.7633 24.0047 27.2199C23.8657 27.6765 23.8772 28.1656 24.0374 28.6152C24.1976 29.0648 24.4982 29.451 24.8946 29.7168C25.2911 29.9827 25.7626 30.1142 26.2395 30.0918C26.7164 30.0695 27.1735 29.8945 27.5434 29.5928C27.9132 29.291 28.1763 28.8784 28.2938 28.4158C28.4113 27.9532 28.3769 27.4651 28.1959 27.0235L33.5993 21.6218L35.0321 21.294C35.3007 21.2351 35.547 21.1014 35.7427 20.9084L38.9991 17.6523L35.9558 18.0429L36.3464 15L33.0887 18.2553C32.8955 18.4509 32.7616 18.6973 32.7025 18.9658L32.3746 20.3973L26.968 25.8033C26.7034 25.6964 26.4205 25.6415 26.1351 25.6416Z"
+                        fill="#0072DD"></path>
+                </svg>
+                <h3 class="text-3xl font-bold text-slate-900">Hand Over Your Project</h3>
                 <p class="text-lg text-slate-900">Want to make clients happy and stay competitive online? Then reduce
                     product return by taking high-quality
                     photos. Easily hire experts who let your product photos look natural yet pixel-perfect at the same
@@ -574,29 +652,11 @@
             <div class="space-y-2 hover:bg-cyan-100 hover:shadow-lg hover:rounded-2xl p-4 ">
                 <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="53" height="53" rx="8" fill="#F0F5FF"></rect>
-                    <g clip-path="url(#clip0_570_1766)">
-                        <path
-                            d="M26.763 15.3894L14.2439 25.3529L22.962 36.3071L24.4449 23.2487C24.4749 22.9853 24.6083 22.7445 24.8158 22.5794C25.0233 22.4143 25.2878 22.3383 25.5513 22.3682L32.9965 23.2216L26.763 15.3894ZM12.052 25.8104C11.8898 25.6038 11.8155 25.3417 11.8451 25.0807C11.8746 24.8198 12.0056 24.5809 12.2098 24.4157L26.3063 13.1968C26.7351 12.8555 27.3596 12.9272 27.7008 13.356L37.6731 25.886C37.8352 26.0927 37.9095 26.3548 37.88 26.6157C37.8505 26.8767 37.7194 27.1156 37.5153 27.2807L23.4188 38.4997C23.2127 38.6634 22.95 38.7386 22.6885 38.7087C22.427 38.6788 22.1881 38.5464 22.0242 38.3405L12.052 25.8104ZM21.11 27.5567C20.695 27.887 20.1657 28.0389 19.6387 27.979C19.1117 27.9191 18.63 27.6523 18.2997 27.2372C17.9694 26.8222 17.8175 26.2929 17.8774 25.7659C17.9373 25.2389 18.2041 24.7572 18.6191 24.4269C19.0342 24.0966 19.5634 23.9447 20.0905 24.0046C20.6175 24.0645 21.0992 24.3313 21.4295 24.7463C21.7598 25.1614 21.9117 25.6906 21.8518 26.2177C21.7919 26.7447 21.5251 27.2264 21.11 27.5567Z"
-                            fill="#0072DD"></path>
-                    </g>
+                    <path
+                        d="M20 17V33H36V35H18V17H20ZM34.9393 19.9393L37.0607 22.0607L31 28.1213L28 25.121L24.0607 29.0607L21.9393 26.9393L28 20.8787L31 23.879L34.9393 19.9393Z"
+                        fill="#0072DD"></path>
                 </svg>
-                <h3 class="text-3xl font-bold text-slate-900">A High-Quality Product Image — Every Time</h3>
-                <p class="text-lg text-slate-900">Want to make clients happy and stay competitive online? Then reduce
-                    product return by taking high-quality
-                    photos. Easily hire experts who let your product photos look natural yet pixel-perfect at the same
-                    time.
-                </p>
-            </div>
-            <div class="space-y-2 hover:bg-cyan-100 hover:shadow-lg hover:rounded-2xl p-4 ">
-                <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="53" height="53" rx="8" fill="#F0F5FF"></rect>
-                    <g clip-path="url(#clip0_570_1766)">
-                        <path
-                            d="M26.763 15.3894L14.2439 25.3529L22.962 36.3071L24.4449 23.2487C24.4749 22.9853 24.6083 22.7445 24.8158 22.5794C25.0233 22.4143 25.2878 22.3383 25.5513 22.3682L32.9965 23.2216L26.763 15.3894ZM12.052 25.8104C11.8898 25.6038 11.8155 25.3417 11.8451 25.0807C11.8746 24.8198 12.0056 24.5809 12.2098 24.4157L26.3063 13.1968C26.7351 12.8555 27.3596 12.9272 27.7008 13.356L37.6731 25.886C37.8352 26.0927 37.9095 26.3548 37.88 26.6157C37.8505 26.8767 37.7194 27.1156 37.5153 27.2807L23.4188 38.4997C23.2127 38.6634 22.95 38.7386 22.6885 38.7087C22.427 38.6788 22.1881 38.5464 22.0242 38.3405L12.052 25.8104ZM21.11 27.5567C20.695 27.887 20.1657 28.0389 19.6387 27.979C19.1117 27.9191 18.63 27.6523 18.2997 27.2372C17.9694 26.8222 17.8175 26.2929 17.8774 25.7659C17.9373 25.2389 18.2041 24.7572 18.6191 24.4269C19.0342 24.0966 19.5634 23.9447 20.0905 24.0046C20.6175 24.0645 21.0992 24.3313 21.4295 24.7463C21.7598 25.1614 21.9117 25.6906 21.8518 26.2177C21.7919 26.7447 21.5251 27.2264 21.11 27.5567Z"
-                            fill="#0072DD"></path>
-                    </g>
-                </svg>
-                <h3 class="text-3xl font-bold text-slate-900">A High-Quality Product Image — Every Time</h3>
+                <h3 class="text-3xl font-bold text-slate-900">Receive Delivery</h3>
                 <p class="text-lg text-slate-900">Want to make clients happy and stay competitive online? Then reduce
                     product return by taking high-quality
                     photos. Easily hire experts who let your product photos look natural yet pixel-perfect at the same
@@ -1612,7 +1672,7 @@
             <div>
                 <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Color Correction</a></li>
+                    <li><a href="photo-editing-services.html" class="text-medium hover:text-gray-400 transition">Photo Color Correction</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>
@@ -1648,6 +1708,8 @@
 
 
     <script src="main.js"></script>
+    <script src="animation.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
