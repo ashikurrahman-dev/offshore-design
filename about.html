@@ -7,16 +7,38 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .background-color {
+            background-color: #e2faff !important;
+        }
+
+        .dropdown-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        .dropdown-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        .mobile-menu-enter {
+            transform: translateX(-100%);
+        }
+        .mobile-menu-enter-active {
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 h-screen font-sans">
-    <header class="bg-white shadow-md w-full fixed top-0 z-50 ">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header class="bg-white shadow-md w-full fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <!-- Logo Section -->
             <a class="flex items-center space-x-3" href="index.html">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zyPdjOcQe1xhUSnp4KaZZ_q6BOt0XKr2KQ&s"
-                    alt="Danpite Tech Logo" class="h-12 w-12 rounded-lg object-cover">
-                <span class="text-2xl font-bold text-gray-800 tracking-tight">Danpite Tech</span>
+                    alt="Danpite Tech Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-lg object-cover">
+                <span class="text-xl sm:text-2xl font-bold text-gray-800 tracking-tight">Danpite Tech</span>
             </a>
 
             <!-- Desktop Navigation -->
@@ -101,7 +123,8 @@
                 </div>
 
                 <!-- About Us -->
-                <a href="#" class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                <a href="about.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
                     About Us
                 </a>
 
@@ -112,97 +135,130 @@
                 </a>
 
                 <!-- CTA Button -->
-                <a href="#" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 
-                           transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105">
-                    Free Trial
+                <a href="#"
+                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                    Free Trial >
                 </a>
             </nav>
 
             <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="lg:hidden flex flex-col space-y-1 p-2">
-                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
-                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
-                <span class="w-6 h-0.5 bg-gray-600 transition-all duration-300"></span>
-            </button>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-gray-200 shadow-lg">
-            <div class="px-6 py-4 space-y-4">
-                <!-- Mobile Services -->
-                <div class="space-y-2">
-                    <button id="mobileServicesBtn"
-                        class="flex items-center justify-between w-full text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
-                        Services
-                        <svg id="mobileServicesIcon" class="w-4 h-4 transition-transform duration-200" fill="none"
-                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div id="mobileServicesMenu" class="hidden pl-4 space-y-2 border-l-2 border-blue-100">
-                        <a href="#"
-                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Photo
-                            Color Correction</a>
-                        <a href="#"
-                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Photo
-                            Retouching</a>
-                        <a href="#"
-                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Background
-                            Removal</a>
-                        <a href="#"
-                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Ghost
-                            Mannequin</a>
-                        <a href="#"
-                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">E-commerce
-                            Image Editing</a>
-                    </div>
-                </div>
-
-                <a href="#" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
-                    Pricing
-                </a>
-
-                <!-- Mobile Portfolio -->
-                <div class="space-y-2">
-                    <button id="mobilePortfolioBtn"
-                        class="flex items-center justify-between w-full text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
-                        Portfolio
-                        <svg id="mobilePortfolioIcon" class="w-4 h-4 transition-transform duration-200" fill="none"
-                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div id="mobilePortfolioMenu" class="hidden pl-4 space-y-2 border-l-2 border-blue-100">
-                        <a href="#"
-                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Recent
-                            Work</a>
-                        <a href="#"
-                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Before &
-                            After</a>
-                        <a href="#"
-                            class="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1">Case
-                            Studies</a>
-                    </div>
-                </div>
-
-                <a href="#" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
-                    About Us
-                </a>
-
-                <a href="#" class="block text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200">
-                    Contact Us
-                </a>
-
+            <div class="lg:hidden flex items-center space-x-3">
+                <!-- Mobile CTA Button -->
                 <a href="#"
-                    class="block w-full text-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                    class="inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
                     Free Trial
                 </a>
+                
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-button" class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden fixed inset-y-0 left-0 w-80 max-w-full bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+            <div class="flex flex-col h-full">
+                <!-- Mobile Menu Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <a class="flex items-center space-x-3" href="index.html">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6zyPdjOcQe1xhUSnp4KaZZ_q6BOt0XKr2KQ&s"
+                            alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
+                        <span class="text-xl font-bold text-gray-800 tracking-tight">Danpite Tech</span>
+                    </a>
+                    <button id="mobile-menu-close" class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <nav class="flex-1 px-6 py-4 overflow-y-auto">
+                    <!-- Services Section -->
+                    <div class="border-b border-gray-100">
+                        <button id="mobile-services-toggle" class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
+                            Services
+                            <svg id="services-arrow" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobile-services-menu" class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
+                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Photo Color Correction
+                            </a>
+                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Photo Retouching
+                            </a>
+                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Background Removal
+                            </a>
+                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Ghost Mannequin
+                            </a>
+                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                E-commerce Image Editing
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pricing -->
+                    <a href="pricing.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        Pricing
+                    </a>
+
+                    <!-- Portfolio Section -->
+                    <div class="border-b border-gray-100">
+                        <button id="mobile-portfolio-toggle" class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
+                            Portfolio
+                            <svg id="portfolio-arrow" class="w-5 h-5 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobile-portfolio-menu" class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
+                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Recent Work
+                            </a>
+                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Before & After
+                            </a>
+                            <a href="#" class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Case Studies
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- About Us -->
+                    <a href="about.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        About Us
+                    </a>
+
+                    <!-- Contact Us -->
+                    <a href="contact.html" class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        Contact Us
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Footer -->
+                <div class="p-6 border-t border-gray-200">
+                    <a href="#" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
+                        Start Free Trial >
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="lg:hidden fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 ease-in-out z-40"></div>
     </header>
 
     <!-- about -->
-    <div class="max-w-7xl mx-auto px-4 py-16 mt-24">
+    <div class="max-w-7xl mx-auto px-4 py-16 mt-36">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Left Side - Text Content -->
             <div class="space-y-6">
@@ -618,6 +674,236 @@
 
     </div>
 
+    <!-- Testimonial -->
+
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <!-- Header Section -->
+        <div class="flex justify-between items-start mb-12">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    What Customers Are Saying
+                </h1>
+                <p class="text-lg text-gray-600">
+                    Our valued clients across the world are the reason we perform better every day! Check what they are
+                    saying about our photo editing services.
+                </p>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="flex space-x-2">
+                <button id="prevBtn"
+                    class="w-12 h-12 bg-blue-100 hover:bg-blue-200 text-blue-600 rounded-full flex items-center justify-center transition-colors duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn"
+                    class="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden">
+            <div id="testimonialTrack" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Testimonial Set 1 -->
+                <div class="w-full flex-shrink-0">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Testimonial 1 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Punctual and great service"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Best Customer Service that I have received and price was amazing!
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Colleen Bale Wright" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Colleen Bale Wright</h4>
+                                    <p class="text-gray-500 text-sm">USA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "These guys pay attention to details"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                "Fantastic service from the guys at Offshore Clipping Path - really great communication,
+                                excellent quality of work, and the pricing is fantastic. They're very responsive to any
+                                feedback or questions."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Michael Rumbles" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Michael Rumbles</h4>
+                                    <p class="text-gray-500 text-sm">UK</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Highly recommended"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                "Really happy with the service. Very tricky cutouts were required and the final result
+                                was excellent. Thank you."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Kenneth Gray" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Kenneth Gray</h4>
+                                    <p class="text-gray-500 text-sm">USA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Set 2 -->
+                <div class="w-full flex-shrink-0">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Testimonial 4 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Outstanding quality"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                The team delivered exceptional results beyond our expectations. Professional service
+                                with quick turnaround times.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                    <p class="text-gray-500 text-sm">Canada</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Perfect communication"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Great experience working with this team. They understood our requirements perfectly and
+                                delivered exactly what we needed.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="David Miller" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">David Miller</h4>
+                                    <p class="text-gray-500 text-sm">Australia</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 6 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Amazing results"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                The attention to detail and quality of work is impressive. Will definitely use their
+                                services again for future projects.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Emma Wilson" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Emma Wilson</h4>
+                                    <p class="text-gray-500 text-sm">Germany</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Set 3 -->
+                <div class="w-full flex-shrink-0">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Testimonial 7 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Exceeded expectations"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Professional team with incredible attention to detail. They transformed our product
+                                images beautifully.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="James Rodriguez" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">James Rodriguez</h4>
+                                    <p class="text-gray-500 text-sm">Spain</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 8 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Fast and reliable"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Quick turnaround time without compromising on quality. The team is very responsive and
+                                professional.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Lisa Chen" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Lisa Chen</h4>
+                                    <p class="text-gray-500 text-sm">Singapore</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 9 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Top-notch service"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Excellent service from start to finish. The team understood our needs and delivered
+                                perfect results every time.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Robert Taylor" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Robert Taylor</h4>
+                                    <p class="text-gray-500 text-sm">France</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots Indicator -->
+        <div class="flex justify-center mt-8 space-x-2">
+            <button class="dot w-3 h-3 bg-blue-600 rounded-full transition-colors duration-200" data-slide="0"></button>
+            <button class="dot w-3 h-3 bg-gray-300 rounded-full transition-colors duration-200" data-slide="1"></button>
+            <button class="dot w-3 h-3 bg-gray-300 rounded-full transition-colors duration-200" data-slide="2"></button>
+        </div>
+    </section>
 
     <!-- footer section -->
     <section class="py-12">
@@ -641,12 +927,15 @@
             </div>
 
             <!-- Promotional Section -->
-            <div class="flex flex-col md:flex-row items-center text-white overflow-hidden">
-                <div class="w-full md:w-1/2">
+            <div class="flex flex-col md:flex-row items-stretch bg-gray-900 text-white rounded-lg overflow-hidden">
+                <!-- Image -->
+                <div class="w-full md:w-1/2 h-64 md:h-auto">
                     <img src="https://offshoreclipping.com/wp-content/uploads/2023/09/CS-1.png" alt="CS"
-                        class="w-full h-auto object-cover">
+                        class="w-full h-full object-cover">
                 </div>
-                <div class="w-full md:w-1/2 p-6 bg-gray-900">
+
+                <!-- Text -->
+                <div class="w-full md:w-1/2 p-6 flex flex-col justify-center">
                     <blockquote class="text-lg italic mb-2">
                         &ldquo;Transform Your Photos and Make Them Look Amazing &mdash; Try Our Photo Editing Solution
                         Now!&rdquo;
@@ -655,13 +944,10 @@
                         Clipping your product images high-end editorial, and lucrative at your offshore.
                         Stand yourself out from the crowd with high-end edited photos. Let Visitors Come!
                     </p>
-                    <a href="#"
-                        class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        <!-- Icon -->
-
+                    <a href="contact.html"
+                        class="relative inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                         Contact Us
                     </a>
-
                 </div>
             </div>
 
@@ -704,7 +990,8 @@
                 <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Useful Links</h3>
                 <ul class="space-y-2">
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Home</a></li>
-                    <li><a href="#" class="text-medium hover:text-gray-400 transition">About</a></li>
+                    <li><a href="about.html" class="text-medium hover:text-gray-400 transition">About</a></li>
+                    <li><a href="contact.html" class="text-medium hover:text-gray-400 transition">Contact</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Services</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Portfolio</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Blog</a></li>
@@ -750,6 +1037,7 @@
     </footer>
 
 
+    <script src="main.js"></script>
 
 </body>
 
