@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <style>
         .background-color {
             background-color: #e2faff !important;
+        }
+
+        .group:hover .group-hover\:shadow-xl {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Custom hover effects */
+        .group:hover img {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
         }
 
         .dropdown-enter {
@@ -35,7 +44,7 @@
     </style>
 </head>
 
-<body class="bg-gray-50 h-screen font-sans">
+<body class="bg-white h-screen font-sans">
     <header class="bg-white shadow-md w-full fixed top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <!-- Logo Section -->
@@ -320,21 +329,53 @@
     <section class="relative  py-6 mt-24">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 text-center md:text-left z-10">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight">
-                    ELEVATE EVERY PHOTO WITH PROFESSIONAL CLIPPING PATH SERVICES
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-700 mb-4 leading-tight">
+                    Professional Photoshop
                 </h1>
                 <h3 class="text-slate-800 text-xl font-bold mb-4 pt-4">
-                    One Platform, Infinite Photo Editing Solutions
+                    All Types of Industry-Grade Photoshop Service On a Single Platform
                 </h3>
                 <p class="text-gray-600 text-lg mb-6">
-                    One Platform, Infinite Photo Editing Solutions
-                    No time for graphic design? Outsource your photo clipping path work and focus on growing your brand
-                    and
-                    business. From a simple white background to the most complex clipping path — we offer the
-                    pixel-perfect
-                    image editing service that will make your product photography pop.
+                    No matter which professional you are; our Photoshop service will fulfill your need; any volume; any
+                    requirement; any time. Tell us your needs; get quality photos that drive traffic.
                 </p>
-                <div class="space-x-4 pt-6">
+
+                <!-- card -->
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+                    <div class="card flex items-center gap-4 p-6">
+                        <i class="fas fa-award text-blue-600 text-4xl"></i>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">05+</p>
+                            <p class="text-slate-600 text-lg">Awards Rewarded</p>
+                        </div>
+                    </div>
+
+                    <div class="card flex items-center gap-4 p-6">
+                        <i class="fas fa-calendar-check text-blue-600 text-4xl"></i>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">13+</p>
+                            <p class="text-slate-600 text-lg">Years of Image Experience</p>
+                        </div>
+                    </div>
+
+                    <div class="card flex items-center gap-4 p-6">
+                        <i class="fas fa-image text-blue-600 text-4xl"></i>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">750+</p>
+                            <p class="text-slate-600 text-lg">Completed Projects</p>
+                        </div>
+                    </div>
+
+                    <div class="card flex items-center gap-4 p-6">
+                        <i class="fas fa-users text-blue-600 text-4xl"></i>
+                        <div>
+                            <p class="text-2xl font-bold text-slate-900">1200+</p>
+                            <p class="text-slate-600 text-lg">Happy Clients</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex w-full gap-4 pt-6">
                     <a href="free-trial.html"
                         class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                         Free Trial
@@ -344,623 +385,395 @@
                             <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
                         </svg>
                     </a>
+
                     <a href="contact.html"
-                        class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                        class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                         Get A Free Quote
                     </a>
                 </div>
             </div>
 
+            <!-- Image -->
             <div class="md:w-1/2 mt-8 md:mt-0 relative">
-                <img src="https://sb.kaleidousercontent.com/67418/960x550/3e324c0328/individuals-removed.png"
-                    alt="Model with Camera" class="mx-auto md:ml-auto object-cover w-full">
+                <img fetchpriority="high" decoding="async" width="976" height="843"
+                    src="https://offshoreclipping.com/wp-content/uploads/2023/08/Professional-Photoshop-Services.png"
+                    alt="" title="Professional Photoshop Services"
+                    srcset="https://offshoreclipping.com/wp-content/uploads/2023/08/Professional-Photoshop-Services.png 976w, https://offshoreclipping.com/wp-content/uploads/2023/08/Professional-Photoshop-Services-480x415.png 480w"
+                    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 976px, 100vw"
+                    class="wp-image-17902">
             </div>
-        </div>
-    </section>
-
-    <!-- card section -->
-    <section class="max-w-7xl mx-auto py-8 px-6">
-        <div class="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
-            <div>
-                <p class="text-green-600 font-semibold text-lg">Danpite Tech</p>
-                <p class="text-gray-700  text-lg">Reviews 99 <span class=""><i
-                            class="fa-solid fa-circle text-[6px]"></i></span> Excellent</p>
-                <div class="flex items-center justify-center md:justify-start text-yellow-400 text-lg mt-1">
-                    <span class="mr-2">★★★★★</span>
-                    <span class="text-gray-800 font-semibold">4.9</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4">
-            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
-                <div class="text-3xl font-bold text-white flex flex-col items-center">
-                    <i class="fas fa-award text-white text-3xl mb-2"></i>
-                    <span>05+</span>
-                </div>
-                <p class="text-base text-white mt-1">Awards Rewarded</p>
-            </div>
-
-            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
-                <div class="text-3xl font-bold text-white flex flex-col items-center">
-                    <i class="fas fa-calendar-check text-white text-3xl mb-2"></i>
-                    <span>13+</span>
-                </div>
-                <p class="text-sm text-white mt-1">Years of Image Experience</p>
-            </div>
-
-            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
-                <div class="text-3xl font-bold text-white flex flex-col items-center">
-                    <i class="fas fa-image text-white text-3xl mb-2"></i>
-                    <span>750+</span>
-                </div>
-                <p class="text-sm text-white mt-1">Completed Retouching Projects</p>
-            </div>
-
-            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
-                <div class="text-3xl font-bold text-white flex flex-col items-center">
-                    <i class="fas fa-users text-white text-3xl mb-2"></i>
-                    <span>1200+</span>
-                </div>
-                <p class="text-base text-white mt-1">Happy Clients</p>
-            </div>
-        </div>
 
     </section>
 
-    <section class="background-color w-full py-12">
-        <div class="max-w-7xl mx-auto px-6 space-y-8">
-
-            <div class=" font-sans">
-                <div class="container mx-auto p-6">
-                    <!-- Header Section -->
-                    <h1 class="text-4xl font-bold text-purple-800 text-center mb-4">
-                        A Trusted Photo Editing Partner — Committed to Your Growth
-                    </h1>
-                    <p class="text-center text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
-                        At the core of everything we do is a commitment to helping your brand thrive. As your trusted
-                        photo editing partner, we combine creativity, consistency, and precision to deliver stunning
-                        visuals that align with your goals. Whether you're in eCommerce, fashion, real estate, or
-                        product photography, our expert team ensures every image reflects the quality your brand
-                        deserves—efficiently, affordably, and at scale.
-                    </p>
-
-                    <!-- Call to Action -->
-                    <div class="flex flex-col md:flex-row gap-8 py-6 max-w-7xl mx-auto">
-                        <!-- Left Content -->
-                        <div class="flex-1 flex flex-col items-center justify-center space-y-6">
-                            <div class="text-center">
-                                <button
-                                    class="bg-purple-600 text-white font-medium text-sm px-4 py-3 rounded-lg hover:bg-purple-700 transition-colors duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
-                                    aria-label="Hire us for photo editing">
-                                    Let us handle the edits so you can focus on growing your business
-                                </button>
-                            </div>
-                            <div class="text-center max-w-md">
-                                <button
-                                    class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors duration-300 font-sm shadow-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
-                                    aria-label="Explore our photo editing services">
-                                    Tailored photo editing services to meet your project requirements
-                                </button>
-                            </div>
-                            <div class="flex justify-center">
-                                <img src="model-blue-outfit.png" alt="Model in blue outfit"
-                                    class="w-64 h-auto rounded-lg object-cover">
-                            </div>
-                        </div>
-                        <!-- Right Image -->
-                        <div class="flex-1 flex items-center ">
-                            <img src="https://cdn.isa-aydin.com/wp-content/uploads/2019/05/business-headshot-photography-nj.jpg"
-                                alt="Professional photoshoot setup"
-                                class="w-full  h-full rounded-lg shadow-lg object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card space-y-2 text-center md:text-left">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Cost-and-Time-Saving.svg" alt=""
-                        class="mx-auto md:mx-0">
-                    <h3 class="text-slate-900 text-xl font-bold">Clip Costs and Save Time</h3>
-                    <p class="text-slate-700">Enjoy fast image clipping solutions within your budget and project
-                        timeline.
-                    </p>
-                </div>
-                <div class=" card space-y-2 text-center md:text-left">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/High-Quality-Photos.svg" alt=""
-                        class=" mx-auto md:mx-0">
-                    <h3 class="text-slate-900 text-xl font-bold">Unmatched Precision</h3>
-                    <p class="text-slate-700">Our skilled team ensures pixel-perfect clipping paths every time.</p>
-                </div>
-                <div class="card space-y-2 text-center md:text-left">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Assured-Data-Privacy.svg" alt=""
-                        class="mx-auto md:mx-0">
-                    <h3 class="text-slate-900 text-xl font-bold">Global Client Trust</h3>
-                    <p class="text-slate-700">Trusted by clients worldwide for over a decade of excellence.</p>
-                </div>
-            </div>
-
-            <div class="flex items-center justify-center">
-                <a href="about.html"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    About Us
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- video slider -->
-    <div class="max-w-7xl mx-auto py-8">
-        <!-- Main Container -->
-        <div class="bg-white rounded-3xl shadow overflow-hidden">
-            <div class="grid lg:grid-cols-2 gap-8 p-8">
-                <!-- Left Side - Video Player -->
-                <div class="relative">
-                    <!-- Video Container -->
-                    <div class="video-container relative bg-gradient-to-br from-slate-800 to-slate-900 ">
-                        <div id="videoLoading" class="video-loading hidden">Loading video...</div>
-                        <iframe id="youtubePlayer" class="w-full h-full"
-                            src="https://www.youtube.com/embed/8LSt8_11wbQ?enablejsapi=1&rel=0"
-                            title="Testimonial Video" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-
-                    <!-- Reviewer Info -->
-                    <div class="mt-6">
-                        <div class="flex items-center gap-4 mb-2">
-                            <div class="avatar-ring">
-                                <div class="avatar-inner">
-                                    <img id="currentAvatar"
-                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
-                                        alt="Neil" class="w-12 h-12 rounded-full object-cover slide-transition">
-                                </div>
-                            </div>
-                            <div>
-                                <h3 id="reviewerName" class="font-bold text-xl text-slate-800 slide-transition">Neil &
-                                    Sabrina</h3>
-                                <p id="reviewerTitle" class="text-slate-600 slide-transition">Augment Agency</p>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial Quote -->
-                        <blockquote id="testimonialQuote"
-                            class="text-slate-600 italic mb-4 text-lg leading-relaxed slide-transition">
-                            "Amazing results for our e-commerce product photos!"
-                        </blockquote>
-
-                        <!-- Star Rating -->
-                        <div id="starRating" class="flex gap-1 mb-6">
-                            <span class="star text-xl">★</span>
-                            <span class="star text-xl">★</span>
-                            <span class="star text-xl">★</span>
-                            <span class="star text-xl">★</span>
-                            <span class="star text-xl">★</span>
-                        </div>
-                    </div>
-
-                    <!-- Navigation Controls -->
-                    <div class="flex items-center justify-between mt-6">
-                        <button id="prevBtn"
-                            class="nav-button w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-
-                        <div class="flex items-center gap-2 text-slate-600">
-                            <span id="currentSlide">1</span>
-                            <span>/</span>
-                            <span id="totalSlides">6</span>
-                        </div>
-
-                        <button id="nextBtn"
-                            class="nav-button w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Right Side - Content -->
-                <div class="flex flex-col justify-between">
-                    <!-- Header -->
-                    <div>
-                        <h1 class="text-4xl lg:text-5xl font-bold text-slate-800 leading-tight mb-8">
-                            What Photographers, Business Owners and Influencers Say About Our Photo Clipping Path
-                            Service
-                        </h1>
-                    </div>
-
-                    <!-- Avatar Navigation -->
-                    <div class="space-y-6">
-                        <div class="flex flex-wrap gap-4" id="avatarContainer">
-                            <!-- Avatars will be dynamically generated -->
-                        </div>
-
-                        <button
-                            class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 transition-colors duration-300 group">
-                            <span class="font-semibold">SEE MORE REVIEWS</span>
-                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- service card -->
-    <section class="py-10 background-color px-4">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center">
-                <h3 class="text-3xl font-bold text-gray-800">Services We Provide</h3>
-                <p class="mt-2 text-gray-600 text-lg">Meta Clipping Path, the leading Photo Editing Company, offers huge
-                    services to
-                    enhance and transform your images. With our expertise in clipping path, photo editing and
-                    retouching, we
-                    strive to make your images beautiful, radiating harmony and wholeness while preserving intricate
-                    details.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#EF4444">
-                            <path d="M4 7h16l-8 12-8-12zM12 3v18" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#EF4444" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="card text-lg font-semibold text-gray-800">Clipping Path</h3>
-                    <p class="mt-2 text-gray-600">Our clipping path service includes background removal, image cutout,
-                        photo
-                        masking, and isolating objects in images.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#F59E0B">
-                            <path d="M7 7h10v10H7zM5 5v14h14V5H5zm2 2h10" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#F59E0B" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Background Removal</h3>
-                    <p class="mt-2 text-gray-600">We expertly remove backgrounds and unwanted objects from your images.
-                    </p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#10B981">
-                            <path d="M5 7h14l-2 10H7l-2-10zm2 2v6h8V9H7zm4-2V3h2v4h-2zm-4 12v2h10v-2H7z" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#10B981" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Ecommerce Photo Editing</h3>
-                    <p class="mt-2 text-gray-600">Our professional e-commerce photo editing service enhances your
-                        product
-                        images.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#3B82F6">
-                            <rect x="5" y="5" width="14" height="14" rx="2" />
-                            <path d="M9 15l6-6" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#3B82F6" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Shadow Creation</h3>
-                    <p class="mt-2 text-gray-600">Our shadow creation service adds depth and perspective to your product
-                        images.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#8B5CF6">
-                            <circle cx="12" cy="12" r="6" />
-                            <path d="M12 6v6l4 2" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#8B5CF6" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Color Correction</h3>
-                    <p class="mt-2 text-gray-600">Use our color correction service to achieve accurate and vibrant
-                        colors in
-                        your images.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#EC4899">
-                            <path d="M12 6v6l-6 3m6-9l-6 3m6-3l6 3m-6-9v6m0 6v6" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#EC4899" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Photo Retouching</h3>
-                    <p class="mt-2 text-gray-600">Get professional-looking images by smoothing creases, removing props,
-                        improving symmetry, and reducing wrinkles.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#06B6D4">
-                            <path
-                                d="M12 6c-2 0-4 2-4 4v4c0 2 2 4 4 4s4-2 4-4v-4c0-2-2-4-4-4zm0 6c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1-.9-2-2-2z" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#06B6D4" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Ghost Mannequin</h3>
-                    <p class="mt-2 text-gray-600">Create the illusion of a mannequin in your product photos for a
-                        lifelike
-                        appearance.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#F97316">
-                            <path
-                                d="M12 2L2 7v10l10 5 10-5V7l-10-5zm0 2v8l8 4V9l-8-4zm-8 12v-6l8 4v6l-8-4zm16 0v-6l-8 4v6l8-4z" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#F97316" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Real Estate Photo Editing</h3>
-                    <p class="mt-2 text-gray-600">Our expert team edits your real estate photos, adjusting colors and
-                        brightness to make them visually appealing.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#EF4444">
-                            <path d="M4 7h16l-8 12-8-12zM12 3v18" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#EF4444" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Clipping Path</h3>
-                    <p class="mt-2 text-gray-600">Our clipping path service includes background removal, image cutout,
-                        photo
-                        masking, and isolating objects in images.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#F59E0B">
-                            <path d="M7 7h10v10H7zM5 5v14h14V5H5zm2 2h10" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#F59E0B" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Background Removal</h3>
-                    <p class="mt-2 text-gray-600">We expertly remove backgrounds and unwanted objects from your images.
-                    </p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#10B981">
-                            <path d="M5 7h14l-2 10H7l-2-10zm2 2v6h8V9H7zm4-2V3h2v4h-2zm-4 12v2h10v-2H7z" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#10B981" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Ecommerce Photo Editing</h3>
-                    <p class="mt-2 text-gray-600">Our professional e-commerce photo editing service enhances your
-                        product
-                        images.</p>
-                </div>
-                <div class="card bg-white p-6 rounded-lg shadow text-center">
-                    <div class="w-12 h-12 mx-auto mb-4">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="#3B82F6">
-                            <rect x="5" y="5" width="14" height="14" rx="2" />
-                            <path d="M9 15l6-6" />
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="#3B82F6" stroke-width="2" />
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">Shadow Creation</h3>
-                    <p class="mt-2 text-gray-600">Our shadow creation service adds depth and perspective to your product
-                        images.</p>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                <a href="free-trial.html"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Get Free Trial
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                        width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- service -->
-    <section class="py-16 px-4">
-        <div class="max-w-7xl mx-auto ">
-            <div>
-                <div>
-                    <h2 class="text-5xl font-bold mb-4">What's Included in Our Image Clipping Service</h2>
-                    <p class="text-gray-600 text-lg mb-6">
-                        We are committed to ensuring complete satisfaction and guarantee you will be happy with the
-                        results.
-                        With a
-                        wide range of photo editing services, including retouching, color correction, and background
-                        removal, our
-                        expertise will bring your images to life. Choose us for a professional, high-quality image
-                        masking
-                        service
-                        that you can rely on.
-                    </p>
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="card md:w-1/2 mb-8 md:mb-0 relative">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Cliping-Path.png" alt="" class="">
-                </div>
-
-                <div class="md:w-1/2 md:pl-12">
-                    <h3 class="text-3xl font-semibold mt-3 mb-3">Clipping Path</h3>
-                    <h4 class="text-xl font-medium mb-2">Glamor Images Boost Conversion & Sales</h4>
-                    <p class="text-gray-600 text-lg mb-4">
-                        Using a Photoshop Clipping Path, also known as deep etching, you can precisely cut an object
-                        from
-                        its
-                        background, adding a transparent or white background to highlight the subject. Using the
-                        Photoshop
-                        pen
-                        tool, designers perform this extraction from the background manually (fully handmade) and also
-                        ensure
-                        project and brand-specific style, whether that includes color correction or shadow creation.
-                    </p>
-                    <ul class="list-disc list-inside text-lg font-bold text-gray-800 space-y-2">
-                        <li>Bulk Discount and Fast Turnaround.</li>
-                        <li>Simple, Medium and Super Complex Clipping Path.</li>
-                        <li>Single-Layer and Multiple Clipping Path Workflows.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 md:pl-12">
-                    <h3 class="text-3xl font-semibold mt-3 mb-3">Clipping Path</h3>
-                    <h4 class="text-xl font-medium mb-2">Glamor Images Boost Conversion & Sales</h4>
-                    <p class="text-gray-600 text-lg mb-4">
-                        Using a Photoshop Clipping Path, also known as deep etching, you can precisely cut an object
-                        from
-                        its
-                        background, adding a transparent or white background to highlight the subject. Using the
-                        Photoshop
-                        pen
-                        tool, designers perform this extraction from the background manually (fully handmade) and also
-                        ensure
-                        project and brand-specific style, whether that includes color correction or shadow creation.
-                    </p>
-                    <ul class="list-disc list-inside text-lg font-bold text-gray-800 space-y-2">
-                        <li>Bulk Discount and Fast Turnaround.</li>
-                        <li>Simple, Medium and Super Complex Clipping Path.</li>
-                        <li>Single-Layer and Multiple Clipping Path Workflows.</li>
-                    </ul>
-                </div>
-                <div class="card md:w-1/2 mb-8 md:mb-0 relative">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Photo-Retouching.png" alt=""
-                        class="">
-                </div>
-            </div>
-            <div class="space-x-4 flex items-center justify-center">
-                <a href="free-trial.html"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Free Trial
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                        width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
-                </a>
-                <a href="#"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    See All Services
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- card -->
-    <section class="max-w-7xl mx-auto mb-6">
-        <div class="space-y-4">
-            <h3 class="text-5xl sm:text-3xl max-w-5xl font-bold text-slate-900">Discover Why Millions of Entrepreneurs
-                and Ecom
-                Store Owners
-                Choose Us As Their Path Service
-                Provider</h3>
-            <p class="text-lg max-w-6xl text-slate-900">
-                Want to bring website traffic and increase monthly sales targets? Need eye-catching product photography
-                that
-                grabs customers attention at first glance?<br><br>
-
-                We've got you covered. Our perfect clipping path service will let you focus on building your brand and
-                customers trust. With multiple paths
-                and our color correction service, even the most intricate product photos can meet the same standards as
-                those of prominent brands.
+    <!--  -->
+    <section class="background-color w-full">
+        <div class="max-w-5xl mx-auto px-6 py-12 text-center">
+            <h3 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4">
+                Industry-Standard Background Removal Service From Pro-editors
+            </h3>
+            <p class="text-lg text-gray-600 mb-4">
+                Are you a professional photographer or working in media companies, e-commerce businesses, creative
+                agencies?
+                You have 13 milliseconds to stimulate your clients! But you aren’t alone. Comrade competitors are there
+                as well.
+                A high-end background removal service curated by well-versed photoshop experts can help you stand out
+            </p>
+            <p class="text-lg text-gray-600">
+                This non-destructive process ensures improved quality service for your images, and the viewers’
+                attention remains on the object — helping you save time, reduce costs, and grow your business to the
+                next level!
             </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3  gap-8 mt-4">
-            <div class="space-y-2 hover:bg-cyan-100 hover:shadow-lg hover:rounded-2xl p-4 ">
-                <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="53" height="53" rx="8" fill="#F0F5FF"></rect>
-                    <g clip-path="url(#clip0_570_1766)">
-                        <path
-                            d="M26.763 15.3894L14.2439 25.3529L22.962 36.3071L24.4449 23.2487C24.4749 22.9853 24.6083 22.7445 24.8158 22.5794C25.0233 22.4143 25.2878 22.3383 25.5513 22.3682L32.9965 23.2216L26.763 15.3894ZM12.052 25.8104C11.8898 25.6038 11.8155 25.3417 11.8451 25.0807C11.8746 24.8198 12.0056 24.5809 12.2098 24.4157L26.3063 13.1968C26.7351 12.8555 27.3596 12.9272 27.7008 13.356L37.6731 25.886C37.8352 26.0927 37.9095 26.3548 37.88 26.6157C37.8505 26.8767 37.7194 27.1156 37.5153 27.2807L23.4188 38.4997C23.2127 38.6634 22.95 38.7386 22.6885 38.7087C22.427 38.6788 22.1881 38.5464 22.0242 38.3405L12.052 25.8104ZM21.11 27.5567C20.695 27.887 20.1657 28.0389 19.6387 27.979C19.1117 27.9191 18.63 27.6523 18.2997 27.2372C17.9694 26.8222 17.8175 26.2929 17.8774 25.7659C17.9373 25.2389 18.2041 24.7572 18.6191 24.4269C19.0342 24.0966 19.5634 23.9447 20.0905 24.0046C20.6175 24.0645 21.0992 24.3313 21.4295 24.7463C21.7598 25.1614 21.9117 25.6906 21.8518 26.2177C21.7919 26.7447 21.5251 27.2264 21.11 27.5567Z"
-                            fill="#0072DD"></path>
-                    </g>
-                </svg>
-                <h3 class="text-3xl font-bold text-slate-900">Send a Sample</h3>
-                <p class="text-lg text-slate-900">Initially, you'll upload your images, which can be in various formats
-                    such as PNG, JPEG or PSD. This sample allows us to understand your specific needs and the level of
-                    detail involved in your project.
-                </p>
+    </section>
+
+
+    <!-- photoshop image -->
+    <section class="max-w-7xl mx-auto px-4 py-8">
+        <div class="space-y-6 max-w-5xl">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800">Professional Photoshop Editing Services We Provide
+            </h1>
+            <p class="text-lg text-slate-700 leading-relaxed">
+                Offshore Clipping offers professional Photoshop services online to help you challenge and leap ahead
+                with outstanding product photos.<br>
+                With a wide range of photo editing services, we can help you get the best quality photos that meet your
+                online or offline demand and individual or business requirements and get the desired results achieved.
+            </p>
+        </div>
+
+        <div class="space-y-16 mt-12">
+            <!-- Service Item 1 with Interactive Slider -->
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <!-- Image Comparison Container -->
+                <div class="w-full lg:w-1/2">
+                    <div class="relative w-full max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                        <!-- Container for images -->
+                        <div class="relative aspect-square overflow-hidden comparison-container">
+                            <!-- After Image (background) -->
+                            <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Bag-After.jpg"
+                                alt="After correction" class="absolute inset-0 w-full h-full object-cover">
+
+                            <!-- Before Image (overlay) -->
+                            <div class="absolute inset-0 overflow-hidden before-image-container"
+                                style="clip-path: inset(0 50% 0 0);">
+                                <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Bag-Before.jpg"
+                                    alt="Before correction" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Slider Handle -->
+                            <div class="absolute top-0 bottom-0 w-1 bg-blue-500 cursor-col-resize z-10 shadow-lg slider-line"
+                                style="left: 50%;">
+                                <div
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-blue-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center cursor-col-resize hover:bg-blue-600 transition-colors">
+                                    <i class="fas fa-arrows-alt-h text-white text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Service Description -->
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl font-bold text-slate-800">Photoshop Clipping Path</h2>
+                    <div class="space-y-4 text-slate-600 leading-relaxed">
+                        <p class="text-lg">
+                            Also called a shape or a closed vector path. Almost any photo editing works needs this.
+                            Under our photoshop clipping path service, we separate the specific object and highlight it
+                            with necessary adjustments. As a result, this clipped image gets the attention no matter
+                            which platform you use.
+                        </p>
+                        <p class="text-lg">
+                            As one of the best clipping path service providers of the post-production photography
+                            industry, our clipping path service includes-
+                        </p>
+                    </div>
+
+                    <!-- Process Steps -->
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                1</div>
+                            <p class="text-slate-700">Pixel-perfect clipping path</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                2</div>
+                            <p class="text-slate-700">Points adjusted perfection</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                3</div>
+                            <p class="text-slate-700">Separating noisy background</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="space-y-2 hover:bg-cyan-100 hover:shadow-lg hover:rounded-2xl p-4 ">
-                <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="53" height="53" rx="8" fill="#F0F5FF"></rect>
-                    <path
-                        d="M35.2804 22.379L34.1607 22.6355L33.6742 23.122C34.5714 24.5423 35.0465 26.1883 35.044 27.8681C35.044 32.7866 31.0549 36.7737 26.1355 36.7737C21.2161 36.7737 17.227 32.7859 17.227 27.8681C17.227 22.9503 21.2161 18.9627 26.1355 18.9627C27.812 18.9601 29.4549 19.4327 30.8735 20.3257L31.362 19.8374L31.6184 18.7181C31.6542 18.5623 31.7039 18.4101 31.7669 18.2633C30.0601 17.2606 28.1157 16.7333 26.136 16.7362C19.9855 16.7361 15 21.7201 15 27.8679C15 34.0158 19.9855 39 26.1355 39C32.2855 39 37.271 34.0159 37.271 27.8679C37.2739 25.8852 36.7445 23.9379 35.7381 22.2294C35.5904 22.293 35.4372 22.3431 35.2804 22.379Z"
-                        fill="#0072DD"></path>
-                    <path
-                        d="M26.1364 23.4151C26.6179 23.4146 27.0963 23.4923 27.5529 23.6451L29.2444 21.9546C28.2861 21.4505 27.2192 21.1879 26.1364 21.1896C22.4464 21.1896 19.4551 24.1799 19.4551 27.8687C19.4551 31.5574 22.4464 34.5479 26.1364 34.5479C29.8263 34.5479 32.8176 31.5576 32.8176 27.8687C32.8193 26.7816 32.5544 25.7107 32.046 24.7498L30.3563 26.4394C30.5119 26.8996 30.5911 27.3822 30.5906 27.868C30.5906 30.3273 28.5964 32.3208 26.1364 32.3208C23.6763 32.3208 21.6821 30.3273 21.6821 27.868C21.6821 25.4088 23.6763 23.4151 26.1364 23.4151Z"
-                        fill="#0072DD"></path>
-                    <path
-                        d="M26.1351 25.6416C25.6576 25.6417 25.1929 25.7951 24.8093 26.0792C24.4257 26.3634 24.1436 26.7633 24.0047 27.2199C23.8657 27.6765 23.8772 28.1656 24.0374 28.6152C24.1976 29.0648 24.4982 29.451 24.8946 29.7168C25.2911 29.9827 25.7626 30.1142 26.2395 30.0918C26.7164 30.0695 27.1735 29.8945 27.5434 29.5928C27.9132 29.291 28.1763 28.8784 28.2938 28.4158C28.4113 27.9532 28.3769 27.4651 28.1959 27.0235L33.5993 21.6218L35.0321 21.294C35.3007 21.2351 35.547 21.1014 35.7427 20.9084L38.9991 17.6523L35.9558 18.0429L36.3464 15L33.0887 18.2553C32.8955 18.4509 32.7616 18.6973 32.7025 18.9658L32.3746 20.3973L26.968 25.8033C26.7034 25.6964 26.4205 25.6415 26.1351 25.6416Z"
-                        fill="#0072DD"></path>
-                </svg>
-                <h3 class="text-3xl font-bold text-slate-900">Hand Over Your Project</h3>
-                <p class="text-lg text-slate-900">Want to make clients happy and stay competitive online? Then reduce
-                    product return by taking high-quality
-                    photos. Easily hire experts who let your product photos look natural yet pixel-perfect at the same
-                    time.
-                </p>
+
+            <!-- Service Item 2 with Second Slider -->
+            <div class="flex flex-col lg:flex-row-reverse gap-8 items-center">
+                <div class="w-full lg:w-1/2">
+                    <div class="relative w-full max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                        <!-- Container for images -->
+                        <div class="relative aspect-square overflow-hidden comparison-container">
+                            <!-- After Image (background) -->
+                            <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/masking-after.jpg"
+                                alt="After correction" class="absolute inset-0 w-full h-full object-cover">
+
+                            <!-- Before Image (overlay) -->
+                            <div class="absolute inset-0 overflow-hidden before-image-container"
+                                style="clip-path: inset(0 50% 0 0);">
+                                <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/masking-before.jpg"
+                                    alt="Before correction" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Slider Handle -->
+                            <div class="absolute top-0 bottom-0 w-1 bg-blue-500 cursor-col-resize z-10 shadow-lg slider-line"
+                                style="left: 50%;">
+                                <div
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-blue-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center cursor-col-resize hover:bg-blue-600 transition-colors">
+                                    <i class="fas fa-arrows-alt-h text-white text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl font-bold text-slate-800">Photoshop Image Masking</h2>
+                    <div class="space-y-4 text-slate-600 leading-relaxed">
+                        <p class="text-lg">
+                            Photoshop image masking plays a vital role in adding a realistic look to images. Images that
+                            have soft, furry, and fuzzy edges, hair, or unclear parts are complicated to deal with. Our
+                            photoshop image masking service from photoshop editing professionals will solve your unsolve
+                            projects.
+                        </p>
+                        <p class="text-lg">
+                            Under our photoshop masking service, here’s how we work on your project-
+                        </p>
+                    </div>
+
+                    <!-- Process Steps -->
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                1</div>
+                            <p class="text-slate-700">Get the object, and necessary parts focused</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                2</div>
+                            <p class="text-slate-700">Keep the background transparent</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                3</div>
+                            <p class="text-slate-700">Isolate the object image from the background</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="space-y-2 hover:bg-cyan-100 hover:shadow-lg hover:rounded-2xl p-4 ">
-                <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="53" height="53" rx="8" fill="#F0F5FF"></rect>
-                    <path
-                        d="M20 17V33H36V35H18V17H20ZM34.9393 19.9393L37.0607 22.0607L31 28.1213L28 25.121L24.0607 29.0607L21.9393 26.9393L28 20.8787L31 23.879L34.9393 19.9393Z"
-                        fill="#0072DD"></path>
-                </svg>
-                <h3 class="text-3xl font-bold text-slate-900">Receive Delivery</h3>
-                <p class="text-lg text-slate-900">Want to make clients happy and stay competitive online? Then reduce
-                    product return by taking high-quality
-                    photos. Easily hire experts who let your product photos look natural yet pixel-perfect at the same
-                    time.
-                </p>
+
+            <!-- Service Item 3 with Interactive Slider -->
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <!-- Image Comparison Container -->
+                <div class="w-full lg:w-1/2">
+                    <div class="relative w-full max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                        <!-- Container for images -->
+                        <div class="relative aspect-square overflow-hidden comparison-container">
+                            <!-- After Image (background) -->
+                            <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/After-6.jpg"
+                                alt="After correction" class="absolute inset-0 w-full h-full object-cover">
+
+                            <!-- Before Image (overlay) -->
+                            <div class="absolute inset-0 overflow-hidden before-image-container"
+                                style="clip-path: inset(0 50% 0 0);">
+                                <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Before-6.jpg"
+                                    alt="Before correction" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Slider Handle -->
+                            <div class="absolute top-0 bottom-0 w-1 bg-blue-500 cursor-col-resize z-10 shadow-lg slider-line"
+                                style="left: 50%;">
+                                <div
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-blue-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center cursor-col-resize hover:bg-blue-600 transition-colors">
+                                    <i class="fas fa-arrows-alt-h text-white text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Service Description -->
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl font-bold text-slate-800">Photoshop Image Manipulation</h2>
+                    <div class="space-y-4 text-slate-600 leading-relaxed">
+                        <p class="text-lg">
+                            Want to Blow your customers’ minds with images? Our image manipulation services got you
+                            covered. This is crafty and creative work and needs adequate practice to pull off. Don’t
+                            worry, though. Regardless of which photo manipulation you need, our expert graphic designers
+                            are active here to assist you.
+                        </p>
+                        <p class="text-lg">
+                            What you get from our photoshop image manipulation services are mentioned below:
+                        </p>
+                    </div>
+
+                    <!-- Process Steps -->
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                1</div>
+                            <p class="text-slate-700">Remove, add, swap, or replace objects</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                2</div>
+                            <p class="text-slate-700">Blend and adjoin photos</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                3</div>
+                            <p class="text-slate-700">Retouch work for Human models</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Service Item 4 with Second Slider -->
+            <div class="flex flex-col lg:flex-row-reverse gap-8 items-center">
+                <div class="w-full lg:w-1/2">
+                    <div class="relative w-full max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                        <!-- Container for images -->
+                        <div class="relative aspect-square overflow-hidden comparison-container">
+                            <!-- After Image (background) -->
+                            <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/After-7.jpg"
+                                alt="After correction" class="absolute inset-0 w-full h-full object-cover">
+
+                            <!-- Before Image (overlay) -->
+                            <div class="absolute inset-0 overflow-hidden before-image-container"
+                                style="clip-path: inset(0 50% 0 0);">
+                                <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Before-7.jpg"
+                                    alt="Before correction" class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- Slider Handle -->
+                            <div class="absolute top-0 bottom-0 w-1 bg-blue-500 cursor-col-resize z-10 shadow-lg slider-line"
+                                style="left: 50%;">
+                                <div
+                                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-blue-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center cursor-col-resize hover:bg-blue-600 transition-colors">
+                                    <i class="fas fa-arrows-alt-h text-white text-sm"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl font-bold text-slate-800">Photoshop Neck Joint</h2>
+                    <div class="space-y-4 text-slate-600 leading-relaxed">
+                        <p class="text-lg">
+                            Our photoshop neck joint is an integral part of the invisible mannequin; even so, we provide
+                            separate neck joint service considering the fashion industry’s demands. Our adobe photoshop
+                            experts team uses processes like clipping path, liquifying, retouching to join the neck
+                            parts flawlessly.
+                        </p>
+                        <p class="text-lg">
+                            What our photoshop neck joint service do to your images is –
+                        </p>
+                    </div>
+
+                    <!-- Process Steps -->
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                1</div>
+                            <p class="text-slate-700">Necessary adjustments from professionals</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                2</div>
+                            <p class="text-slate-700">Ensure the complete commercial look</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div
+                                class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mt-1">
+                                3</div>
+                            <p class="text-slate-700">The inner view and the front side merging</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center w-full gap-4 pt-6 mt-10">
+            <a href="free-trial.html"
+                class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                Free Trial
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                    width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                </svg>
+            </a>
+
+            <a href="contact.html"
+                class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                Get A Free Quote
+            </a>
         </div>
     </section>
 
-    <section class="background-color py-12">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 px-6">
+    <!-- review -->
+    <section class="background-color w-full">
+        <div class="max-w-7xl mx-auto py-8 px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6">
 
-            <!-- Text Section -->
-            <div class="flex-1 text-center lg:text-left">
-                <h3 class="text-5xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                    Talk to one of our Service Consultants
-                </h3>
-                <p class="mt-4 text-slate-700 text-lg mb-4">
-                    Whenever you need consultation or have questions on your mind,
-                    our dedicated customer support team is always ready to help and answer you.
-                </p>
-                <a href="#"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Get In Touch
-                </a>
+                <!-- Text Content -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800">Over 99 ★ Reviews</h3>
+                    <p class="mt-2 text-lg text-gray-600">We've edited more than <span class="font-semibold">8
+                            million</span>
+                        images for <span class="font-semibold">1200+ businesses</span> like yours.</p>
+
+                    <p class="mt-3 text-green-600 font-semibold text-lg">Danpite Tech</p>
+
+                    <p class="text-gray-700 text-lg">
+                        Reviews <span class="font-bold">99</span>
+                        <span class="mx-2 text-gray-400"><i class="fa-solid fa-circle text-[6px]"></i></span>
+                        <span class="font-semibold text-green-600">Excellent</span>
+                    </p>
+
+                    <div class="flex items-center justify-center md:justify-start text-yellow-400 text-xl mt-2">
+                        <span class="mr-2">★★★★★</span>
+                        <span class="text-gray-800 font-semibold">4.9</span>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="w-full md:w-2/3">
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/07/Frame-10000032401.png"
+                        alt="Customer Reviews" class="w-full h-auto rounded-lg shadow-md">
+                </div>
+
             </div>
-
-            <!-- Image Section -->
-            <div class="flex-1">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/09/Talk-to-one-of-our-Service-Consultants.png"
-                    alt="Service Consultant" class="w-full max-w-md mx-auto lg:mx-0">
-            </div>
-
         </div>
     </section>
 
     <!-- 3 step -->
-    <section class="max-w-7xl mx-auto mt-4">
+    <section class="max-w-7xl mx-auto mt-10">
         <h3 class="text-5xl lg:text-5xl font-bold text-slate-900 leading-tight">Follow Our Simple 3-Step Order Process
         </h3>
         <p class="mt-4 text-lg text-slate-700 mb-4">
@@ -1295,254 +1108,605 @@
         </svg>
     </section>
 
-    <!-- pricing -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
+    <!-- photoshop service -->
+    <section class="w-full bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-6 space-y-8">
 
-            <!-- Title & Description -->
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-5xl font-bold text-slate-900">Delivery Time and Pricing</h2>
-                <p class="mt-4 text-lg text-slate-600">
-                    Our standard delivery time is from 12 hours to 48 hours. However, if you need an urgent dispatch,
-                    we can provide it using our fastest package. This photo editing service is based on low complexity.
+            <div class="max-w-4xl">
+                <h3 class="text-slate-900 text-5xl font-bold leading-tight">
+                    Why Do You Need Photoshop Service?
+                </h3>
+                <p class="mt-4 text-slate-700 text-lg font-medium leading-relaxed">
+                    Want to bring website traffic & increase monthly sales targets? Need eye-catchy product looks that
+                    grab consumers’ attention at first glance? We’ve got you covered by building your brand value &
+                    customers’ trust.
                 </p>
             </div>
 
-            <!-- Feature Row -->
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mt-8 text-slate-800 font-medium">
-                <div class="flex items-center text-lg gap-2">
-                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Free Trial: 5 Images.
+            <div class="grid grid-cols-1 md:grid-cols-2  gap-8">
+                <div>
+                    <p class="text-slate-700 text-lg font-medium leading-relaxed">
+                        This level of detail is particularly critical for you, the professional photographer, aiming to
+                        deliver striking results to clients.
+                    </p>
+                    <div class="space-y-4 max-w-xl mx-auto p-6 rounded-lg">
+                        <!-- Item -->
+                        <div class="pb-3">
+                            <button class="flex items-center justify-between w-full text-left accordion-btn">
+                                <div class="flex items-center space-x-3">
+                                    <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                                    <span class="font-bold text-2xl text-gray-900">
+                                        Images need various editing to be done
+                                    </span>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-500 transition-transform duration-300" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
+                                <p class="px-6 text-slate-700 text-lg">
+                                    If you have different types of images and you need to do all types of editing, our
+                                    Photoshop services cover you with all our resources. Under one category, you get a
+                                    wide variety of work done.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="pb-3">
+                            <button class="flex items-center justify-between w-full text-left accordion-btn">
+                                <div class="flex items-center space-x-3">
+                                    <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                                    <span class="font-bold text-2xl text-gray-900">
+                                        Need professional assistance
+                                    </span>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-500 transition-transform duration-300" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
+                                <p class="p-6 text-slate-700 text-lg">
+                                    Our Photoshop team members are experts with a couple of years up their sleeves. By
+                                    assigning them to your project, you can rest assured of getting professional-grade
+                                    editing done for your product images.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="pb-3">
+                            <button class="flex items-center justify-between w-full text-left accordion-btn">
+                                <div class="flex items-center space-x-3">
+                                    <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                                    <span class="font-bold text-2xl text-gray-900">
+                                        Ensure pixel-perfect image
+                                    </span>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-500 transition-transform duration-300" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
+                                <p class="px-6 text-slate-700 text-lg">
+                                    When doing repetitive work or bulk work, mistakes can happen. That’s why we have a
+                                    team to cross-check your project. Under 3-step surveillance, your project quality
+                                    and perfection remain top-notch.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div class="pb-3">
+                            <button class="flex items-center justify-between w-full text-left accordion-btn">
+                                <div class="flex items-center space-x-3">
+                                    <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                                    <span class="font-bold text-2xl text-gray-900">
+                                        Enhance visual appeal
+                                    </span>
+                                </div>
+                                <svg class="w-5 h-5 text-gray-500 transition-transform duration-300" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+
+                            <div class="accordion-content overflow-hidden max-h-0 transition-all duration-300">
+                                <p class="px-6 text-slate-700 text-lg">
+                                    Considering context, product, and purpose, we edit photos in a way that brings out
+                                    the best look of your product and results in enhancing the photo’s overall visual
+                                    appeal.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="flex items-center text-lg gap-2">
-                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Multiple Quality Checks.
-                </div>
-                <div class="flex items-center text-lg gap-2">
-                    <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Easy Cancellation.
+                <div>
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Attract-Fashionistas-Across-The-World.png"
+                        alt="Model with Camera" class="mx-auto md:ml-auto object-cover rounded-lg w-full w-full">
                 </div>
             </div>
 
-            <!-- Pricing Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
+            <div class="flex items-center justify-center">
+                <a href="free-trial.html"
+                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                    Get Free Trial
+                </a>
+            </div>
 
-                <!-- Card Component -->
-                <div
-                    class="hover:border rounded-2xl p-6 shadow-sm hover:shadow-lg hover:scale-105 transform transition-all duration-300 ease-out">
-                    <div class="text-3xl font-bold text-slate-900">$0.23
-                        <span class="text-base font-normal text-slate-500">/Per Image</span>
-                    </div>
-                    <span
-                        class="inline-block bg-slate-100 text-slate-800 text-sm font-medium px-3 py-1 rounded-full mt-2">
-                        Basic Plan
-                    </span>
-                    <p class="mt-4 text-slate-600">Fast, Easy, and within anyone’s reach.</p>
-                    <ul class="mt-4 space-y-2 text-slate-700">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Delivery within 48 hours
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>1-500 Images / Order
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Multiple Quality Check
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Easy Upload & Download
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>24/7 Customer Support
-                        </li>
-                    </ul>
-                    <a href="#"
-                        class="flex mt-6 w-full items-center justify-center relative gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        Choose Plan
-                    </a>
-                </div>
-                <div
-                    class="hover:border rounded-2xl p-6 shadow-sm hover:shadow-lg hover:scale-105 transform transition-all duration-300 ease-out">
-                    <div class="text-3xl font-bold text-slate-900">$0.23
-                        <span class="text-base font-normal text-slate-500">/Per Image</span>
-                    </div>
-                    <span
-                        class="inline-block bg-slate-100 text-slate-800 text-sm font-medium px-3 py-1 rounded-full mt-2">
-                        Basic Plan
-                    </span>
-                    <p class="mt-4 text-slate-600">Fast, Easy, and within anyone’s reach.</p>
-                    <ul class="mt-4 space-y-2 text-slate-700">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Delivery within 48 hours
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>1-500 Images / Order
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Multiple Quality Check
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Easy Upload & Download
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>24/7 Customer Support
-                        </li>
-                    </ul>
-                    <a href="#"
-                        class="flex mt-6 w-full items-center justify-center relative gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        Choose Plan
-                    </a>
-                </div>
-                <div
-                    class="hover:border rounded-2xl p-6 shadow-sm hover:shadow-lg hover:scale-105 transform transition-all duration-300 ease-out">
-                    <div class="text-3xl font-bold text-slate-900">$0.23
-                        <span class="text-base font-normal text-slate-500">/Per Image</span>
-                    </div>
-                    <span
-                        class="inline-block bg-slate-100 text-slate-800 text-sm font-medium px-3 py-1 rounded-full mt-2">
-                        Basic Plan
-                    </span>
-                    <p class="mt-4 text-slate-600">Fast, Easy, and within anyone’s reach.</p>
-                    <ul class="mt-4 space-y-2 text-slate-700">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Delivery within 48 hours
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>1-500 Images / Order
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Multiple Quality Check
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Easy Upload & Download
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>24/7 Customer Support
-                        </li>
-                    </ul>
-                    <a href="#"
-                        class="flex mt-6 w-full items-center justify-center relative gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        Choose Plan
-                    </a>
-                </div>
-                <div
-                    class="hover:border rounded-2xl p-6 shadow-sm hover:shadow-lg hover:scale-105 transform transition-all duration-300 ease-out">
-                    <div class="text-3xl font-bold text-slate-900">$0.23
-                        <span class="text-base font-normal text-slate-500">/Per Image</span>
-                    </div>
-                    <span
-                        class="inline-block bg-slate-100 text-slate-800 text-sm font-medium px-3 py-1 rounded-full mt-2">
-                        Basic Plan
-                    </span>
-                    <p class="mt-4 text-slate-600">Fast, Easy, and within anyone’s reach.</p>
-                    <ul class="mt-4 space-y-2 text-slate-700">
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Delivery within 48 hours
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>1-500 Images / Order
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Multiple Quality Check
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>Easy Upload & Download
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>24/7 Customer Support
-                        </li>
-                    </ul>
-                    <a href="#"
-                        class="flex mt-6 w-full items-center justify-center relative gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        Choose Plan
-                    </a>
+        </div>
+    </section>
+
+    <!-- service -->
+    <section class="max-w-7xl mx-auto mt-10 px-4">
+        <!-- Header -->
+        <div class=" mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4">What Do You Get From Our Service</h3>
+            <p class="text-lg text-gray-600 max-w-2xl ">
+                It's not all about work; we care about your project. That's why ensuring the delivery of quality service
+                is essential to us. This is what you get from us.
+            </p>
+        </div>
+
+        <!-- Main Content -->
+        <div class=" overflow-hidden">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Left side - Image -->
+                <div class="lg:w-1/2">
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Rectangle-22886-1.png"
+                        alt="Professional photo shoot in studio"
+                        class="w-full h-full rounded-lg object-cover min-h-[400px] lg:min-h-[500px]" />
                 </div>
 
-                <!-- Repeat the above card for other plans, just changing title, price, and features -->
+                <!-- Right side - Features -->
+                <div class="lg:w-1/2 p-8 flex items-center justify-center">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Free Trial</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Fast Turnaround</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Client Service 24/7</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Privacy Assurance</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Bulk Discount</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Unlimited Revisions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" overflow-hidden mt-8">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Left side - fetures -->
+                <div class="lg:w-1/2 p-8 flex items-center justify-center">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">100% client satisfaction</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Cutting-edge technology</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Smooth ordering process</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Affordable pricing structure</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Top-quality and professionally edited
+                                photo</span>
+                        </div>
+
+                        <div class="flex items-center space-x-4 ">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700 font-medium text-lg">Emphasis on clients’ demand and
+                                perfection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side - Image -->
+                <div class="lg:w-1/2">
+                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/Rectangle-1270-1.png"
+                        alt="Professional photo shoot in studio"
+                        class="w-full h-full rounded-lg object-cover min-h-[400px] lg:min-h-[500px]" />
+                </div>
 
             </div>
         </div>
     </section>
 
-    <!-- protfolio -->
-    <section class="max-w-7xl mx-auto px-4 mt-4 mb-4">
-        <div class="flex flex-col sm:flex-row items-center sm:justify-between gap-4">
-            <h3 class="text-3xl sm:text-5xl font-bold text-slate-900">Our Portfolio</h3>
-            <a href="#"
-                class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                See All Services
-            </a>
+    <!-- Testimonial -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+        <div class="flex justify-between items-start mb-12">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Related customer stories
+                </h1>
+                <p class="text-lg text-gray-600">
+                    Our valued clients across the world are the reason we perform better every day! Check what they are
+                    saying about our photo editing services.
+                </p>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="flex space-x-2">
+                <button id="prevBtn"
+                    class="w-12 h-12 bg-blue-100 hover:bg-blue-200 text-blue-600 rounded-full flex items-center justify-center transition-colors duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="nextBtn"
+                    class="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
         </div>
-        <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/portfolio-grid.png" alt="Portfolio"
-            class="mt-6 w-full h-auto rounded-lg" />
+
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden">
+            <div id="testimonialTrack" class="flex transition-transform duration-500 ease-in-out">
+                <!-- Testimonial Set 1 -->
+                <div class="w-full flex-shrink-0">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Testimonial 1 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Punctual and great service"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Best Customer Service that I have received and price was amazing!
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Colleen Bale Wright" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Colleen Bale Wright</h4>
+                                    <p class="text-gray-500 text-sm">USA</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "These guys pay attention to details"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                "Fantastic service from the guys at Offshore Clipping Path - really great communication,
+                                excellent quality of work, and the pricing is fantastic. They're very responsive to any
+                                feedback or questions."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Michael Rumbles" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Michael Rumbles</h4>
+                                    <p class="text-gray-500 text-sm">UK</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Highly recommended"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                "Really happy with the service. Very tricky cutouts were required and the final result
+                                was excellent. Thank you."
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Kenneth Gray" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Kenneth Gray</h4>
+                                    <p class="text-gray-500 text-sm">USA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Set 2 -->
+                <div class="w-full flex-shrink-0">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Testimonial 4 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Outstanding quality"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                The team delivered exceptional results beyond our expectations. Professional service
+                                with quick turnaround times.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                    <p class="text-gray-500 text-sm">Canada</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Perfect communication"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Great experience working with this team. They understood our requirements perfectly and
+                                delivered exactly what we needed.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="David Miller" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">David Miller</h4>
+                                    <p class="text-gray-500 text-sm">Australia</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 6 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Amazing results"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                The attention to detail and quality of work is impressive. Will definitely use their
+                                services again for future projects.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Emma Wilson" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Emma Wilson</h4>
+                                    <p class="text-gray-500 text-sm">Germany</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Set 3 -->
+                <div class="w-full flex-shrink-0">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Testimonial 7 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Exceeded expectations"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Professional team with incredible attention to detail. They transformed our product
+                                images beautifully.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="James Rodriguez" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">James Rodriguez</h4>
+                                    <p class="text-gray-500 text-sm">Spain</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 8 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Fast and reliable"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Quick turnaround time without compromising on quality. The team is very responsive and
+                                professional.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Lisa Chen" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Lisa Chen</h4>
+                                    <p class="text-gray-500 text-sm">Singapore</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 9 -->
+                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                "Top-notch service"
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Excellent service from start to finish. The team understood our needs and delivered
+                                perfect results every time.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=50&h=50&fit=crop&crop=face&auto=format"
+                                    alt="Robert Taylor" class="w-12 h-12 rounded-full mr-4 object-cover">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Robert Taylor</h4>
+                                    <p class="text-gray-500 text-sm">France</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots Indicator -->
+        <div class="flex justify-center mt-8 space-x-2">
+            <button class="dot w-3 h-3 bg-blue-600 rounded-full transition-colors duration-200" data-slide="0"></button>
+            <button class="dot w-3 h-3 bg-gray-300 rounded-full transition-colors duration-200" data-slide="1"></button>
+            <button class="dot w-3 h-3 bg-gray-300 rounded-full transition-colors duration-200" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!--  -->
+    <section class="max-w-7xl mx-auto mt-16 px-4 lg:px-8">
+        <!-- Heading -->
+        <h3 class="text-3xl md:text-5xl text-slate-900 font-bold max-w-4xl leading-tight mb-8">
+            Win Online Battle with Our Professional Photoshop Service
+        </h3>
+
+        <!-- Flex Layout -->
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+
+            <!-- Text -->
+            <div class="lg:w-1/2 space-y-5 text-gray-700 text-lg leading-relaxed">
+                <p>
+                    Get access to expertise at your fingertip. It is industry-grade, fast, and budget-friendly.
+                </p>
+                <p>
+                    Offshore Clipping is a renowned Photoshop service provider. Our Photoshop service is extended to a
+                    variety of sectors and curated for individual and business needs.
+                </p>
+                <p>
+                    By addressing the quality image, we contribute to fulfilling their target to achieve and make sure
+                    their target has been achieved. Our team of Photoshop experts is well-trained to comply with your
+                    requirements. Thus, our service
+                </p>
+                <ul class="list-disc px-4">
+                    <li>Provides premium quality service</li>
+                    <li>Optimize for potential viewers</li>
+                    <li>Highlight and draw attention to the product</li>
+                    <li>Retains uniform and consistent image look</li>
+                    <li>Reveal your brand authenticity and professionalism</li>
+                    <li>Meet e-commerce platforms (Amazon, eBay) requirements</li>
+                </ul>
+                <p>We are your virtual photo editing team on standby to fulfill professional Photoshop services needs.
+                </p>
+            </div>
+
+            <!-- Image -->
+            <div class="lg:w-1/2">
+                <img src="https://offshoreclipping.com/wp-content/uploads/2023/08/Why-Choose-Offshore-Clipping-Path-for-Photoshop-Services_.png"
+                    alt="Offshore Clipping Image Masking Service"
+                    class="w-full h-[600px] object-cover rounded-xl shadow-lg">
+            </div>
+
+        </div>
     </section>
 
     <!-- form  -->
@@ -1718,130 +1882,147 @@
         </div>
     </section>
 
-    <!-- faq -->
-    <section class="bg-white py-16 px-4 relative overflow-hidden">
-        <!-- Background decorative circle -->
-        <div
-            class="absolute right-0 top-0 w-96 h-96 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full transform translate-x-32 -translate-y-16 opacity-90">
+    <!-- video slider -->
+    <div class="max-w-7xl mx-auto py-8">
+        <!-- Main Container -->
+        <div class="bg-white rounded-3xl shadow overflow-hidden">
+            <div class="grid lg:grid-cols-2 gap-8 p-8">
+                <!-- Left Side - Video Player -->
+                <div class="relative">
+                    <!-- Video Container -->
+                    <div class="video-container relative bg-gradient-to-br from-slate-800 to-slate-900 ">
+                        <div id="videoLoading" class="video-loading hidden">Loading video...</div>
+                        <iframe id="youtubePlayer" class="w-full h-full"
+                            src="https://www.youtube.com/embed/8LSt8_11wbQ?enablejsapi=1&rel=0"
+                            title="Testimonial Video" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- Reviewer Info -->
+                    <div class="mt-6">
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="avatar-ring">
+                                <div class="avatar-inner">
+                                    <img id="currentAvatar"
+                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
+                                        alt="Neil" class="w-12 h-12 rounded-full object-cover slide-transition">
+                                </div>
+                            </div>
+                            <div>
+                                <h3 id="reviewerName" class="font-bold text-xl text-slate-800 slide-transition">Neil &
+                                    Sabrina</h3>
+                                <p id="reviewerTitle" class="text-slate-600 slide-transition">Augment Agency</p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Quote -->
+                        <blockquote id="testimonialQuote"
+                            class="text-slate-600 italic mb-4 text-lg leading-relaxed slide-transition">
+                            "Amazing results for our e-commerce product photos!"
+                        </blockquote>
+
+                        <!-- Star Rating -->
+                        <div id="starRating" class="flex gap-1 mb-6">
+                            <span class="star text-xl">★</span>
+                            <span class="star text-xl">★</span>
+                            <span class="star text-xl">★</span>
+                            <span class="star text-xl">★</span>
+                            <span class="star text-xl">★</span>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Controls -->
+                    <div class="flex items-center justify-between mt-6">
+                        <button id="prevBtn"
+                            class="nav-button w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+
+                        <div class="flex items-center gap-2 text-slate-600">
+                            <span id="currentSlide">1</span>
+                            <span>/</span>
+                            <span id="totalSlides">6</span>
+                        </div>
+
+                        <button id="nextBtn"
+                            class="nav-button w-12 h-12 rounded-full flex items-center justify-center text-white shadow-lg">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Side - Content -->
+                <div class="flex flex-col justify-between">
+                    <!-- Header -->
+                    <div>
+                        <h1 class="text-4xl lg:text-5xl font-bold text-slate-800 leading-tight mb-8">
+                            What Photographers, Business Owners and Influencers Say About Our Photo Clipping Path
+                            Service
+                        </h1>
+                    </div>
+
+                    <!-- Avatar Navigation -->
+                    <div class="space-y-6">
+                        <div class="flex flex-wrap gap-4" id="avatarContainer">
+                            <!-- Avatars will be dynamically generated -->
+                        </div>
+
+                        <button
+                            class="flex items-center gap-2 text-slate-600 hover:text-cyan-500 transition-colors duration-300 group">
+                            <span class="font-semibold">SEE MORE REVIEWS</span>
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="py-16 bg-white text-center">
+        <!-- Heart Icon -->
+        <div class="mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-blue-600 mx-auto" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
         </div>
 
-        <div class="max-w-4xl mx-auto relative z-10">
-            <!-- Header -->
-            <div class="flex justify-between items-start mb-12">
-                <div>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                        Answers to Frequently Asked Questions<br>
-                        From Our Inbox
-                    </h2>
-                    <p class="text-gray-600 text-lg">
-                        Let us know what troubles you. Give us a message; we will get back to you soon.
-                    </p>
-                </div>
-                <a href="#"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Get In Touch
-                </a>
-            </div>
+        <!-- Heading -->
+        <h2 class="text-xl md:text-2xl font-semibold text-blue-800 leading-relaxed mb-8">
+            Let Us Handle the Edits — You Focus on Creating.<br>
+            So you can get back to doing what inspires you.
+        </h2>
 
-            <!-- FAQ Items -->
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <input type="checkbox" id="faq1" class="faq-checkbox">
-                <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
-                    <label for="faq1"
-                        class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
-                        <span class="text-lg font-semibold text-gray-900 pr-4">
-                            1. What are your turnaround times?
-                        </span>
-                        <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </div>
-                    </label>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6">
-                            <div class="text-gray-700 leading-relaxed">
-                                Our standard turnaround time is 24-48 hours for most photo editing projects. Rush orders
-                                can be completed within 12 hours for an additional fee.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 2 -->
-                <input type="checkbox" id="faq2" class="faq-checkbox">
-                <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
-                    <label for="faq2"
-                        class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
-                        <span class="text-lg font-semibold text-gray-900 pr-4">
-                            2. Do you offer bulk image discounts?
-                        </span>
-                        <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </div>
-                    </label>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6">
-                            <div class="text-gray-700 leading-relaxed">
-                                Yes! We offer attractive discounts for bulk orders. Orders of 50+ images receive a 15%
-                                discount, 100+ images get 25% off, and 500+ images receive a 35% discount.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <input type="checkbox" id="faq3" class="faq-checkbox">
-                <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
-                    <label for="faq3"
-                        class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
-                        <span class="text-lg font-semibold text-gray-900 pr-4">
-                            3. What file formats do you accept?
-                        </span>
-                        <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                            </svg>
-                        </div>
-                    </label>
-                    <div class="faq-content">
-                        <div class="px-6 pb-6">
-                            <div class="text-gray-700 leading-relaxed">
-                                We accept all major image formats including JPEG, PNG, TIFF, RAW files (CR2, NEF, ARW,
-                                etc.), and PSD files. We can work with images up to 100MB in size.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Button -->
+        <a href="#"
+            class="inline-flex items-center gap-2 px-5 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+            Get started
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+        </a>
     </section>
 
-    <!-- image -->
-    <section class="max-w-7xl mx-auto">
-        <img decoding="async" width="1438" height="545"
-            src="https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google.png" alt=""
-            title="client-review-google"
-            data-lazy-srcset="https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google.png 1438w, https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google-1280x485.png 1280w, https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google-980x371.png 980w, https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google-480x182.png 480w"
-            data-lazy-sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1438px, 100vw"
-            class="wp-image-354 entered lazyloaded"
-            data-lazy-src="https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google.png"
-            data-ll-status="loaded"
-            sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1438px, 100vw"
-            srcset="https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google.png 1438w, https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google-1280x485.png 1280w, https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google-980x371.png 980w, https://offshoreclipping.com/wp-content/uploads/2023/06/client-review-google-480x182.png 480w">
-    </section>
 
 
 
     <!-- footer section -->
-
-    <section class="py-12">
+    <section class="py-12 mt-24">
         <div class="container max-w-7xl mx-auto px-6">
 
             <!-- Featured Websites Section -->
@@ -1879,17 +2060,15 @@
                         Clipping your product images high-end editorial, and lucrative at your offshore.
                         Stand yourself out from the crowd with high-end edited photos. Let Visitors Come!
                     </p>
-                    <a href="contact.html"
+                    <a href="#"
                         class="relative inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                         Contact Us
                     </a>
                 </div>
             </div>
 
-
         </div>
     </section>
-
     <footer class="bg-gray-800 text-white py-10">
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -1929,7 +2108,7 @@
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Services</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Portfolio</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Blog</a></li>
-                    <li><a href="" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
                 </ul>
             </div>
 
@@ -1937,7 +2116,7 @@
                 <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
                 <ul class="space-y-2">
                     <li><a href="photo-editing-services.html" class="text-medium hover:text-gray-400 transition">Photo
-                            Color Correction</a></li>
+                            Editing Services</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>
@@ -1971,11 +2150,9 @@
         </div>
     </footer>
 
-
     <script src="main.js"></script>
-    <script src="animation.js"></script>
+    <script src="script.js"></script>
     <script src="video-slider.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
