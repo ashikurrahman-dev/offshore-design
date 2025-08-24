@@ -40,7 +40,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <!-- Logo Section -->
             <a class="flex items-center space-x-3" href="index.html">
-                <img src="logo.png" alt="Danpite Tech Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-lg object-cover">
+                <img src="images/logo.png" alt="Danpite Tech Logo"
+                    class="h-16 w-16 sm:h-16 sm:w-16 rounded-lg object-cover">
+                <span class="text-2xl font-semibold text-blue-800">
+                    Photo Edit
+                </span>
             </a>
 
             <!-- Desktop Navigation -->
@@ -141,30 +145,54 @@
                     class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
                     Contact Us
                 </a>
+                <!-- Contact Us -->
+                <a href="blog.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Blog
+                </a>
 
                 <!-- CTA Button -->
                 <a href="free-trial.html"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Free Trial
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                        width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
+                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Center-to-side background overlay -->
+                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                    <!-- Text + Icon -->
+                    <span class="relative flex items-center gap-2 z-10">
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
                 </a>
+
             </nav>
 
             <!-- Mobile Menu Button -->
             <div class="lg:hidden flex items-center space-x-3">
                 <!-- Mobile CTA Button -->
                 <a href="free-trial.html"
-                    class="inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
-                    Free Trial
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                        width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
+                    class="relative inline-flex items-center px-2 py-1 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Center-to-side background overlay -->
+                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                    <!-- Text + Icon -->
+                    <span class="relative flex items-center gap-2 z-10">
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
                 </a>
 
                 <!-- Hamburger Button -->
@@ -189,7 +217,7 @@
                 <!-- Mobile Menu Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200">
                     <a class="flex items-center space-x-3" href="index.html">
-                        <img src="logo.png" alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
+                        <img src="images/logo.png" alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
                     </a>
                     <button id="mobile-menu-close"
                         class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
@@ -285,18 +313,32 @@
                         class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         Contact Us
                     </a>
+                    <!-- Blog -->
+                    <a href=""
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        Blog
+                    </a>
                 </nav>
 
                 <!-- Mobile Menu Footer -->
                 <div class="p-6 border-t border-gray-200">
                     <a href="free-trial.html"
-                        class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
-                        Start Free Trial
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                            width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                        </svg>
+                        class="relative inline-flex items-center gap-2 px-2 py-1 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                        <!-- Center-to-side background overlay -->
+                        <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                        <!-- Text + Icon -->
+                        <span class="relative flex items-center gap-2 z-10">
+                            Free Trial
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                            </svg>
+                        </span>
                     </a>
                 </div>
             </div>
@@ -1406,63 +1448,18 @@
     </section>
 
     <!-- footer section -->
-    <section class="py-12">
-        <div class="container max-w-7xl mx-auto px-6">
-
-            <!-- Featured Websites Section -->
-            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 text-center mb-10">
-                We are featured on these websites
-            </h2>
-            <div class="flex flex-wrap justify-center items-center gap-10 mb-10 pb-10">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photo.com_.png" alt="IPHOTO.COM"
-                    class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
-                    alt="Photography Course" class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
-                    class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
-                    alt="Photography Course" class="h-12 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
-                    class="h-10 object-contain">
-            </div>
-
-            <!-- Promotional Section -->
-            <div class="flex flex-col md:flex-row items-stretch bg-gray-900 text-white rounded-lg overflow-hidden">
-                <!-- Image -->
-                <div class="w-full md:w-1/2 h-64 md:h-auto">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/09/CS-1.png" alt="CS"
-                        class="w-full h-full object-cover">
-                </div>
-
-                <!-- Text -->
-                <div class="w-full md:w-1/2 p-6 flex flex-col justify-center">
-                    <blockquote class="text-lg italic mb-2">
-                        &ldquo;Transform Your Photos and Make Them Look Amazing &mdash; Try Our Photo Editing Solution
-                        Now!&rdquo;
-                    </blockquote>
-                    <p class="mb-6">
-                        Clipping your product images high-end editorial, and lucrative at your offshore.
-                        Stand yourself out from the crowd with high-end edited photos. Let Visitors Come!
-                    </p>
-                    <a href="contact.html"
-                        class="relative inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
     <footer class="bg-gray-800 text-white py-10">
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
 
             <div>
                 <a class="flex items-center space-x-3" href="#">
-                    <img src="logo.png" alt="Logo" class="h-10 rounded">
+                    <img src="images/logo.png" alt="Logo" class="w-20 h-auto rounded">
+                    <span class="text-2xl font-semibold text-blue-500">
+                        Photo Edit
+                    </span>
                 </a>
-                <p class="text-medium leading-relaxed">
+                <p class="text-medium leading-relaxed mt-2">
                     A digital photo editing platform, fast & efficient, for photographers & businesses.
                 </p>
             </div>
@@ -1501,7 +1498,7 @@
                 <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
                 <ul class="space-y-2">
                     <li><a href="photo-editing-services.html" class="text-medium hover:text-gray-400 transition">Photo
-                            Editing Services</a></li>
+                            Color Correction</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>

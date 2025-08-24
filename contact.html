@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <style>
         .background-color {
@@ -39,7 +40,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <!-- Logo Section -->
             <a class="flex items-center space-x-3" href="index.html">
-                <img src="logo.png" alt="Danpite Tech Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-lg object-cover">
+                <img src="images/logo.png" alt="Danpite Tech Logo"
+                    class="h-16 w-16 sm:h-16 sm:w-16 rounded-lg object-cover">
+                <span class="text-2xl font-semibold text-blue-800">
+                    Photo Edit
+                </span>
             </a>
 
             <!-- Desktop Navigation -->
@@ -140,30 +145,54 @@
                     class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
                     Contact Us
                 </a>
+                <!-- Contact Us -->
+                <a href="blog.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Blog
+                </a>
 
                 <!-- CTA Button -->
                 <a href="free-trial.html"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Free Trial
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                        width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
+                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Center-to-side background overlay -->
+                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                    <!-- Text + Icon -->
+                    <span class="relative flex items-center gap-2 z-10">
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
                 </a>
+
             </nav>
 
             <!-- Mobile Menu Button -->
             <div class="lg:hidden flex items-center space-x-3">
                 <!-- Mobile CTA Button -->
                 <a href="free-trial.html"
-                    class="inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
-                    Free Trial
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                        width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
+                    class="relative inline-flex items-center px-2 py-1 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Center-to-side background overlay -->
+                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                    <!-- Text + Icon -->
+                    <span class="relative flex items-center gap-2 z-10">
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
                 </a>
 
                 <!-- Hamburger Button -->
@@ -188,7 +217,7 @@
                 <!-- Mobile Menu Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200">
                     <a class="flex items-center space-x-3" href="index.html">
-                        <img src="logo.png" alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
+                        <img src="images/logo.png" alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
                     </a>
                     <button id="mobile-menu-close"
                         class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
@@ -284,18 +313,32 @@
                         class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         Contact Us
                     </a>
+                    <!-- Blog -->
+                    <a href=""
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        Blog
+                    </a>
                 </nav>
 
                 <!-- Mobile Menu Footer -->
                 <div class="p-6 border-t border-gray-200">
                     <a href="free-trial.html"
-                        class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
-                        Start Free Trial
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                            width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                        </svg>
+                        class="relative inline-flex items-center gap-2 px-2 py-1 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                        <!-- Center-to-side background overlay -->
+                        <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                        <!-- Text + Icon -->
+                        <span class="relative flex items-center gap-2 z-10">
+                            Free Trial
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                            </svg>
+                        </span>
                     </a>
                 </div>
             </div>
@@ -308,7 +351,7 @@
     </header>
 
     <!-- form  -->
-    <section class="container mx-auto px-4 py-12 mt-36">
+    <section class="container mx-auto px-4 py-12 mt-24">
         <div class="max-w-7xl mx-auto">
 
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -317,7 +360,7 @@
                 <div class="space-y-8">
                     <div>
                         <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                            <span class="text-blue-600">Get in touch</span> with us
+                            Get in touch with us
                         </h1>
                         <h3 class="text-5xl font-bold mt-6 text-gray-600">
                             We're looking forward to hearing from you!
@@ -326,8 +369,7 @@
                     </div>
 
                     <!-- image -->
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/contact-us-hero-illustration.svg"
-                        alt="" class="pt-4">
+                    <img src="https://photoedite.com/wp-content/uploads/2025/07/contact-us-1.jpg" alt="" class="pt-4">
                 </div>
 
                 <!-- Right Side - Form -->
@@ -438,23 +480,26 @@
                 <div
                     class="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
                     <div class="flex items-start space-x-3 sm:space-x-4">
-                        <div class="flex-shrink-0">
-                            <div
-                                class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-blue-600" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                    </path>
-                                </svg>
+                        <a class="flex items-start space-x-3 sm:space-x-4" target="_blank"
+                            href="https://wa.me/+8801646716454">
+                            <div class="flex-shrink-0">
+                                <div
+                                    class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-green-500" fill="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.52 3.48A11.962 11.962 0 0012 0C5.373 0 0 5.373 0 12c0 2.116.554 4.094 1.52 5.848L0 24l6.313-1.534A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12 0-3.196-1.242-6.202-3.48-8.52zm-8.52 17c-1.942 0-3.847-.516-5.5-1.488l-.393-.233-3.745.909.997-3.653-.255-.399A9.958 9.958 0 012 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.034-7.093c-.276-.138-1.633-.805-1.887-.896-.253-.092-.437-.138-.622.138-.184.276-.711.896-.872 1.08-.16.184-.322.207-.598.069-.276-.138-1.164-.429-2.216-1.368-.819-.729-1.371-1.63-1.533-1.906-.16-.276-.017-.425.12-.563.123-.123.276-.322.414-.483.138-.16.184-.276.276-.46.092-.184.046-.345-.023-.483-.069-.138-.622-1.503-.852-2.056-.224-.54-.454-.466-.622-.475l-.53-.01c-.184 0-.483.069-.736.345-.253.276-.966.943-.966 2.303s.988 2.667 1.127 2.854c.138.184 1.948 2.977 4.724 4.164.66.285 1.173.455 1.573.583.66.213 1.26.184 1.734.112.53-.08 1.633-.666 1.865-1.309.23-.64.23-1.188.161-1.309-.069-.123-.253-.184-.53-.322z" />
+                                    </svg>
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <h3 class="font-semibold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">
-                                Tap/Click to Call</h3>
-                            <p class="text-blue-600 font-medium text-sm sm:text-base lg:text-lg break-all">+1 315 636
-                                4807</p>
-                        </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">
+                                    Click to Whatsapp</h3>
+                                <p class="text-blue-600 font-medium text-sm sm:text-base lg:text-lg break-all">
+                                    01843627200</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -465,20 +510,64 @@
                         <div class="flex-shrink-0">
                             <div
                                 class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                                <svg class="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-blue-600" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path
-                                        d="M12.069 18.874c-4.023 0-7.292-3.269-7.292-7.293C4.777 7.559 8.046 4.29 12.069 4.29c4.023 0 7.292 3.269 7.292 7.291 0 4.024-3.269 7.293-7.292 7.293z" />
-                                    <path
-                                        d="M17.318 14.985l-1.537-2.463c-.207-.331-.661-.661-1.016-.661-.331 0-.661.124-.927.372l-.683.807c-.186.207-.496.248-.744.124-1.537-.744-2.818-2.025-3.562-3.562-.124-.248-.083-.558.124-.744l.807-.683c.248-.266.372-.596.372-.927 0-.355-.331-.809-.661-1.016L7.03 4.695c-.331-.207-.661-.248-1.016-.041-.372.207-.744.454-1.016.744C3.526 6.87 3.236 8.779 3.93 10.403c1.225 2.818 3.065 5.636 5.636 8.207 2.571 2.571 5.389 4.411 8.207 5.636 1.624.695 3.533.405 5.005-1.067.29-.272.537-.644.744-1.016.207-.355.166-.685-.041-1.016l-5.163-.162z" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 256 256"><!-- Icon from SVG Logos by Gil Barbara - https://raw.githubusercontent.com/gilbarbara/logos/master/LICENSE.txt -->
+                                    <defs>
+                                        <linearGradient id="logosSkype0" x1="42.173%" x2="57.827%" y1=".584%"
+                                            y2="99.416%">
+                                            <stop offset="1%" stop-color="#00B7F0" />
+                                            <stop offset="34%" stop-color="#009DE5" />
+                                            <stop offset="76%" stop-color="#0082D9" />
+                                            <stop offset="100%" stop-color="#0078D4" />
+                                        </linearGradient>
+                                        <linearGradient id="logosSkype1" x1="6.659%" x2="93.341%" y1="75%" y2="25%">
+                                            <stop offset="0%" stop-color="#0078D4" />
+                                            <stop offset="37%" stop-color="#007AD5" />
+                                            <stop offset="57%" stop-color="#0082D9" />
+                                            <stop offset="74%" stop-color="#0090DF" />
+                                            <stop offset="88%" stop-color="#00A3E7" />
+                                            <stop offset="100%" stop-color="#00BCF2" />
+                                        </linearGradient>
+                                        <linearGradient id="logosSkype2" x1="30.436%" x2="80.436%" y1="16.124%"
+                                            y2="102.737%">
+                                            <stop offset="0%" stop-color="#00B7F0" />
+                                            <stop offset="100%" stop-color="#007CC1" />
+                                        </linearGradient>
+                                        <linearGradient id="logosSkype3" x1="45.636%" x2="54.364%" y1="99.815%"
+                                            y2=".185%">
+                                            <stop offset="0%" stop-color="#0078D4" />
+                                            <stop offset="100%" stop-color="#00BCF2" />
+                                        </linearGradient>
+                                        <radialGradient id="logosSkype4" cx="48.539%" cy="50%" r="50.021%" fx="48.539%"
+                                            fy="50%">
+                                            <stop offset="0%" />
+                                            <stop offset="100%" stop-opacity="0" />
+                                        </radialGradient>
+                                        <path id="logosSkype5"
+                                            d="M179.903 104.187a75.7 75.7 0 0 0-38.567 10.55c19.535-32.94 11.499-75.273-18.749-98.764C92.34-7.52 49.337-4.827 22.255 22.255C-4.826 49.336-7.519 92.34 15.973 122.587c23.491 30.248 65.823 38.284 98.765 18.749c-17.49 29.642-12.843 67.344 11.322 91.852c24.166 24.508 61.798 29.685 91.684 12.613s44.542-52.118 35.705-85.382c-8.836-33.265-38.95-56.418-73.37-56.409z" />
+                                    </defs>
+                                    <path fill="#FFF"
+                                        d="M246.663 143.907a115 115 0 0 0 1.153-15.782A119.87 119.87 0 0 0 127.948 8.258c-5.28.022-10.553.407-15.781 1.152C82.62-6.514 46.125-1.165 22.392 22.57S-6.691 82.797 9.233 112.344c-.745 5.228-1.13 10.5-1.153 15.781c0 66.202 53.667 119.868 119.868 119.868c5.28-.022 10.554-.407 15.782-1.152c29.546 15.924 66.04 10.575 89.775-13.16c23.733-23.733 29.083-60.228 13.158-89.774" />
+                                    <circle cx="75.994" cy="76.171" r="75.893" fill="url(#logosSkype0)" />
+                                    <circle cx="179.903" cy="180.08" r="75.893" fill="url(#logosSkype1)" />
+                                    <mask id="logosSkype6" fill="#fff">
+                                        <use href="#logosSkype5" />
+                                    </mask>
+                                    <circle cx="125.547" cy="133.578" r="141.812" fill="url(#logosSkype4)"
+                                        mask="url(#logosSkype6)" />
+                                    <circle cx="127.948" cy="128.125" r="119.868" fill="url(#logosSkype2)" />
+                                    <circle cx="127.948" cy="128.125" r="119.868" fill="url(#logosSkype3)" />
+                                    <path fill="#FFF"
+                                        d="M84.239 113.408a34.76 34.76 0 0 1-4.078-17.2a31.12 31.12 0 0 1 7.27-20.746a44.33 44.33 0 0 1 18.973-12.59a73.1 73.1 0 0 1 24.736-4.167a101 101 0 0 1 16.49 1.241a70 70 0 0 1 11.438 2.926a21.9 21.9 0 0 1 8.866 5.763a11.26 11.26 0 0 1 2.837 7.625a11.17 11.17 0 0 1-2.926 8.068a9.57 9.57 0 0 1-7.27 3.014a13.7 13.7 0 0 1-5.497-1.241a103 103 0 0 0-12.856-4.7a46.5 46.5 0 0 0-12.5-1.506a29.26 29.26 0 0 0-15.605 3.9a12.94 12.94 0 0 0-6.206 11.704a11.7 11.7 0 0 0 3.192 8.156a29.8 29.8 0 0 0 8.866 6.295c3.635 1.773 8.866 4.167 16.313 7.182l2.305.886a111.4 111.4 0 0 1 20.126 10.107a40.8 40.8 0 0 1 12.501 12.767a33.6 33.6 0 0 1 4.522 17.732a35.46 35.46 0 0 1-6.295 21.367a36.7 36.7 0 0 1-17.732 12.945a73.5 73.5 0 0 1-26.155 4.255a82.4 82.4 0 0 1-35.464-6.738a20.04 20.04 0 0 1-7.358-5.674a13.5 13.5 0 0 1-2.305-7.802a9.93 9.93 0 0 1 3.103-7.89a11.35 11.35 0 0 1 8.068-2.838a21.2 21.2 0 0 1 9.486 2.394c3.635 1.773 6.472 3.192 8.866 4.078a40 40 0 0 0 7.359 2.305a39.5 39.5 0 0 0 9.487.976a25.18 25.18 0 0 0 15.958-4.256a13.83 13.83 0 0 0 5.408-11.614a12.5 12.5 0 0 0-3.369-8.866a37.9 37.9 0 0 0-9.93-7.27c-4.344-2.306-10.55-5.054-18.44-8.423a118 118 0 0 1-20.304-10.462c-4.796-3.19-8.977-6.727-11.88-11.703" />
                                 </svg>
+
                             </div>
                         </div>
                         <div class="flex-1 min-w-0">
                             <h3 class="font-semibold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">
                                 Tap/Click to Call</h3>
                             <p class="text-gray-600 font-medium text-sm sm:text-base lg:text-lg break-all">
-                                offshore.clipping</p>
+                                photo.edite</p>
                         </div>
                     </div>
                 </div>
@@ -486,7 +575,7 @@
                 <!-- Email Card -->
                 <div
                     class="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer sm:col-span-2 lg:col-span-1">
-                    <div class="flex items-start space-x-3 sm:space-x-4">
+                    <a href="mailto:contact@photoedite.com" class="flex items-start space-x-3 sm:space-x-4">
                         <div class="flex-shrink-0">
                             <div
                                 class="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -502,240 +591,142 @@
                             <h3 class="font-semibold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-base lg:text-lg">
                                 Tap/Click to Email</h3>
                             <p class="text-blue-600 font-medium text-sm sm:text-base lg:text-lg break-all">
-                                contact@offshoreclipping.com</p>
+                                contact@photoedite.com</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Testimonial -->
-    <section class="max-w-6xl mx-auto px-6 py-16">
-        <div class="flex justify-between items-start mb-12">
-            <div class="max-w-2xl">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    What Customers Are Saying
-                </h1>
-                <p class="text-lg text-gray-600">
-                    Our valued clients across the world are the reason we perform better every day! Check what they are
-                    saying about our photo editing services.
-                </p>
-            </div>
 
-            <!-- Navigation Arrows -->
-            <div class="flex space-x-2">
-                <button id="prevBtn"
-                    class="w-12 h-12 bg-blue-100 hover:bg-blue-200 text-blue-600 rounded-full flex items-center justify-center transition-colors duration-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button id="nextBtn"
-                    class="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Header Section -->
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                What Our Customers Are Saying
+            </h1>
+            <p class="text-base sm:text-lg text-gray-600">
+                Our valued clients worldwide inspire us to improve every day! Discover their thoughts on our photo
+                editing services.
+            </p>
         </div>
 
         <!-- Carousel Container -->
-        <div class="relative overflow-hidden">
-            <div id="testimonialTrack" class="flex transition-transform duration-500 ease-in-out">
-                <!-- Testimonial Set 1 -->
-                <div class="w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Testimonial 1 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Punctual and great service"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Best Customer Service that I have received and price was amazing!
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Colleen Bale Wright" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Colleen Bale Wright</h4>
-                                    <p class="text-gray-500 text-sm">USA</p>
-                                </div>
+        <div class="w-full py-8">
+            <div class="swiper reviewSwiper">
+                <div class="swiper-wrapper mb-10">
+                    <div
+                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
                             </div>
                         </div>
-
-                        <!-- Testimonial 2 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "These guys pay attention to details"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                "Fantastic service from the guys at Offshore Clipping Path - really great communication,
-                                excellent quality of work, and the pricing is fantastic. They're very responsive to any
-                                feedback or questions."
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Michael Rumbles" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Michael Rumbles</h4>
-                                    <p class="text-gray-500 text-sm">UK</p>
-                                </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Sarah Johnson</h3>
+                                <p class="text-sm text-gray-500">Software Engineer</p>
                             </div>
                         </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Highly recommended"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                "Really happy with the service. Very tricky cutouts were required and the final result
-                                was excellent. Thank you."
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Kenneth Gray" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Kenneth Gray</h4>
-                                    <p class="text-gray-500 text-sm">USA</p>
-                                </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"The seamless integration and user-friendly
+                            design make this product stand out. It's a must for any tech team!"</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Michael Lee</h3>
+                                <p class="text-sm text-gray-500">UX Designer</p>
                             </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"An exceptional product with unparalleled
+                            support. It’s made our design process so much smoother!"</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Emma Brown</h3>
+                                <p class="text-sm text-gray-500">Operations Lead</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"Fantastic product! It streamlined our
+                            processes and saved us countless hours."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">David Kim</h3>
+                                <p class="text-sm text-gray-500">CEO</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This product is a game-changer for our
+                            business. Highly recommend it for its efficiency and ease of use."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Lisa Wong</h3>
+                                <p class="text-sm text-gray-500">Marketing Director</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"The best investment for our marketing
+                            team. It’s intuitive and packed with powerful features."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Testimonial Set 2 -->
-                <div class="w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Testimonial 4 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Outstanding quality"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                The team delivered exceptional results beyond our expectations. Professional service
-                                with quick turnaround times.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
-                                    <p class="text-gray-500 text-sm">Canada</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 5 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Perfect communication"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Great experience working with this team. They understood our requirements perfectly and
-                                delivered exactly what we needed.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="David Miller" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">David Miller</h4>
-                                    <p class="text-gray-500 text-sm">Australia</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 6 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Amazing results"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                The attention to detail and quality of work is impressive. Will definitely use their
-                                services again for future projects.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Emma Wilson" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Emma Wilson</h4>
-                                    <p class="text-gray-500 text-sm">Germany</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div
+                    class="swiper-button-next text-gray-300!important hover:text-indigo-800 transition-colors duration-200">
                 </div>
-
-                <!-- Testimonial Set 3 -->
-                <div class="w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Testimonial 7 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Exceeded expectations"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Professional team with incredible attention to detail. They transformed our product
-                                images beautifully.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="James Rodriguez" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">James Rodriguez</h4>
-                                    <p class="text-gray-500 text-sm">Spain</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 8 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Fast and reliable"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Quick turnaround time without compromising on quality. The team is very responsive and
-                                professional.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Lisa Chen" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Lisa Chen</h4>
-                                    <p class="text-gray-500 text-sm">Singapore</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 9 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Top-notch service"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Excellent service from start to finish. The team understood our needs and delivered
-                                perfect results every time.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Robert Taylor" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Robert Taylor</h4>
-                                    <p class="text-gray-500 text-sm">France</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="swiper-button-prev text-gray-300 hover:text-indigo-800 transition-colors duration-200">
                 </div>
+                <div class="swiper-pagination !bottom-0"></div>
             </div>
-        </div>
-
-        <!-- Dots Indicator -->
-        <div class="flex justify-center mt-8 space-x-2">
-            <button class="dot w-3 h-3 bg-blue-600 rounded-full transition-colors duration-200" data-slide="0"></button>
-            <button class="dot w-3 h-3 bg-gray-300 rounded-full transition-colors duration-200" data-slide="1"></button>
-            <button class="dot w-3 h-3 bg-gray-300 rounded-full transition-colors duration-200" data-slide="2"></button>
         </div>
     </section>
 
@@ -827,12 +818,41 @@
         </div>
     </div>
 
+    <!-- lets connect -->
+    <div class="flex items-center justify-center ">
+        <div class="flex flex-col md:flex-row w-full max-w-7xl p-6">
+            <!-- Text Content -->
+            <div class="md:w-1/2 p-6">
+                <h1 class="text-4xl font-bold text-teal-800 mb-4 italic">Let's connect.</h1>
+                <p class="text-gray-700 mb-4">
+                    With a passion for visual storytelling and a keen eye for detail, I help individuals, photographers,
+                    e-commerce brands, and businesses bring their images to life.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    What started as a hobby quickly grew into a full-time mission to deliver clean, polished, and
+                    compelling visuals that make a lasting impression. Whether it's background removal, photo
+                    retouching, color correction, or advanced manipulation, I approach every project with precision,
+                    creativity, and care.
+                </p>
+                <p class="text-gray-700 mb-4">
+                    At Photoedit.com, your vision is my priority. I believe every image has a story to tell — my job is
+                    to make sure it's told beautifully.
+                </p>
+                <p class="text-gray-700">
+                    Let's turn your ordinary images into extraordinary ones.
+                </p>
+            </div>
+            <!-- Image/Content on Right -->
+            <div class="md:w-1/2 p-6 flex items-center justify-center  rounded-r-lg">
+                <img src="images/okal.jpg" alt="Person with phone"
+                    class="w-full h-auto object-cover rounded-lg">
+            </div>
+        </div>
+    </div>
+
     <!-- faq -->
     <section class="bg-white py-16 px-4 relative overflow-hidden">
-        <!-- Background decorative circle -->
-        <div
-            class="absolute right-0 top-0 w-96 h-96 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full transform translate-x-32 -translate-y-16 opacity-90">
-        </div>
+
 
         <div class="max-w-4xl mx-auto relative z-10">
             <!-- Header -->
@@ -845,10 +865,6 @@
                         Let us know what troubles you. Give us a message; we will get back to you soon.
                     </p>
                 </div>
-                <a href="#"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Get In Touch
-                </a>
             </div>
 
             <!-- FAQ Items -->
@@ -932,63 +948,18 @@
     </section>
 
     <!-- footer section -->
-    <section class="py-12">
-        <div class="container max-w-7xl mx-auto px-6">
-
-            <!-- Featured Websites Section -->
-            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 text-center mb-10">
-                We are featured on these websites
-            </h2>
-            <div class="flex flex-wrap justify-center items-center gap-10 mb-10 pb-10">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photo.com_.png" alt="IPHOTO.COM"
-                    class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
-                    alt="Photography Course" class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
-                    class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
-                    alt="Photography Course" class="h-12 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
-                    class="h-10 object-contain">
-            </div>
-
-            <!-- Promotional Section -->
-            <div class="flex flex-col md:flex-row items-stretch bg-gray-900 text-white rounded-lg overflow-hidden">
-                <!-- Image -->
-                <div class="w-full md:w-1/2 h-64 md:h-auto">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/09/CS-1.png" alt="CS"
-                        class="w-full h-full object-cover">
-                </div>
-
-                <!-- Text -->
-                <div class="w-full md:w-1/2 p-6 flex flex-col justify-center">
-                    <blockquote class="text-lg italic mb-2">
-                        &ldquo;Transform Your Photos and Make Them Look Amazing &mdash; Try Our Photo Editing Solution
-                        Now!&rdquo;
-                    </blockquote>
-                    <p class="mb-6">
-                        Clipping your product images high-end editorial, and lucrative at your offshore.
-                        Stand yourself out from the crowd with high-end edited photos. Let Visitors Come!
-                    </p>
-                    <a href="contact.html"
-                        class="relative inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <footer class="bg-gray-800 text-white py-10">
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
 
             <div>
                 <a class="flex items-center space-x-3" href="#">
-                    <img src="logo.png" alt="Logo" class="h-10 rounded">
+                    <img src="images/logo.png" alt="Logo" class="w-20 h-auto rounded">
+                    <span class="text-2xl font-semibold text-blue-500">
+                        Photo Edit
+                    </span>
                 </a>
-                <p class="text-medium leading-relaxed">
+                <p class="text-medium leading-relaxed mt-2">
                     A digital photo editing platform, fast & efficient, for photographers & businesses.
                 </p>
             </div>
@@ -1019,7 +990,7 @@
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Services</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Portfolio</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Blog</a></li>
-                    <li><a href="#" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
+                    <li><a href="" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
                 </ul>
             </div>
 
@@ -1027,7 +998,7 @@
                 <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
                 <ul class="space-y-2">
                     <li><a href="photo-editing-services.html" class="text-medium hover:text-gray-400 transition">Photo
-                            Editing Services</a></li>
+                            Color Correction</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>
@@ -1063,7 +1034,38 @@
 
 
     <script src="main.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".reviewSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            speed: 600,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
 
 </body>
 

@@ -39,7 +39,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <!-- Logo Section -->
             <a class="flex items-center space-x-3" href="index.html">
-                <img src="logo.png" alt="Danpite Tech Logo" class="h-10 w-10 sm:h-12 sm:w-12 rounded-lg object-cover">
+                <img src="images/logo.png" alt="Danpite Tech Logo"
+                    class="h-16 w-16 sm:h-16 sm:w-16 rounded-lg object-cover">
+                <span class="text-2xl font-semibold text-blue-800">
+                    Photo Edit
+                </span>
             </a>
 
             <!-- Desktop Navigation -->
@@ -140,30 +144,54 @@
                     class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
                     Contact Us
                 </a>
+                <!-- Contact Us -->
+                <a href="blog.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Blog
+                </a>
 
                 <!-- CTA Button -->
                 <a href="free-trial.html"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                    Free Trial
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                        width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
+                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Center-to-side background overlay -->
+                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                    <!-- Text + Icon -->
+                    <span class="relative flex items-center gap-2 z-10">
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
                 </a>
+
             </nav>
 
             <!-- Mobile Menu Button -->
             <div class="lg:hidden flex items-center space-x-3">
                 <!-- Mobile CTA Button -->
                 <a href="free-trial.html"
-                    class="inline-flex items-center gap-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
-                    Free Trial
-                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                        width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                    </svg>
+                    class="relative inline-flex items-center px-2 py-1 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Center-to-side background overlay -->
+                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                    <!-- Text + Icon -->
+                    <span class="relative flex items-center gap-2 z-10">
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
                 </a>
 
                 <!-- Hamburger Button -->
@@ -188,7 +216,7 @@
                 <!-- Mobile Menu Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200">
                     <a class="flex items-center space-x-3" href="index.html">
-                        <img src="logo.png" alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
+                        <img src="images/logo.png" alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
                     </a>
                     <button id="mobile-menu-close"
                         class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
@@ -284,18 +312,32 @@
                         class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
                         Contact Us
                     </a>
+                    <!-- Blog -->
+                    <a href=""
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        Blog
+                    </a>
                 </nav>
 
                 <!-- Mobile Menu Footer -->
                 <div class="p-6 border-t border-gray-200">
                     <a href="free-trial.html"
-                        class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 ease-out">
-                        Start Free Trial
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                            width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                        </svg>
+                        class="relative inline-flex items-center gap-2 px-2 py-1 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                        <!-- Center-to-side background overlay -->
+                        <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                        <!-- Text + Icon -->
+                        <span class="relative flex items-center gap-2 z-10">
+                            Free Trial
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                            </svg>
+                        </span>
                     </a>
                 </div>
             </div>
@@ -307,416 +349,115 @@
         </div>
     </header>
 
-    <!-- form  -->
-    <section class="container mx-auto px-4 py-12 mt-36">
-        <div class="max-w-7xl mx-auto">
+    <section class="max-w-7xl mx-auto py-10 mt-24">
+        <h2 class="text-2xl font-bold mb-4">Send Free Trial</h2>
+        <p class="text-gray-600 mb-6">
+            We want to show our working quality for that reason we doing 2 images for free. If you have any question
+            about confidentiality? Don't worry, your images are 100% safe with us.
+        </p>
 
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Background remove</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Manipulation/Neck joint</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Clipping path</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Resizing/Optimisation</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Drop shadow</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Vector conversion</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Retouching/Airbrushing</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Others</span>
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2 text-gray-700">Enhancement</span>
+                </label>
+            </div>
 
-                <!-- Left Side - Content -->
-                <div class="space-y-8">
-                    <div>
-                        <h1 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                            <span class="text-blue-600">Get Started</span> with free trial
-                        </h1>
-                        <h3 class="text-5xl font-bold mt-6 text-gray-600">
-                            TRY OUR EXPERT IMAGE EDITING FOR FREE
-                        </h3>
-                        <p class="mt-6 text-slate-900 font-medium text-lg">Take advantage of our free trial offer to
-                            test our services.</p>
-                    </div>
+            <div class="flex space-x-4">
+                <select class="w-1/2 p-2 border rounded">
+                    <option>Return file format</option>
+                    <option>JPG, leave original background</option>
+                    <option>JPG, white background</option>
+                    <option>PSD, leave original background</option>
+                    <option>PSD, white background</option>
+                    <option>PSD, layer mask</option>
+                    <option>AI</option>
+                    <option>EPS</option>
+                    <option>PDF</option>
+                    <option>Others</option>
+                </select>
+                <input type="number" placeholder="Quantity" class="w-1/4 p-2 border rounded">
+                <select class="w-1/4 p-2 border rounded">
+                    <option>Desired turnaround</option>
+                    <option>Flexible</option>
+                    <option>12 Hours</option>
+                    <option>18 Hours</option>
+                    <option>24 Hours</option>
+                    <option>36 Hours</option>
+                    <option>48 Hours</option>
+                    <option>72 Hours</option>
+                    <option>Others</option>
+                </select>
+            </div>
 
-                    <div class="space-x-4 pt-6">
-                        <a href="#"
-                            class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                            Get Started
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                            </svg>
-                        </a>
-                        <a href="contact.html"
-                            class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                            Get A Free Quote
-                        </a>
-                    </div>
-                </div>
+            <textarea class="w-full p-2 border rounded"
+                placeholder="Please write any instruction here (optional)"></textarea>
 
-                <!-- Right Side - Form -->
-                <div class="bg-white rounded-2xl shadow-xl p-8">
-                    <form class="space-y-6">
+            <div class="flex items-center">
+                <!-- reCAPTCHA Widget -->
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
 
-                        <!-- Name and Phone Row -->
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <input type="text" placeholder="Your name*"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
-                            </div>
-                            <div>
-                                <input type="tel" placeholder="Your Phone No.*"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
-                            </div>
-                        </div>
+                <!-- Optional: Keep the original label as a fallback or styling hint -->
+                <label class="flex items-center ml-2 text-gray-700 hidden">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="ml-2">I am not a robot</span>
+                </label>
 
-                        <!-- Email and Website Row -->
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <input type="email" placeholder="Your email ID*"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
-                            </div>
-                            <div>
-                                <input type="url" placeholder="Your Website URL"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
-                            </div>
-                        </div>
-
-                        <!-- Service Selection -->
-                        <div>
-                            <select
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-gray-500">
-                                <option value="">Select service</option>
-                                <option value="background-removal">Background Removal</option>
-                                <option value="color-correction">Color Correction</option>
-                                <option value="retouching">Photo Retouching</option>
-                                <option value="clipping-path">Clipping Path</option>
-                                <option value="shadow-creation">Shadow Creation</option>
-                            </select>
-                        </div>
-
-                        <!-- Message -->
-                        <div>
-                            <textarea placeholder="Your Message" rows="4"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"></textarea>
-                        </div>
-
-                        <!-- File Upload Area -->
-                        <div
-                            class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-400 transition-colors cursor-pointer">
-                            <input type="file" multiple accept="image/*" class="hidden" id="file-upload">
-                            <label for="file-upload" class="cursor-pointer">
-                                <div class="space-y-2">
-                                    <div class="text-gray-600">
-                                        <span class="font-semibold">Drag & Drop Files Here</span>
-                                        <br>or<br>
-                                        <span class="text-blue-600 hover:text-blue-700 font-semibold">Browse
-                                            Files</span>
-                                    </div>
-                                    <div class="text-sm text-gray-500" id="file-count">0 of 5</div>
-                                </div>
-                            </label>
-                        </div>
-
-                        <!-- Cloud Link Note -->
-                        <div class="text-sm text-gray-600 text-center">
-                            If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or
-                            WeTransfer)
-                        </div>
-
-                        <!-- Cloud Link Input -->
-                        <div>
-                            <input type="url" placeholder="Paste the link here"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit"
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-lg transition duration-200 transform hover:scale-[1.02] shadow-lg">
-                            SUBMIT
-                        </button>
-                    </form>
-                </div>
+                <button class="ml-auto bg-blue-600 text-white px-12 py-2 hover:cursor-pointer hover:bg-blue-500  rounded" onclick="submitForm()">Next</button>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial -->
-    <section class="max-w-6xl mx-auto px-6 py-16">
-        <div class="flex justify-between items-start mb-12">
-            <div class="max-w-2xl">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    What Customers Are Saying
-                </h1>
-                <p class="text-lg text-gray-600">
-                    Our valued clients across the world are the reason we perform better every day! Check what they are
-                    saying about our photo editing services.
-                </p>
-            </div>
 
-            <!-- Navigation Arrows -->
-            <div class="flex space-x-2">
-                <button id="prevBtn"
-                    class="w-12 h-12 bg-blue-100 hover:bg-blue-200 text-blue-600 rounded-full flex items-center justify-center transition-colors duration-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button id="nextBtn"
-                    class="w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-        </div>
 
-        <!-- Carousel Container -->
-        <div class="relative overflow-hidden">
-            <div id="testimonialTrack" class="flex transition-transform duration-500 ease-in-out">
-                <!-- Testimonial Set 1 -->
-                <div class="w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Testimonial 1 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Punctual and great service"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Best Customer Service that I have received and price was amazing!
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Colleen Bale Wright" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Colleen Bale Wright</h4>
-                                    <p class="text-gray-500 text-sm">USA</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Testimonial 2 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "These guys pay attention to details"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                "Fantastic service from the guys at Offshore Clipping Path - really great communication,
-                                excellent quality of work, and the pricing is fantastic. They're very responsive to any
-                                feedback or questions."
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Michael Rumbles" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Michael Rumbles</h4>
-                                    <p class="text-gray-500 text-sm">UK</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Highly recommended"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                "Really happy with the service. Very tricky cutouts were required and the final result
-                                was excellent. Thank you."
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Kenneth Gray" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Kenneth Gray</h4>
-                                    <p class="text-gray-500 text-sm">USA</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial Set 2 -->
-                <div class="w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Testimonial 4 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Outstanding quality"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                The team delivered exceptional results beyond our expectations. Professional service
-                                with quick turnaround times.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
-                                    <p class="text-gray-500 text-sm">Canada</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 5 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Perfect communication"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Great experience working with this team. They understood our requirements perfectly and
-                                delivered exactly what we needed.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="David Miller" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">David Miller</h4>
-                                    <p class="text-gray-500 text-sm">Australia</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 6 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Amazing results"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                The attention to detail and quality of work is impressive. Will definitely use their
-                                services again for future projects.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Emma Wilson" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Emma Wilson</h4>
-                                    <p class="text-gray-500 text-sm">Germany</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial Set 3 -->
-                <div class="w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Testimonial 7 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Exceeded expectations"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Professional team with incredible attention to detail. They transformed our product
-                                images beautifully.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="James Rodriguez" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">James Rodriguez</h4>
-                                    <p class="text-gray-500 text-sm">Spain</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 8 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Fast and reliable"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Quick turnaround time without compromising on quality. The team is very responsive and
-                                professional.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Lisa Chen" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Lisa Chen</h4>
-                                    <p class="text-gray-500 text-sm">Singapore</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 9 -->
-                        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                "Top-notch service"
-                            </h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Excellent service from start to finish. The team understood our needs and delivered
-                                perfect results every time.
-                            </p>
-                            <div class="flex items-center">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=50&h=50&fit=crop&crop=face&auto=format"
-                                    alt="Robert Taylor" class="w-12 h-12 rounded-full mr-4 object-cover">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Robert Taylor</h4>
-                                    <p class="text-gray-500 text-sm">France</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dots Indicator -->
-        <div class="flex justify-center mt-8 space-x-2">
-            <button class="dot w-3 h-3 bg-blue-600 rounded-full transition-colors duration-200" data-slide="0"></button>
-            <button class="dot w-3 h-3 bg-gray-300 rounded-full transition-colors duration-200" data-slide="1"></button>
-            <button class="dot w-3 h-3 bg-gray-300 rounded-full transition-colors duration-200" data-slide="2"></button>
-        </div>
-    </section>
 
     <!-- footer section -->
-    <section class="py-12">
-        <div class="container max-w-7xl mx-auto px-6">
-
-            <!-- Featured Websites Section -->
-            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 text-center mb-10">
-                We are featured on these websites
-            </h2>
-            <div class="flex flex-wrap justify-center items-center gap-10 mb-10 pb-10">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photo.com_.png" alt="IPHOTO.COM"
-                    class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
-                    alt="Photography Course" class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
-                    class="h-10 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/photographycourse.png"
-                    alt="Photography Course" class="h-12 object-contain">
-                <img src="https://offshoreclipping.com/wp-content/uploads/2023/06/pixpa.png" alt="Pixpa"
-                    class="h-10 object-contain">
-            </div>
-
-            <!-- Promotional Section -->
-            <div class="flex flex-col md:flex-row items-stretch bg-gray-900 text-white rounded-lg overflow-hidden">
-                <!-- Image -->
-                <div class="w-full md:w-1/2 h-64 md:h-auto">
-                    <img src="https://offshoreclipping.com/wp-content/uploads/2023/09/CS-1.png" alt="CS"
-                        class="w-full h-full object-cover">
-                </div>
-
-                <!-- Text -->
-                <div class="w-full md:w-1/2 p-6 flex flex-col justify-center">
-                    <blockquote class="text-lg italic mb-2">
-                        &ldquo;Transform Your Photos and Make Them Look Amazing &mdash; Try Our Photo Editing Solution
-                        Now!&rdquo;
-                    </blockquote>
-                    <p class="mb-6">
-                        Clipping your product images high-end editorial, and lucrative at your offshore.
-                        Stand yourself out from the crowd with high-end edited photos. Let Visitors Come!
-                    </p>
-                    <a href="contact.html"
-                        class="relative inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <footer class="bg-gray-800 text-white py-10">
 
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
 
             <div>
                 <a class="flex items-center space-x-3" href="#">
-                    <img src="logo.png" alt="Logo" class="h-10 rounded">
+                    <img src="images/logo.png" alt="Logo" class="w-20 h-auto rounded">
+                    <span class="text-2xl font-semibold text-blue-500">
+                        Photo Edit
+                    </span>
                 </a>
-                <p class="text-medium leading-relaxed">
+                <p class="text-medium leading-relaxed mt-2">
                     A digital photo editing platform, fast & efficient, for photographers & businesses.
                 </p>
             </div>
@@ -747,7 +488,7 @@
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Services</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Portfolio</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Blog</a></li>
-                    <li><a href="#" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
+                    <li><a href="" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
                 </ul>
             </div>
 
@@ -755,7 +496,7 @@
                 <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
                 <ul class="space-y-2">
                     <li><a href="photo-editing-services.html" class="text-medium hover:text-gray-400 transition">Photo
-                            Editing Services</a></li>
+                            Color Correction</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
                     <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>
@@ -792,7 +533,33 @@
 
     <script src="main.js"></script>
     <script src="script.js"></script>
+    <!-- Include reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+    <script>
+        function submitForm() {
+            // Verify reCAPTCHA response
+            grecaptcha.ready(function () {
+                grecaptcha.execute('YOUR_SITE_KEY_HERE', { action: 'submit' }).then(function (token) {
+                    // Send token to your backend server for verification
+                    fetch('/verify-recaptcha', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ recaptchaToken: token })
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert('Form submitted successfully!');
+                                // Proceed with form submission
+                            } else {
+                                alert('reCAPTCHA verification failed. Please try again.');
+                            }
+                        });
+                });
+            });
+        }
+    </script>
 
 </body>
 

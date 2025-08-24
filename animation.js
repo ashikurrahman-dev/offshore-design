@@ -6,7 +6,7 @@ gsap.to(".card", {
     opacity: 1,
     y: 0,
     scale: 1,
-    duration: 1.2,
+    duration: .8,
     ease: "back.out(1.7)",
     stagger: 0.15
 });
@@ -41,3 +41,6 @@ const tween = gsap.to(carousel, {
 // Pause on hover
 carousel.addEventListener("mouseenter", () => tween.pause());
 carousel.addEventListener("mouseleave", () => tween.resume());
+
+
+
