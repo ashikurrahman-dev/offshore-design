@@ -13,10 +13,6 @@ const servicesToggle = document.getElementById('mobile-services-toggle');
 const servicesMenu = document.getElementById('mobile-services-menu');
 const servicesArrow = document.getElementById('services-arrow');
 
-// Portfolio dropdown
-const portfolioToggle = document.getElementById('mobile-portfolio-toggle');
-const portfolioMenu = document.getElementById('mobile-portfolio-menu');
-const portfolioArrow = document.getElementById('portfolio-arrow');
 
 function openMobileMenu() {
     mobileMenu.classList.remove('-translate-x-full');
@@ -100,28 +96,28 @@ document.addEventListener('keydown', (e) => {
 
 
 // according button
-    const accordionButtons = document.querySelectorAll('.accordion-btn');
+const accordionButtons = document.querySelectorAll('.accordion-btn');
 
-    accordionButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('svg');
+accordionButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('svg');
 
-            // Close other accordions
-            document.querySelectorAll('.accordion-content').forEach(item => {
-                if (item !== content) {
-                    item.style.maxHeight = null;
-                    item.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
-                }
-            });
-
-            // Toggle current accordion
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                icon.classList.remove('rotate-180');
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                icon.classList.add('rotate-180');
+        // Close other accordions
+        document.querySelectorAll('.accordion-content').forEach(item => {
+            if (item !== content) {
+                item.style.maxHeight = null;
+                item.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
             }
         });
+
+        // Toggle current accordion
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            icon.classList.add('rotate-180');
+        }
     });
+});

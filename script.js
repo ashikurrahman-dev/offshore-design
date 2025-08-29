@@ -1,4 +1,4 @@
-// Smooth image comparison slider functionality for multiple sliders
+// Smooth image comparison slider functionality for multiple sliders (hover version)
 document.addEventListener('DOMContentLoaded', function () {
     function initComparisons() {
         const containers = document.querySelectorAll('.comparison-container');
@@ -7,11 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
             const beforeImageContainer = container.querySelector('.before-image-container');
             const sliderLine = container.querySelector('.slider-line');
 
-            let isSliding = false;
             let containerWidth = container.offsetWidth;
             let containerLeft = container.getBoundingClientRect().left;
 
-            // Update container dimensions on window resize
             function updateDimensions() {
                 containerWidth = container.offsetWidth;
                 containerLeft = container.getBoundingClientRect().left + window.pageXOffset;
@@ -20,80 +18,30 @@ document.addEventListener('DOMContentLoaded', function () {
             window.addEventListener('resize', updateDimensions);
 
             function slide(x) {
-                // Calculate position relative to container
                 let pos = x - containerLeft;
 
-                // Keep slider within bounds
                 if (pos < 0) pos = 0;
                 if (pos > containerWidth) pos = containerWidth;
 
-                // Calculate percentage
                 const percentage = (pos / containerWidth) * 100;
 
-                // Update before image width using clip-path for smooth transition
                 beforeImageContainer.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
-
-                // Update slider position
                 sliderLine.style.left = percentage + '%';
             }
 
             function getCursorPos(e) {
-                let x = 0;
                 e = e.changedTouches ? e.changedTouches[0] : e;
-
-                // Get the x positions relative to the page
-                x = e.pageX;
-
-                return x;
+                return e.pageX;
             }
 
-            function slideReady(e) {
-                e.preventDefault();
-                isSliding = true;
-                updateDimensions(); // Update dimensions when sliding starts
-
-                // Add event listeners for move events
-                document.addEventListener('mousemove', slideMove);
-                document.addEventListener('touchmove', slideMove);
-
-                // Change cursor
-                document.body.style.cursor = 'col-resize';
-                container.style.userSelect = 'none';
-            }
-
-            function slideMove(e) {
-                if (!isSliding) return false;
-                e.preventDefault();
-
+            // Hover functionality: slide on mousemove over the container
+            container.addEventListener('mousemove', function (e) {
                 const pos = getCursorPos(e);
                 slide(pos);
-            }
+            });
 
-            function slideFinish() {
-                isSliding = false;
-
-                // Remove event listeners
-                document.removeEventListener('mousemove', slideMove);
-                document.removeEventListener('touchmove', slideMove);
-
-                // Reset cursor
-                document.body.style.cursor = 'default';
-                container.style.userSelect = 'auto';
-            }
-
-            // Mouse events
-            sliderLine.addEventListener('mousedown', slideReady);
-            document.addEventListener('mouseup', slideFinish);
-
-            // Touch events
-            sliderLine.addEventListener('touchstart', slideReady);
-            document.addEventListener('touchend', slideFinish);
-
-            // Click anywhere on container to move slider
-            container.addEventListener('click', function (e) {
-                if (e.target === sliderLine || sliderLine.contains(e.target)) return;
-
-                updateDimensions();
+            // Touch support: move slider on touch move
+            container.addEventListener('touchmove', function (e) {
                 const pos = getCursorPos(e);
                 slide(pos);
             });
@@ -103,9 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Initialize all sliders
     initComparisons();
 });
+
 
 
 // 
@@ -135,40 +83,7 @@ Object.keys(tabs).forEach(tabId => {
     });
 });
 
-// hero section image slide
-let heroCurrentSlide = 0;
-    const heroSlides = document.querySelectorAll('#hero-slider img');
-    const heroDots = document.querySelectorAll('.hero-dot');
-    const heroTotalSlides = heroSlides.length;
 
-    function heroUpdateSlider() {
-        document.getElementById('hero-slider').style.transform = `translateX(-${heroCurrentSlide * 100}%)`;
-        heroDots.forEach((dot, index) => {
-            dot.classList.toggle('bg-white', index === heroCurrentSlide);
-            dot.classList.toggle('bg-gray-400', index !== heroCurrentSlide);
-        });
-    }
-
-    function heroNextSlide() {
-        heroCurrentSlide = (heroCurrentSlide + 1) % heroTotalSlides;
-        heroUpdateSlider();
-    }
-
-    function heroPrevSlide() {
-        heroCurrentSlide = (heroCurrentSlide - 1 + heroTotalSlides) % heroTotalSlides;
-        heroUpdateSlider();
-    }
-
-    function heroGoToSlide(index) {
-        heroCurrentSlide = index;
-        heroUpdateSlider();
-    }
-
-    // Auto-slide every 5 seconds (optional, remove if not needed)
-    // setInterval(heroNextSlide, 5000);
-
-    // Initialize slider
-    heroUpdateSlider();
 
 
 
