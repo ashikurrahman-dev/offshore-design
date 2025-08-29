@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <style>
@@ -475,53 +477,66 @@
 
     <!-- A trusted photo -->
     <section class="w-full bg-[#DEDDFF] py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <!-- Header Section -->
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-[#302CCE] leading-tight">
-                    A Trusted Photo Editing Partner — Committed to Your Growth with Devotion to Your Brand’s Success.
-                </h1>
-                <p class="mt-4 text-lg text-gray-700">
-                    At the core of everything we do is a commitment to helping your brand thrive. As your trusted photo
-                    editing partner, we combine creativity, consistency, and precision to deliver stunning visuals that
-                    align with your goals. Whether you’re in eCommerce, fashion, real estate, or product photography,
-                    our expert team ensures every image reflects the quality your brand deserves efficiently,
-                    affordably, and at scale.
-                </p>
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Header Section -->
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#302CCE] leading-tight">
+                A Trusted Photo Editing Partner — Committed to Your Growth with Devotion to Your Brand’s Success.
+            </h1>
+            <p class="mt-4 text-lg text-gray-700">
+                At the core of everything we do is a commitment to helping your brand thrive. As your trusted photo
+                editing partner, we combine creativity, consistency, and precision to deliver stunning visuals that
+                align with your goals. Whether you’re in eCommerce, fashion, real estate, or product photography,
+                our expert team ensures every image reflects the quality your brand deserves efficiently,
+                affordably, and at scale.
+            </p>
+        </div>
+
+        <!-- Content Section -->
+        <div class="flex flex-col md:flex-row items-stretch gap-12 min-h-[500px]">
+
+            <!-- Left Content (Full Height) -->
+            <div class="flex-1 flex flex-col">
+                <div class="space-y-6">
+                    <button
+                        class="bg-white text-slate-900 font-medium text-lg px-3 py-3 rounded-lg shadow-md border border-purple-800 w-full text-center"
+                        data-aos="fade-right"
+                        data-aos-duration="800"
+                        data-aos-easing="ease-out-quart"
+                        data-aos-once="false"
+                    >
+                        Let us handle the edits so you can focus on growing your business.
+                    </button>
+                    <button
+                        class="bg-white text-slate-900 font-medium text-lg px-3 py-3 rounded-lg shadow-md border border-purple-800 w-full text-center"
+                        data-aos="fade-left"
+                        data-aos-duration="800"
+                        data-aos-easing="ease-out-quart"
+                        data-aos-once="false"
+                    >
+                        Depending on your project requirements, we offer a range of tailored photo editing services
+                        to meet your specific needs:
+                    </button>
+                </div>
+
+                <!-- Left Image -->
+                <div class="flex-1 flex justify-center mt-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="false">
+                    <img src="images/PhotoGraphy-2nd.png" alt="Model in blue outfit"
+                         class="w-full h-full rounded-lg object-cover">
+                </div>
             </div>
 
-            <!-- Content Section -->
-            <div class="flex flex-col md:flex-row items-stretch gap-12 min-h-[500px]">
-                <!-- Left Content (Full Height) -->
-                <div class="flex-1 flex flex-col">
-                    <div class="space-y-6">
-                        <button
-                            class="bg-white text-slate-900 font-medium text-lg px-3 py-3 rounded-lg shadow-md border border-purple-800 text-center w-full">
-                            Let us handle the edits so you can focus on growing your business.
-                        </button>
-                        <button
-                            class="bg-white text-slate-900 font-medium text-lg px-3 py-3 rounded-lg shadow-md border border-purple-800 text-center w-full">
-                            Depending on your project require-ments, we offer a range of tailored photo editing services
-                            to meet your specific needs:
-                        </button>
-                    </div>
-
-                    <!-- Make image take full remaining height -->
-                    <div class="flex-1 flex justify-center mt-6">
-                        <img src="images/PhotoGraphy-2nd.png" alt="Model in blue outfit"
-                            class="w-full h-full rounded-lg object-cover">
-                    </div>
-                </div>
-
-                <!-- Right Image (Full Height, Centered) -->
-                <div class="flex-1 flex">
-                    <img src="images/PhotoGraphy-1st.png" alt="Professional photoshoot setup"
-                        class="w-full h-full rounded-xl object-cover">
-                </div>
+            <!-- Right Image -->
+            <div class="flex-1 flex" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
+                <img src="images/PhotoGraphy-1st.png" alt="Professional photoshoot setup"
+                     class="w-full h-full rounded-xl object-cover">
             </div>
 
         </div>
-    </section>
+
+    </div>
+</section>
 
     <!-- card -->
     <div class="max-w-7xl mx-auto py-6">
@@ -2091,30 +2106,6 @@
     </script>
 
     <script>
-        // // <!-- Typing animation -->
-        // const text = "";
-        // const typingElement = document.getElementById("typing-text");
-        // let i = 0;
-
-        // function type() {
-        //     if (i < text.length) {
-        //         if (text.charAt(i) === "\n") {
-        //             // Append a <br> element for the newline
-        //             typingElement.appendChild(document.createElement("br"));
-        //         } else {
-        //             // Append the current character
-        //             typingElement.appendChild(document.createTextNode(text.charAt(i)));
-        //         }
-        //         i++;
-        //         setTimeout(type, 60); // Typing speed (ms)
-        //     }
-        // }
-
-        // // Clear the element before starting
-        // typingElement.textContent = "";
-        // // Start typing
-        // type();
-
 
         // <!-- Flip animation -->
         const flipText = "Perfect Your Photos\nFast, Flawless & Affordable";
@@ -2157,7 +2148,16 @@
 
     <!-- Header -->
     <script src="header.js"></script>
-
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,      // global default animation duration
+        easing: 'ease-out-quart',
+        once: false,        // repeat animation every scroll
+        mirror: true        // animate out while scrolling past
+    });
+</script>
 </body>
 
 </html>
