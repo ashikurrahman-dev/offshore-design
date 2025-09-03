@@ -48,31 +48,61 @@ var swiper = new Swiper(".reviewSwiper", {
 
 
 var swiper = new Swiper(".logoSwiper", {
-            slidesPerView: 1,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    speed: 600,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        400: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
             spaceBetween: 30,
-            centeredSlides: true,
-            loop: true,
-            speed: 600,
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                400: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-                1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 30,
-                },
-                1280: {
-                    slidesPerView: 6,
-                    spaceBetween: 40,
-                }
-            },
-        });
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+        },
+        1280: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+        }
+    },
+});
+
+var swiper = new Swiper(".carosalImage", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    centeredSlides: true,
+    loop: true,
+    speed: 2000,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        400: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+        },
+        1280: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+        }
+    },
+});
