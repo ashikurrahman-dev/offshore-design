@@ -85,11 +85,11 @@
 
 </head>
 
-<body class="bg-white h-screen font-sans">
+<body class="h-screen bg-gray-50 md:overflow-x-hidden">
     <header class="bg-white shadow-md w-full fixed top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
             <!-- Logo Section -->
-            <a class="hidden sm:flex flex items-center space-x-3" href="index.html">
+            <a class="sm:flex flex items-center space-x-3" href="index.html">
                 <img src="images/logo.png" alt="Danpite Tech Logo"
                     class="h-16 w-16 sm:h-16 sm:w-16 rounded-lg object-cover">
                 <span class="text-2xl font-semibold text-blue-800">
@@ -261,34 +261,8 @@
             </nav>
 
             <!-- Mobile Menu Button -->
-            <div class="lg:hidden flex items-center space-x-3">
-                <!-- Logo Section -->
-                <a class="flex items-center space-x-3" href="index.html">
-                    <img src="images/logo.png" alt="Danpite Tech Logo"
-                        class="h-16 w-16 sm:h-16 sm:w-16 rounded-lg object-cover">
-                    <span class="text-2xl font-semibold text-blue-800">
-                        Photo Edit
-                    </span>
-                </a>
-                <!-- Mobile CTA Button -->
-                <a href="free-trial.html"
-                    class="relative inline-flex items-center px-2 py-1 text-lg font-semibold text-white 
-           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
-
-                    <!-- Center-to-side background overlay -->
-                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
-                 transition-transform duration-500 ease-in-out"></span>
-
-                    <!-- Text + Icon -->
-                    <span class="relative flex items-center gap-2 z-10">
-                        Free Trial
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
-                            width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                        </svg>
-                    </span>
-                </a>
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex items-center justify-between">
 
                 <!-- Hamburger Button -->
                 <button id="mobile-menu-button"
@@ -303,6 +277,7 @@
                     </svg>
                 </button>
             </div>
+
         </div>
 
         <!-- Mobile Menu -->
@@ -431,56 +406,61 @@
     </header>
 
     <!-- hero section -->
-    <section class="relative max-w-7xl mx-auto mt-24 px-4 py-6">
+    <section class="relative max-w-7xl mx-auto mt-24 px-4 py-12">
         <div class="flex flex-col md:flex-row items-center">
-            <!-- left side: Text  -->
-            <div class="md:w-1/2 text-center mt-16 md:text-left" data-aos="fade-right">
-                <h3 class="text-3xl md:text-3xl font-bold text-[#000029] mb-4"
-                    style="font-family: 'rubik', sans-serif;">Better Images. Higher Sales.</h3>
-                <h1 id="flip-text" class="text-2xl md:text-[44px] font-black text-[#302CCE] mb-4 leading-tight">
-                    Perfect Your Photos— <br> <span class="text-[#38CAED]">Fast, Flawless & Affordable</span>
+
+            <!-- Right side: Image (shows first on mobile) -->
+            <div class="md:w-1/2 relative order-1 md:order-2">
+                <img src="images/Home-page-1st-image.png" alt="Model with Camera"
+                    class="mx-auto md:ml-auto object-cover w-full max-w-lg h-[400px] sm:h-[450px] md:h-[600px]">
+            </div>
+
+            <!-- Left side: Text (shows second on mobile) -->
+            <div class="md:w-1/2 md:text-left order-2 md:order-1 mt-8 md:mt-0" data-aos="fade-right">
+                <h3 class="text-xl md:text-2xl font-semibold text-[#000029] mb-3 tracking-tight"
+                    style="font-family: 'Rubik', sans-serif;">
+                    Better Images. Higher Sales.
+                </h3>
+                <h1 id="flip-text" class="text-2xl md:text-[44px] font-extrabold text-[#302CCE] mb-6 leading-snug">
+                    Perfect Your Photos— <br>
+                    <span class="text-[#38CAED]">Fast, Flawless & Affordable</span>
                 </h1>
-                <h3 class="text-slate-800 text-2xl font-semibold mb-4 pt-4">
+                <h3 class="text-lg md:text-2xl font-medium text-slate-800 mb-6">
                     Your All-in-One Hub for Professional Photo Editing.
                 </h3>
-                <p class="text-gray-600 text-lg mb-6">
-                    No Time? No Problem. We Edit for You. Let Us Handle the Photo editing Work — So You Can Focus on
-                    Growing Your Brand. We deliver flawless image editing services that help your products stand out and
-                    sell more. We’re known for creative precision,dependable service, and affordable pricing — that
-                    elevate your visuals and brand.
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg">
+                    No Time? No Problem. We Edit for You. Let Us Handle the photo editing work —
+                    so you can focus on growing your brand. We deliver flawless image editing services
+                    that help your products stand out and sell more. Known for creative precision,
+                    dependable service, and affordable pricing — we elevate your visuals and brand.
                 </p>
-                <div class="space-x-4 mt-24">
+                <div class="space-x-4 mt-10 lg:mt-24">
                     <a href="free-trial.html"
-                        class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white 
+                        class="relative inline-flex items-center gap-2 px-6 py-3 text-base md:text-lg font-semibold text-white 
                     bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
                         <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
                     transition-transform duration-500 ease-in-out"></span>
                         <span class="relative flex items-center gap-2 z-10">
                             Free Trial
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                height="22" width="22" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="none" d="M0 0h24v24H0z"></path>
                                 <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
                             </svg>
                         </span>
                     </a>
                     <a href="contact.html"
-                        class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                        class="relative inline-flex items-center gap-2 px-6 py-3 text-base md:text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
                         Get A Free Quote
                     </a>
                 </div>
             </div>
-            <!-- Right side: Image -->
-            <div class="md:w-1/2 start-end mt-8 relative">
-                <img src="images/Home-page-1st-image.png" alt="Model with Camera"
-                    class="mx-auto md:ml-auto object-cover w-full h-[600px]">
-            </div>
+
         </div>
     </section>
 
-
     <!-- card section -->
-    <section class="max-w-7xl mx-auto mt-4 py-8">
+    <section class="max-w-7xl px-4 mx-auto mt-4">
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4">
             <!-- card 1 -->
@@ -535,7 +515,7 @@
     </section>
 
     <!-- carosal -->
-    <section class="max-w-full mx-auto bg-white">
+    <section class="max-w-full mt-4 mx-auto bg-white">
         <!-- Carousel Container -->
         <div class="w-full py-8">
             <div class="swiper carosalImage">
@@ -634,151 +614,156 @@
     </section>
 
     <!-- A trusted photo -->
-    <section class="w-full bg-[#DEDDFF] py-24">
-        <div class="max-w-7xl mx-auto px-6">
-
+    <section class="max-w-full bg-[#DEDDFF] py-16 mt-4 px-4 sm:py-20 md:py-20 overflow-x-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header Section -->
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h1 class="text-4xl md:text-5xl font-bold text-[#302CCE] leading-tight">
+            <div class="text-center mb-10 sm:mb-12" data-aos="fade-up">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#302CCE] leading-snug md:leading-tight">
                     A Trusted Photo Editing Partner — Committed to Your Growth with Devotion to Your Brand’s Success.
                 </h1>
-                <p class="mt-4 text-lg text-gray-700">
-                    At the core of everything we do is a commitment to helping your brand thrive. As your trusted photo
-                    editing partner, we combine creativity, consistency, and precision to deliver stunning visuals that
-                    align with your goals. Whether you’re in eCommerce, fashion, real estate, or product photography,
-                    our expert team ensures every image reflects the quality your brand deserves efficiently,
-                    affordably, and at scale.
+                <p class="mt-4 text-start text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mx-auto">
+                    At the core of everything we do is a commitment to helping your brand thrive.
+                    As your trusted photo editing partner, we combine creativity, consistency,
+                    and precision to deliver stunning visuals that align with your goals.
+                    Whether you’re in eCommerce, fashion, real estate, or product photography,
+                    our expert team ensures every image reflects the quality your brand deserves —
+                    efficiently, affordably, and at scale.
                 </p>
             </div>
 
             <!-- Content Section -->
-            <div class="flex flex-col md:flex-row items-stretch gap-12 min-h-[500px]">
-
+            <div class="flex flex-col md:flex-row items-stretch gap-8 md:gap-12 min-h-[400px] md:min-h-[500px]">
                 <!-- Left Content (Full Height) -->
-                <div class="flex-1 flex flex-col">
-                    <div class="space-y-6">
+                <div class="flex-1 min-w-0 flex flex-col">
+                    <div class="space-y-4 sm:space-y-6">
                         <button
-                            class="bg-white text-slate-900 font-medium text-lg px-3 py-3 rounded-lg shadow-md border border-purple-800 w-full text-center"
+                            class="bg-white text-slate-900 font-medium text-sm sm:text-base md:text-lg py-3 rounded-lg shadow-md border border-purple-800 w-full text-center whitespace-normal break-words"
                             data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out-quart"
                             data-aos-once="false">
                             Let us handle the edits so you can focus on growing your business.
                         </button>
                         <button
-                            class="bg-white text-slate-900 font-medium text-lg px-3 py-3 rounded-lg shadow-md border border-purple-800 w-full text-center"
+                            class="bg-white text-slate-900 font-medium text-sm sm:text-base md:text-lg py-3 rounded-lg shadow-md border border-purple-800 w-full text-center whitespace-normal break-words"
                             data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-quart"
                             data-aos-once="false">
                             Depending on your project requirements, we offer a range of tailored photo editing services
-                            to meet your specific needs:
+                            to meet your specific needs.
                         </button>
                     </div>
 
                     <!-- Left Image -->
-                    <div class="flex-1 flex justify-center mt-6" data-aos="zoom-in" data-aos-duration="1000"
+                    <div class="flex-1 flex justify-center mt-6 min-w-0" data-aos="zoom-in" data-aos-duration="1000"
                         data-aos-once="false">
                         <img src="images/PhotoGraphy-2nd.png" alt="Model in blue outfit"
-                            class="w-full h-full rounded-lg object-cover">
+                            class="w-full max-w-full h-auto sm:h-72 md:h-full rounded-lg object-cover">
                     </div>
                 </div>
 
                 <!-- Right Image -->
-                <div class="flex-1 flex" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
+                <div class="flex-1 min-w-0 flex" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
                     <img src="images/PhotoGraphy-1st.png" alt="Professional photoshoot setup"
-                        class="w-full h-full rounded-xl object-cover">
+                        class="w-full max-w-full h-auto sm:h-80 md:h-full rounded-xl object-cover">
                 </div>
-
             </div>
-
         </div>
     </section>
 
-    <!-- card -->
-    <div class="max-w-7xl mx-auto py-6 mt-12">
-        <div class="flex justify-around items-stretch flex-wrap gap-6">
-
+    <!-- card section -->
+    <div class="max-w-full mx-auto mt-12 py-8 px-2 sm:px-6 lg:px-8 overflow-x-hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-left">
             <!-- 24/7 Hours Services -->
-            <div class="card text-center w-64 p-4 flex flex-col">
-                <div class="flex justify-center mb-3">
-                    <div class="w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center">
-                        <img src="images/24-Hours-Services.jpg" alt="" class="w-24 h-24 object-contain">
+            <div class="text-center p-4 flex flex-col hover:shadow-lg transition duration-300 min-w-0">
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center">
+                        <img src="images/24-Hours-Services.jpg" alt="24/7 Hours Services"
+                            class="w-14 h-14 object-contain block max-w-full">
                     </div>
                 </div>
-                <h3 class="text-2xl font-semibold text-gray-800 border-b h-12 flex items-center justify-center">
+                <h3 class="text-base md:text-xl font-semibold text-gray-800 border-b pb-2 mb-3">
                     24/7 Hours Services
                 </h3>
-                <p class="text-gray-600 text-justify mt-2">
+                <p
+                    class="text-gray-600 text-sm md:text-lg text-justify leading-relaxed whitespace-normal break-words">
                     Our strength is a quick turnaround. Get your photos back within six hours, from flexible 24-hour
                     delivery to 48-hour delivery followed by services for special emergencies.
                 </p>
             </div>
 
             <!-- Data Security -->
-            <div class="card text-center w-64 p-4 flex flex-col">
-                <div class="flex justify-center mb-3">
-                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
-                        <img src="images/Data-security.jpg" alt="" class="w-24 h-24 object-contain">
+            <div class="text-center p-4 flex flex-col hover:shadow-lg transition duration-300 min-w-0">
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                        <img src="images/Data-security.jpg" alt="Data Security"
+                            class="w-14 h-14 object-contain block max-w-full">
                     </div>
                 </div>
-                <h3 class="text-2xl font-semibold text-gray-800 border-b h-12 flex items-center justify-center">
+                <h3 class="text-base md:text-xl font-semibold text-gray-800 border-b pb-2 mb-3">
                     Data Security
                 </h3>
-                <p class="text-gray-600 text-justify mt-2">
+                <p
+                    class="text-gray-600 text-sm md:text-lg text-justify leading-relaxed whitespace-normal break-words">
                     First of all, your photos are safe with us. We promise that your images will only be used for your
                     project. We always value your trust and never break our promises.
                 </p>
             </div>
 
             <!-- Quality Work -->
-            <div class="card text-center w-64 p-4 flex flex-col">
-                <div class="flex justify-center mb-3">
-                    <div class="w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center">
-                        <img src="images/Quality-work.jpg" alt="" class="w-24 h-24 object-contain">
+            <div class="text-center p-4 flex flex-col hover:shadow-lg transition duration-300 min-w-0">
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center">
+                        <img src="images/Quality-work.jpg" alt="Quality Work"
+                            class="w-14 h-14 object-contain block max-w-full">
                     </div>
                 </div>
-                <h3 class="text-2xl font-semibold text-gray-800 border-b h-12 flex items-center justify-center">
+                <h3 class="text-base md:text-xl font-semibold text-gray-800 border-b pb-2 mb-3">
                     Quality Work
                 </h3>
-                <p class="text-gray-600 text-justify mt-2">
-                    We ensure the photo is done with High-Quality and when you work with me, you can be sure that you
+                <p
+                    class="text-gray-600 text-sm md:text-lg text-justify leading-relaxed whitespace-normal break-words">
+                    We ensure the photo is done with high quality, and when you work with us, you can be sure that you
                     will get a great quality service.
                 </p>
             </div>
 
             <!-- Affordable Prices -->
-            <div class="card text-center w-64 p-4 flex flex-col">
-                <div class="flex justify-center mb-3">
-                    <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center">
-                        <img src="images/Affordable-Prices.jpg" alt="" class="w-24 h-24 object-contain">
+            <div class="text-center p-4 flex flex-col hover:shadow-lg transition duration-300 min-w-0">
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                        <img src="images/Affordable-Prices.jpg" alt="Affordable Prices"
+                            class="w-14 h-14 object-contain block max-w-full">
                     </div>
                 </div>
-                <h3 class="text-2xl font-semibold text-gray-800 border-b h-12 flex items-center justify-center">
+                <h3 class="text-base md:text-xl font-semibold text-gray-800 border-b pb-2 mb-3">
                     Affordable Prices
                 </h3>
-                <p class="text-gray-600 text-justify mt-2">
-                    Get your perfect Image Editing Services whenever you need them, and at Affordable Prices. Our main
-                    goal is to achieve full satisfaction of the clients through the best quality work.
+                <p
+                    class="text-gray-600 text-sm md:text-lg text-justify leading-relaxed whitespace-normal break-words">
+                    Get your perfect image editing services whenever you need them, and at affordable prices. Our main
+                    goal is to achieve full client satisfaction through the best quality work.
                 </p>
             </div>
-
         </div>
     </div>
 
     <!-- video slider -->
-    <div class="flex py-8">
-        <div class="">
+    <div class="flex py-8 overflow-x-hidden">
+        <!-- Left Icon (Desktop only) -->
+        <div class="hidden lg:block  ">
             <img src="images/logo.png" alt="" class="-translate-x-1/2">
         </div>
+
         <div class="max-w-7xl mx-auto">
             <!-- Main Container -->
-            <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-                <div class="grid lg:grid-cols-2 gap-8 p-8">
-                    <!-- Left Side - Video Player -->
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-8">
+
                     <!-- Left Side - Video/Thumbnail -->
                     <div class="relative">
                         <!-- Video Container -->
                         <div id="videoShow"
                             class="video-container hidden bg-gradient-to-br from-slate-800 to-slate-900">
                             <div id="videoLoading" class="video-loading hidden">Loading video...</div>
-                            <iframe id="youtubePlayer" class="w-full h-full"
+                            <iframe id="youtubePlayer" class="w-full h-64 sm:h-80 md:h-full rounded-lg"
                                 src="https://www.youtube.com/embed/8LSt8_11wbQ?enablejsapi=1&rel=0&autoplay=0"
                                 title="Testimonial Video" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -790,8 +775,8 @@
                         <div id="imageShow" class="relative w-full mx-auto">
                             <img id="thumbnailImage" src="images/thumbnail-image.webp" alt="Thumbnail"
                                 class="w-full h-auto rounded-lg object-cover">
-                            <button onclick="videoShow()"
-                                class="absolute inset-0 flex items-center justify-center text-white bg-blue-500/60 cursor-pointer rounded-full w-16 h-16 m-auto">
+                            <button onclick="videoShowButton()"
+                                class="absolute inset-0 flex items-center justify-center text-white bg-blue-500/70 cursor-pointer rounded-full w-16 h-16 m-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                                     class="fill-white">
                                     <path
@@ -800,32 +785,37 @@
                             </button>
                             <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                                 <div>
-                                    <h3 id="reviewerName" class="font-bold text-xl text-cyan-400 slide-transition">Neil
-                                        &
-                                        Sabrina</h3>
-                                    <p id="reviewerTitle" class="text-white slide-transition">Augment Agency</p>
+                                    <h3 id="reviewerName"
+                                        class="font-bold text-lg sm:text-xl text-cyan-400 slide-transition">
+                                        Neil & Sabrina
+                                    </h3>
+                                    <p id="reviewerTitle" class="text-sm sm:text-base text-white slide-transition">
+                                        Augment Agency
+                                    </p>
                                 </div>
-                                <div id="starRating" class="flex gap-1">
-                                    <span class="star text-2xl">★</span>
-                                    <span class="star text-2xl">★</span>
-                                    <span class="star text-2xl">★</span>
-                                    <span class="star text-2xl">★</span>
-                                    <span class="star text-2xl">★</span>
+                                <div id="starRating" class="flex gap-1 text-yellow-400">
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                    <span class="star text-xl sm:text-2xl">★</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center mt-6 text-3xl items-center gap-6">
+
+                        <!-- Slider Controls -->
+                        <div class="flex justify-center mt-6 text-lg sm:text-xl items-center gap-6">
                             <button id="prevBtn"
-                                class="text-white p-3 rounded-full bg-blue-500 hover:text-cyan-300 cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                class="text-white p-3 rounded-full bg-blue-500 hover:bg-cyan-400 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="m10 18l-6-6l6-6l1.4 1.45L7.85 11H20v2H7.85l3.55 3.55z" />
                                 </svg>
                             </button>
                             <span><span id="currentSlide">1</span> / <span id="totalSlides">6</span></span>
                             <button id="nextBtn"
-                                class="text-white p-3 cursor-pointer rounded-full bg-blue-500 hover:text-cyan-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                                class="text-white p-3 rounded-full bg-blue-500 hover:bg-cyan-400 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="m14 18l-1.4-1.45L16.15 13H4v-2h12.15L12.6 7.45L14 6l6 6z" />
                                 </svg>
@@ -834,187 +824,236 @@
                     </div>
 
                     <!-- Right Side - Content -->
-                    <div class="flex flex-col justify-between">
-                        <!-- Header -->
-                        <div>
-                            <h1 class="text-4xl  lg:text-4xl font-bold text-slate-800 leading-tight mb-8">
-                                Hear What E-commerce Brands and Photographers Are Saying About Us
-                            </h1>
-                            <p class="text-xl  lg:text-xl text-slate-800 leading-tight mb-8">
-                                Discover how our expert photo editing services have helped businesses and creatives
-                                boost
-                                their visuals, sales, and brand presence.
-                            </p>
+                    <div class="flex flex-col justify-center">
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 leading-tight mb-6">
+                            Hear What E-commerce Brands and Photographers Are Saying About Us
+                        </h1>
+                        <p class="text-base sm:text-lg lg:text-xl text-slate-800 leading-relaxed mb-6">
+                            Discover how our expert photo editing services have helped businesses and creatives
+                            boost their visuals, sales, and brand presence.
+                        </p>
 
-
-                            <!-- Avatar Navigation -->
-                            <div class="space-y-6">
-                                <div class="flex flex-wrap gap-4" id="avatarContainer">
-                                    <!-- Avatars will be dynamically generated -->
-                                </div>
-
-                                <a href=""
-                                    class="flex items-center gap-2 text-slate-800 hover:text-cyan-500 transition-colors duration-300 group">
-                                    <span class="font-semibold">SEE MORE REVIEWS</span>
-                                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
-                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
-                                </a>
+                        <!-- Avatar Navigation -->
+                        <div class="space-y-6">
+                            <div class="flex flex-wrap gap-4" id="avatarContainer">
+                                <!-- Example Avatar -->
+                                <img src="images/avatar1.png" alt="Avatar"
+                                    class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-gray-300">
+                                <img src="images/avatar2.png" alt="Avatar"
+                                    class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-gray-300">
+                                <!-- More avatars dynamically -->
                             </div>
+                            <a href="#"
+                                class="flex items-center gap-2 text-slate-800 hover:text-cyan-500 transition group">
+                                <span class="font-semibold">SEE MORE REVIEWS</span>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
-        <div class="">
+
+        <!-- Right Icon (Desktop only) -->
+        <!-- <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 overflow-hidden">
+            <img src="images/logo.png" alt="Right Logo" class="w-32 h-32 opacity-80">
+        </div> -->
+        <div class="hidden lg:block">
             <img src="images/logo.png" alt="" class="translate-x-1/2">
         </div>
     </div>
 
     <!-- service card -->
-    <section class="py-16 background-color px-4 mt-12">
+    <section class="py-12 px-4 background-color mt-12 overflow-x-hidden">
         <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
             <div class="text-center max-w-7xl mx-auto">
-                <h3 class="text-5xl py-4 font-bold text-black">Editing Solutions We Provide</h3>
-                <p class="mt-2 text-[#343b3c] font-semibold text-2xl italic">"Our image editing services are fully
+                <h3 class="text-xl md:text-5xl py-4 font-bold text-black">Editing Solutions We Provide</h3>
+                <p class="mt-2 text-[#343b3c] font-semibold text-lg md:text-2xl italic">"Our image editing services are
+                    fully
                     customized to your business
                     needs. If you are an e-commerce store Owner,
                     a Fashion & Apparel Owner, or a photographer business owner, then you are on the right website
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
-                <!-- Card 1 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Photo Retouching</h3>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Color Correction</h3>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Ecommerce Image Editing</h3>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Fashion Photo Retouching</h3>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Flat Lay Image Editing</h3>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Ghost-mannequin</h3>
-                    </div>
-                </div>
-                <!-- Card 7 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Mockup Creation</h3>
-                    </div>
-                </div>
-                <!-- Card 8 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Jewelry Photo Retouching</h3>
-                    </div>
-                </div>
-                <!-- Card 9 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Clipping Path</h3>
-                    </div>
-                </div>
-                <!-- Card 10 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Background Removal</h3>
-                    </div>
-                </div>
-                <!-- Card 11 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Shadow Creation</h3>
-                    </div>
-                </div>
-                <!-- Card 12 -->
-                <div class="card magicCard relative rounded-lg shadow overflow-hidden w-full  mx-auto">
-                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
-                        data-border></div>
-                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
-                    <div class="relative py-4 text-center">
-                        <img src="images/PhotoGraphy-2nd.png" alt="" class="w-full h-auto object-cover">
-                        <h3 class="text-xl font-bold text-[#3622f8]">Image Masking</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                <a href="free-trial.html"
-                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white 
-           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
 
-                    <!-- Center-to-side background overlay -->
-                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
-                 transition-transform duration-500 ease-in-out"></span>
+                <!-- Card 1 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Photo Retouching</h3>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Color Correction</h3>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Ecommerce Image Editing</h3>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Fashion Photo Retouching</h3>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Flat Lay Image Editing</h3>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Ghost-mannequin</h3>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-right" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Mockup Creation</h3>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Jewelry Photo Retouching</h3>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Clipping Path</h3>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Background Removal</h3>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Shadow Creation</h3>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="magicCard relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300"
+                    data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" data-aos-easing="ease-in-out">
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 pointer-events-none"
+                        data-border></div>
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Image Masking</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Free Trial Button -->
+            <div class="text-center mt-12">
+                <a href="free-trial.html"
+                    class="relative inline-flex items-center gap-2 px-8 py-4 text-lg sm:text-xl font-semibold text-white 
+               bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Overlay effect -->
+                    <span
+                        class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100 transition-transform duration-500 ease-in-out"></span>
 
                     <!-- Text + Icon -->
                     <span class="relative flex items-center gap-2 z-10">
@@ -1031,14 +1070,15 @@
     </section>
 
     <!-- card -->
-    <div class="bg-white mt-16">
+    <div class="px-4 mt-16 overflow-x-hidden">
         <div class="container mx-auto max-w-7xl">
             <div class="space-y-4 py-4 mb-4">
-                <h2 class="text-4xl text-start text-[#030303] mb-4">See Why Thousands of E-commerce Brands and
+                <h2 class="text-xl md:text-4xl font-bold md:font-semibold text-start text-[#030303] mb-4">See Why
+                    Thousands of E-commerce Brands and
                     Photographers Rely on Our Photo Editing Services. Want to Drive More Website Traffic and Hit Your
                     Your
                     Mounthly Sales Goals? Need Product Images that Grab Attention at First Glance?</h2>
-                <p class="text-[#030303] text-xl leading-relaxed">
+                <p class="text-[#030303] text-lg md:text-xl leading-relaxed">
                     We've got you covered. Our expert photo editing services help you focus on growing your
                     brand while we handle the visuals. With precision clipping paths, advanced retouching,
                     and professional color correction, we ensure even the most detailed product photos meet
@@ -1050,7 +1090,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Card 1: Humble -->
                 <div
-                    class="card bg-white hover:bg-blue-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    class="transition duration-300 hover:scale-105 bg-white hover:bg-blue-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
                     <div class="flex items-center justify-center gap-3 mb-4">
                         <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                             <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1162,20 +1202,18 @@
         </div>
     </div>
 
-    <!-- form  -->
-    <section class="background-color mt-16 py-16">
+    <section class="background-color mt-16 px-4 py-16 overflow-x-hidden">
         <div class="max-w-7xl mx-auto">
-
             <div class="grid lg:grid-cols-2 gap-12 items-center">
 
                 <!-- Left Side - Content -->
                 <div class="space-y-8">
                     <div>
-                        <h1 class="text-4xl lg:text-5xl  text-[#000000]">
+                        <h1 class="text-4xl lg:text-5xl font-awesome  text-[#000000]">
                             Bring Your Images to Life —
                             Start Your Free Trial Now!
                         </h1>
-                        <p class="text-[#000000] font-semibold text-xl mt-6">
+                        <p class="text-[#000000] font-awesome text-xl mt-6">
                             "Just complete the form, share your images, and we'll
                             deliver your free trial edit in 1 hour!"
                         </p>
@@ -1221,7 +1259,7 @@
                 </div>
 
                 <!-- Right Side - Form -->
-                <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="bg-white rounded-2xl shadow-xl py-8 px-5">
                     <form class="space-y-6">
 
                         <!-- Name and Phone Row -->
@@ -1307,98 +1345,23 @@
         </div>
     </section>
 
-    <!-- logo carosal -->
-    <!-- <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="w-full py-8">
-            <div class="swiper logoSwiper">
-                <div class="swiper-wrapper mb-10">
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-1.png" alt="Job Line Logo">
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-2.png" alt="Real Wave Logo">
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-3.png" alt="Loudnick Logo">
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-4.png" alt="Pitch Logo">
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-5.png" alt="Inner Logo">
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-1.png" alt="Company Logo">
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-2.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-3.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide flex items-center justify-center transition-all duration-300 hover:scale-105">
-                        <div
-                            class="p-5 rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
-                            <img class="w-16 h-16 rounded-lg object-cover" src="images/logo-4.png" alt="Brand Logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- faq -->
-    <section class="bg-white py-16 mt-6 px-4 relative overflow-hidden">
+    <section class="bg-white py-16 mt-6 relative overflow-x-hidden">
         <div class="flex">
             <div>
                 <img src="images/logo.png" alt="" class="-translate-x-1/2">
             </div>
 
-            <div class="max-w-4xl mx-auto relative z-10">
+            <div class="max-w-5xl mx-auto relative z-10">
                 <!-- Header -->
-                <div class="flex justify-between items-start mb-12">
-                    <div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                            Answers to Frequently Asked Questions<br>
-                            From Our Inbox
-                        </h2>
-                        <p class="text-gray-600 text-lg">
-                            Let us know what troubles you. Give us a message; we will get back to you soon.
-                        </p>
-                    </div>
+                <div class="mb-12 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-2">
+                        Answers to Frequently Asked Questions<br>
+                        From Our Inbox
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Let us know what troubles you. Give us a message; we will get back to you soon.
+                    </p>
                 </div>
 
                 <!-- FAQ Items -->
@@ -1541,12 +1504,12 @@
 
     <!-- communication -->
     <section class="bg-gradient-to-r from-[#4c46ff] to-[#56ebfe] py-16 mt-6 px-4">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-2 items-center">
 
             <!-- Left Side (7 cols) -->
             <div class="md:col-span-6 text-white space-y-6">
-                <h2 class="text-5xl font-bold leading-tight">Your 24/7 Communication Partner</h2>
-                <p class="text-2xl font-semibold leading-relaxed">
+                <h2 class="text-3xl font-bold leading-tight">Your 24/7 Communication Partner</h2>
+                <p class="text-xl font-semibold leading-relaxed">
                     "Day or night, we're here for you — <br>
                     committed to providing nonstop <br>
                     support and maximum value. — <br>
@@ -1589,13 +1552,11 @@
         </div>
     </section>
 
-
-
     <!-- Testimonial -->
 
-    <section class="max-w-7xl mx-auto px-4 mt-6 sm:px-6 lg:px-8 py-16">
+    <section class="max-w-7xl mx-auto px-4 mt-6 sm:px-6 lg:px-8 pt-16">
         <!-- Header Section -->
-        <div class="max-w-3xl mx-auto text-center mb-12">
+        <div class="max-w-3xl mx-auto text-center mb-8">
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 What Our Customers Are Saying
             </h1>
@@ -1610,7 +1571,7 @@
             <div class="swiper reviewSwiper">
                 <div class="swiper-wrapper mb-10">
                     <div
-                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4"
                                 src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
@@ -1627,103 +1588,119 @@
                         </div>
                     </div>
                     <div
-                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4"
                                 src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
                                 alt="Customer Avatar">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800">Sarah Johnson</h3>
-                                <p class="text-sm text-gray-500">Software Engineer</p>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic text-sm sm:text-base">"The seamless integration and user-friendly
-                            design make this product stand out. It's a must for any tech team!"</p>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
                         <div class="flex mt-4">
                             <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
                         </div>
                     </div>
                     <div
-                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4"
                                 src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
                                 alt="Customer Avatar">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800">Michael Lee</h3>
-                                <p class="text-sm text-gray-500">UX Designer</p>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic text-sm sm:text-base">"An exceptional product with unparalleled
-                            support. It’s made our design process so much smoother!"</p>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
                         <div class="flex mt-4">
                             <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
                         </div>
                     </div>
                     <div
-                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4"
                                 src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
                                 alt="Customer Avatar">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800">Emma Brown</h3>
-                                <p class="text-sm text-gray-500">Operations Lead</p>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic text-sm sm:text-base">"Fantastic product! It streamlined our
-                            processes and saved us countless hours."</p>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
                         <div class="flex mt-4">
                             <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
                         </div>
                     </div>
                     <div
-                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4"
                                 src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
                                 alt="Customer Avatar">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800">David Kim</h3>
-                                <p class="text-sm text-gray-500">CEO</p>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic text-sm sm:text-base">"This product is a game-changer for our
-                            business. Highly recommend it for its efficiency and ease of use."</p>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
                         <div class="flex mt-4">
                             <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
                         </div>
                     </div>
                     <div
-                        class="swiper-slide bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
                         <div class="flex items-center mb-4">
                             <img class="w-12 h-12 rounded-full mr-4"
                                 src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
                                 alt="Customer Avatar">
                             <div>
-                                <h3 class="text-lg font-semibold text-gray-800">Lisa Wong</h3>
-                                <p class="text-sm text-gray-500">Marketing Director</p>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
                             </div>
                         </div>
-                        <p class="text-gray-600 italic text-sm sm:text-base">"The best investment for our marketing
-                            team. It’s intuitive and packed with powerful features."</p>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
                         <div class="flex mt-4">
                             <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="swiper-button-next text-gray-300!important hover:text-indigo-800 transition-colors duration-200">
-                </div>
-                <div class="swiper-button-prev text-gray-300 hover:text-indigo-800 transition-colors duration-200">
-                </div>
+                <!-- <div class="swiper-button-next"> </div> -->
+                <!-- <div class="swiper-button-prev text-gray-300 hover:text-indigo-800 transition-colors duration-200">
+                </div> -->
                 <div class="swiper-pagination !bottom-0"></div>
             </div>
         </div>
     </section>
 
 
-    <section class="py-16 bg-white text-center">
+    <!-- love section -->
+    <section class=" pb-16 mt-4  bg-white text-center">
         <!-- Heart Icon -->
         <div class="mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-blue-600 mx-auto" fill="none"

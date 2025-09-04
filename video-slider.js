@@ -108,7 +108,7 @@
         }
 
         // Show video and hide thumbnail
-        function videoShow() {
+        function videoShowButton() {
             const imageShow = document.getElementById('imageShow');
             const videoShow = document.getElementById('videoShow');
             const youtubePlayer = document.getElementById('youtubePlayer');
@@ -281,29 +281,6 @@
             console.log('Previous slide clicked');
             goToSlide(currentIndex - 1);
         }
-
-   /*      // Autoplay functions
-        function startAutoplay() {
-            console.log('Starting autoplay');
-            if (autoplayInterval) clearInterval(autoplayInterval);
-            autoplayInterval = setInterval(() => {
-                console.log('Autoplay advancing slide');
-                nextSlide();
-            }, 5000);
-        }
-
-        function stopAutoplay() {
-            console.log('Stopping autoplay');
-            if (autoplayInterval) {
-                clearInterval(autoplayInterval);
-                autoplayInterval = null;
-            }
-        }
-
-        function resetAutoplay() {
-            stopAutoplay();
-            startAutoplay();
-        } */
 
         // Setup event listeners
         function setupEventListeners() {
