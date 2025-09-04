@@ -1,0 +1,1883 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .background-color {
+            background-color: #e2faff !important;
+        }
+
+        .dropdown-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .dropdown-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-enter {
+            transform: translateX(-100%);
+        }
+
+        .mobile-menu-enter-active {
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+
+        /* video style */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .slide-transition {
+            transition: opacity 0.3s ease;
+        }
+
+        .avatar-ring {
+            @apply border-2 border-gray-300 rounded-full p-1;
+        }
+
+        .avatar-inner {
+            @apply border-2 border-gray-100 rounded-full;
+        }
+
+        .star {
+            @apply text-yellow-400;
+        }
+    </style>
+
+</head>
+
+<body class="h-screen overflow-x-hidden">
+    <header class="bg-white shadow-md w-full fixed top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+            <!-- Logo Section -->
+            <a class="sm:flex flex items-center space-x-3" href="index.html">
+                <img src="images/logo.png" alt="Danpite Tech Logo"
+                    class="h-16 w-16 sm:h-16 sm:w-16 rounded-lg object-cover">
+                <span class="text-2xl font-semibold text-blue-800">
+                    Photo Edit
+                </span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-8">
+                <!-- Home -->
+                <a href="index.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Home
+                </a>
+                <!-- Services Dropdown -->
+                <!-- Mega Dropdown -->
+                <div class="relative group">
+                    <button
+                        class="text-slate-600 font-bold hover:text-indigo-700 transition-colors duration-300 flex items-center space-x-2 py-3 px-5 rounded-xl hover:bg-indigo-50/80 bg-gradient-to-r from-indigo-50/30 to-transparent">
+                        <span>Services</span>
+                        <svg class="w-5 h-5 transition-transform duration-300 group-hover:rotate-180" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div
+                        class="absolute left-1/2 top-full mt-3 w-full min-w-[1000px] max-w-[900px] bg-white shadow-2xl rounded-2xl border border-indigo-100/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-400 transform translate-y-4 group-hover:translate-y-0 -translate-x-1/2 z-50 flex bg-gradient-to-b from-white to-indigo-50/20">
+
+                        <!-- Categories -->
+                        <div class="w-1/3 bg-indigo-50/50 rounded-l-2xl border-r border-indigo-100/50 p-5">
+                            <ul class="space-y-3">
+                                <li class="px-5 py-3 cursor-pointer rounded-xl hover:bg-indigo-100 hover:text-indigo-800 text-lg font-semibold transition-all duration-200 serviceCategory text-slate-800"
+                                    data-target="photo">Photo Editing</li>
+                                <li class="px-5 py-3 cursor-pointer rounded-xl hover:bg-indigo-100 hover:text-indigo-800 font-semibold transition-all duration-200 serviceCategory text-slate-800"
+                                    data-target="video">AI Photo Editing</li>
+                            </ul>
+                        </div>
+
+                        <!-- Sub-services -->
+                        <div class="w-2/3 p-7">
+                            <!-- Photo Editing -->
+                            <div class="sub-services" id="photo">
+                                <h3 class="text-xl font-bold text-slate-900 mb-4">Photo Editing Services</h3>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Photo Retouching
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Color Correction
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Ecommerce Image Editing
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Fashion Photo Retouching
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Flat Lay Image Editing
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Ghost Mannequin
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Mockup Creation
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Jewelry Photo Retouching
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Clipping Path
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Background Removal
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Shadow Creation
+                                    </a>
+                                    <a href="professional-photoshop.html"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">
+                                        Image Masking
+                                    </a>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <a href="photo-editing-services.html"
+                                        class="inline-block py-2 px-6 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-200">Explore
+                                        All &rarr;</a>
+                                </div>
+                            </div>
+                            <!-- AI Photo Editing -->
+                            <div class="sub-services hidden" id="video">
+                                <h3 class="text-xl font-bold text-slate-900 mb-4">AI Photo Editing Services</h3>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <a href="#"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">High-res
+                                        Video Editing</a>
+                                    <a href="#"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">Motion
+                                        Graphics</a>
+                                    <a href="#"
+                                        class="block py-2.5 px-4 rounded-lg hover:bg-indigo-50 hover:text-indigo-700  transition-all duration-200 text-slate-700 text-lg">Video
+                                        Color Grading</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing -->
+                <a href="pricing.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Pricing
+                </a>
+
+                <!-- Portfolio -->
+                <a href="image-editing-portfolio.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Portfolio
+                </a>
+
+                <!-- About Us -->
+                <a href="about.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    About Us
+                </a>
+
+                <!-- Contact Us -->
+                <a href="contact.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Contact Us
+                </a>
+                <!-- Contact Us -->
+                <a href="blog.html"
+                    class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                    Blog
+                </a>
+
+                <!-- CTA Button -->
+                <a href="free-trial.html"
+                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Center-to-side background overlay -->
+                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                    <!-- Text + Icon -->
+                    <span class="relative flex items-center gap-2 z-10">
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
+                </a>
+
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden flex items-center justify-between">
+
+                <!-- Hamburger Button -->
+                <button id="mobile-menu-button"
+                    class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-200">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="lg:hidden fixed inset-y-0 left-0 w-80 max-w-full bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50">
+            <div class="flex flex-col h-full">
+                <!-- Mobile Menu Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <a class="flex items-center space-x-3" href="index.html">
+                        <img src="images/logo.png" alt="Danpite Tech Logo" class="h-10 w-10 rounded-lg object-cover">
+                    </a>
+                    <button id="mobile-menu-close"
+                        class="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <nav class="flex-1 px-6 py-4 overflow-y-auto">
+                    <!-- Home -->
+                    <a href="index.html"
+                        class="text-gray-600 font-bold hover:text-blue-600 transition-colors duration-200 py-2">
+                        Home
+                    </a>
+                    <!-- Services Section -->
+                    <div class="border-b border-gray-100">
+                        <button id="mobile-services-toggle"
+                            class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
+                            Services
+                            <svg id="services-arrow" class="w-5 h-5 transition-transform duration-200" fill="none"
+                                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobile-services-menu"
+                            class="pb-4 space-y-1 transition-all duration-300 overflow-hidden" style="max-height: 0px;">
+                            <a href="photo-correction-services.html"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Photo Correction Services
+                            </a>
+                            <a href="photo-editing-services.html"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Photo Editing Services
+                            </a>
+                            <a href="image-masking-services.html"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Image Masking Service
+                            </a>
+                            <a href="professional-photoshop.html"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Professional Photoshop
+                            </a>
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                Ghost Mannequin
+                            </a>
+                            <a href="#"
+                                class="block py-3 pl-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200">
+                                E-commerce Image Editing
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Pricing -->
+                    <a href="pricing.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        Pricing
+                    </a>
+
+                    <!-- Portfolio Section -->
+                    <div class="border-b border-gray-100">
+                        <a href="image-editing-portfolio.html"
+                            class="w-full flex items-center justify-between py-4 text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors duration-200">
+                            Portfolio
+                        </a>
+                    </div>
+
+                    <!-- About Us -->
+                    <a href="about.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        About Us
+                    </a>
+
+                    <!-- Contact Us -->
+                    <a href="contact.html"
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        Contact Us
+                    </a>
+                    <!-- Blog -->
+                    <a href=""
+                        class="block py-4 text-gray-700 font-semibold hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 border-b border-gray-100">
+                        Blog
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Footer -->
+                <div class="p-6 border-t border-gray-200">
+                    <a href="free-trial.html"
+                        class="relative inline-flex items-center gap-2 px-2 py-1 text-lg font-semibold text-white 
+           bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                        <!-- Center-to-side background overlay -->
+                        <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                 transition-transform duration-500 ease-in-out"></span>
+
+                        <!-- Text + Icon -->
+                        <span class="relative flex items-center gap-2 z-10">
+                            Free Trial
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay"
+            class="lg:hidden fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-all duration-300 ease-in-out z-40">
+        </div>
+    </header>
+
+    <!-- hero section -->
+    <section class="relative max-w-7xl mx-auto mt-12 px-4 py-12">
+        <div class="flex flex-col md:flex-row items-center">
+
+            <!-- Right side: Image (shows first on mobile) -->
+            <div class="md:w-1/2 relative order-1 md:order-2">
+                <img src="images/Home-page-1st-image.png" alt="Model with Camera"
+                    class="mx-auto md:ml-auto object-cover w-full max-w-lg h-[400px] sm:h-[450px] md:h-[600px]">
+            </div>
+
+            <!-- Left side: Text (shows second on mobile) -->
+            <div class="md:w-1/2 md:text-left order-2 md:order-1 mt-8 md:mt-0" data-aos="fade-right">
+                <h3 class="text-xl md:text-2xl font-semibold text-[#000029] mb-3 tracking-tight"
+                    style="font-family: 'Rubik', sans-serif;">
+                    Better Images. Higher Sales.
+                </h3>
+                <h1 id="flip-text" class="text-2xl md:text-[44px] font-extrabold text-[#302CCE] mb-6 leading-snug">
+                    Perfect Your Photos— <br>
+                    <span class="text-[#38CAED]">Fast, Flawless & Affordable</span>
+                </h1>
+                <h3 class="text-lg md:text-2xl font-medium text-slate-800 mb-6">
+                    Your All-in-One Hub for Professional Photo Editing.
+                </h3>
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg">
+                    No Time? No Problem. We Edit for You. Let Us Handle the photo editing work —
+                    so you can focus on growing your brand. We deliver flawless image editing services
+                    that help your products stand out and sell more. Known for creative precision,
+                    dependable service, and affordable pricing — we elevate your visuals and brand.
+                </p>
+                <div class="space-x-4 mt-10 lg:mt-24">
+                    <a href="free-trial.html"
+                        class="relative inline-flex items-center gap-2 px-6 py-3 text-base md:text-lg font-semibold text-white 
+                    bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+                        <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                    transition-transform duration-500 ease-in-out"></span>
+                        <span class="relative flex items-center gap-2 z-10">
+                            Free Trial
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="contact.html"
+                        class="relative inline-flex items-center gap-2 px-6 py-3 text-base md:text-lg font-semibold text-blue-600 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                        Get A Free Quote
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- card section -->
+    <section class="max-w-7xl px-4 mx-auto mt-4">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-4">
+            <!-- card 1 -->
+            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
+                <div class="text-3xl font-bold text-white flex flex-col items-center">
+                    <div class="">
+                        <i class="fas fa-award text-white text-4xl mb-2 mr-4"></i>
+                        <span id="num1" class="text-4xl"></span><span class="text-4xl">+</span>
+                    </div>
+                </div>
+                <p class="text-xl italic text-white font-semibold mt-1">Awards for Excellence — <br>Prestigious Awards
+                </p>
+            </div>
+
+            <!-- card 2 -->
+            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
+                <div class="text-3xl font-bold text-white flex flex-col items-center">
+                    <div class="">
+                        <i class="fas fa-calendar-check text-white text-4xl mb-2 mr-4"></i>
+                        <span id="num2" class="text-4xl"></span><span class="text-4xl">+</span>
+                    </div>
+                </div>
+                <p class="text-xl italic text-white font-semibold mt-1">Experience Matters — <br>9+ Years in the
+                    Industry</p>
+            </div>
+
+            <!-- card 3 -->
+            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
+                <div class="text-3xl font-bold text-white flex flex-col items-center">
+                    <div class="">
+                        <i class="fas fa-users text-white text-4xl mb-2 mr-4"></i>
+                        <span id="num3" class="text-4xl"></span><span class="text-4xl">+</span>
+                    </div>
+                </div>
+                <p class="text-xl italic text-white font-semibold mt-1">Projects Delivered —<br>with Precision and
+                    Quality</p>
+            </div>
+
+            <!-- card 4 -->
+            <div class="card bg-blue-600 shadow-md rounded-2xl p-4 text-center">
+                <div class="text-3xl font-bold text-white flex flex-col items-center">
+                    <div class="">
+                        <i class="fas fa-image text-white text-4xl mb-2 mr-4"></i>
+                        <span id="num4" class="text-4xl"></span><span class="text-4xl"> M+</span>
+                    </div>
+                </div>
+                <p class="text-xl italic text-white font-semibold mt-1">Photos Edits Done Right —<br>Yours Could Be Next
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- carosal -->
+    <section class="max-w-full mx-auto bg-white">
+        <!-- Carousel Container -->
+        <div class="w-full py-8">
+            <div class="swiper carosalImage">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex sm:col-1 items-center justify-center">
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full h-full rounded-lg object-cover" src="images/carosal.avif" alt="carosal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- A trusted photo -->
+    <section class="w-full bg-[#DEDDFF] py-16 sm:py-20 md:py-24">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Header Section -->
+            <div class="text-center mb-10 sm:mb-12 px-4" data-aos="fade-up">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#302CCE] leading-snug md:leading-tight">
+                    A Trusted Photo Editing Partner — Committed to Your Growth with Devotion to Your Brand’s Success.
+                </h1>
+                <p class="mt-4 text-sm text-start sm:text-base md:text-lg text-gray-700 leading-relaxed">
+                    At the core of everything we do is a commitment to helping your brand thrive.
+                    As your trusted photo editing partner, we combine creativity, consistency,
+                    and precision to deliver stunning visuals that align with your goals.
+                    Whether you’re in eCommerce, fashion, real estate, or product photography,
+                    our expert team ensures every image reflects the quality your brand deserves —
+                    efficiently, affordably, and at scale.
+                </p>
+            </div>
+
+            <!-- Content Section -->
+            <div class="flex flex-col md:flex-row items-stretch gap-8 md:gap-12 px-4 min-h-[400px] md:min-h-[500px]">
+
+                <!-- Left Content (Full Height) -->
+                <div class="flex-1 flex flex-col">
+                    <div class="space-y-4 sm:space-y-6">
+                        <button
+                            class="bg-white text-slate-900 font-medium text-sm sm:text-base md:text-lg px-3 py-3 rounded-lg shadow-md border border-purple-800 w-full text-center"
+                            data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-out-quart"
+                            data-aos-once="false">
+                            Let us handle the edits so you can focus on growing your business.
+                        </button>
+                        <button
+                            class="bg-white text-slate-900 font-medium text-sm sm:text-base md:text-lg px-3 py-3 rounded-lg shadow-md border border-purple-800 w-full text-center"
+                            data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-out-quart"
+                            data-aos-once="false">
+                            Depending on your project requirements, we offer a range of tailored photo editing services
+                            to meet your specific needs.
+                        </button>
+                    </div>
+
+                    <!-- Left Image -->
+                    <div class="flex-1 flex justify-center mt-6" data-aos="zoom-in" data-aos-duration="1000"
+                        data-aos-once="false">
+                        <img src="images/PhotoGraphy-2nd.png" alt="Model in blue outfit"
+                            class="w-full h-auto sm:h-72 md:h-full rounded-lg object-cover">
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="flex-1 flex" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
+                    <img src="images/PhotoGraphy-1st.png" alt="Professional photoshoot setup"
+                        class="w-full h-auto sm:h-80 md:h-full rounded-xl object-cover">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- card section -->
+    <div class="max-w-full mx-auto py-8 px-2 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- 24/7 Hours Services -->
+            <div class="card text-center p-4 flex flex-col hover:shadow-lg transition duration-300">
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 bg-teal-100 rounded-full flex items-center justify-center">
+                        <img src="images/24-Hours-Services.jpg" alt="24/7 Hours Services"
+                            class="w-14 h-14 object-contain">
+                    </div>
+                </div>
+                <h3 class="text-base md:text-lg font-semibold text-gray-800 border-b pb-2 mb-3">
+                    24/7 Hours Services
+                </h3>
+                <p class="text-gray-600 text-sm md:text-base text-justify leading-relaxed">
+                    Our strength is a quick turnaround. Get your photos back within six hours, from flexible 24-hour
+                    delivery to 48-hour delivery followed by services for special emergencies.
+                </p>
+            </div>
+
+            <!-- Data Security -->
+            <div class="card text-center p-4 flex flex-col hover:shadow-lg transition duration-300">
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                        <img src="images/Data-security.jpg" alt="Data Security" class="w-14 h-14 object-contain">
+                    </div>
+                </div>
+                <h3 class="text-base md:text-lg font-semibold text-gray-800 border-b pb-2 mb-3">
+                    Data Security
+                </h3>
+                <p class="text-gray-600 text-sm md:text-base text-justify leading-relaxed">
+                    First of all, your photos are safe with us. We promise that your images will only be used for your
+                    project. We always value your trust and never break our promises.
+                </p>
+            </div>
+
+            <!-- Quality Work -->
+            <div class="card text-center p-4 flex flex-col hover:shadow-lg transition duration-300">
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center">
+                        <img src="images/Quality-work.jpg" alt="Quality Work" class="w-14 h-14 object-contain">
+                    </div>
+                </div>
+                <h3 class="text-base md:text-lg font-semibold text-gray-800 border-b pb-2 mb-3">
+                    Quality Work
+                </h3>
+                <p class="text-gray-600 text-sm md:text-base text-justify leading-relaxed">
+                    We ensure the photo is done with high quality, and when you work with us, you can be sure that you
+                    will get a great quality service.
+                </p>
+            </div>
+
+            <!-- Affordable Prices -->
+            <div class="card text-center p-4 flex flex-col hover:shadow-lg transition duration-300">
+                <div class="flex justify-center mb-4">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                        <img src="images/Affordable-Prices.jpg" alt="Affordable Prices"
+                            class="w-14 h-14 object-contain">
+                    </div>
+                </div>
+                <h3 class="text-base md:text-lg font-semibold text-gray-800 border-b pb-2 mb-3">
+                    Affordable Prices
+                </h3>
+                <p class="text-gray-600 text-sm md:text-base text-justify leading-relaxed">
+                    Get your perfect image editing services whenever you need them, and at affordable prices. Our main
+                    goal is to achieve full client satisfaction through the best quality work.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- video slider -->
+    <div class="flex py-8">
+        <!-- Left Icon (Desktop only) -->
+        <div class="hidden lg:block  ">
+             <img src="images/logo.png" alt="" class="-translate-x-1/2">
+        </div>
+
+        <div class="max-w-7xl mx-auto">
+            <!-- Main Container -->
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 p-6 lg:p-8">
+
+                    <!-- Left Side - Video/Thumbnail -->
+                    <div class="relative">
+                        <!-- Video Container -->
+                        <div id="videoShow"
+                            class="video-container hidden bg-gradient-to-br from-slate-800 to-slate-900">
+                            <div id="videoLoading" class="video-loading hidden">Loading video...</div>
+                            <iframe id="youtubePlayer" class="w-full h-64 sm:h-80 md:h-full rounded-lg"
+                                src="https://www.youtube.com/embed/8LSt8_11wbQ?enablejsapi=1&rel=0&autoplay=0"
+                                title="Testimonial Video" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <!-- Thumbnail Image -->
+                        <div id="imageShow" class="relative w-full mx-auto">
+                            <img id="thumbnailImage" src="images/thumbnail-image.webp" alt="Thumbnail"
+                                class="w-full h-auto rounded-lg object-cover">
+                            <button onclick="videoShow()"
+                                class="absolute inset-0 flex items-center justify-center text-white bg-blue-500/70 cursor-pointer rounded-full w-16 h-16 m-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    class="fill-white">
+                                    <path
+                                        d="m9.5 16.5l7-4.5l-7-4.5zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" />
+                                </svg>
+                            </button>
+                            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                                <div>
+                                    <h3 id="reviewerName"
+                                        class="font-bold text-lg sm:text-xl text-cyan-400 slide-transition">
+                                        Neil & Sabrina
+                                    </h3>
+                                    <p id="reviewerTitle" class="text-sm sm:text-base text-white slide-transition">
+                                        Augment Agency
+                                    </p>
+                                </div>
+                                <div id="starRating" class="flex gap-1 text-yellow-400">
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                    <span class="star text-xl sm:text-2xl">★</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slider Controls -->
+                        <div class="flex justify-center mt-6 text-lg sm:text-xl items-center gap-6">
+                            <button id="prevBtn"
+                                class="text-white p-3 rounded-full bg-blue-500 hover:bg-cyan-400 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="m10 18l-6-6l6-6l1.4 1.45L7.85 11H20v2H7.85l3.55 3.55z" />
+                                </svg>
+                            </button>
+                            <span><span id="currentSlide">1</span> / <span id="totalSlides">6</span></span>
+                            <button id="nextBtn"
+                                class="text-white p-3 rounded-full bg-blue-500 hover:bg-cyan-400 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="m14 18l-1.4-1.45L16.15 13H4v-2h12.15L12.6 7.45L14 6l6 6z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Content -->
+                    <div class="flex flex-col justify-center">
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 leading-tight mb-6">
+                            Hear What E-commerce Brands and Photographers Are Saying About Us
+                        </h1>
+                        <p class="text-base sm:text-lg lg:text-xl text-slate-800 leading-relaxed mb-6">
+                            Discover how our expert photo editing services have helped businesses and creatives
+                            boost their visuals, sales, and brand presence.
+                        </p>
+
+                        <!-- Avatar Navigation -->
+                        <div class="space-y-6">
+                            <div class="flex flex-wrap gap-4" id="avatarContainer">
+                                <!-- Example Avatar -->
+                                <img src="images/avatar1.png" alt="Avatar"
+                                    class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-gray-300">
+                                <img src="images/avatar2.png" alt="Avatar"
+                                    class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-gray-300">
+                                <!-- More avatars dynamically -->
+                            </div>
+                            <a href="#"
+                                class="flex items-center gap-2 text-slate-800 hover:text-cyan-500 transition group">
+                                <span class="font-semibold">SEE MORE REVIEWS</span>
+                                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Icon (Desktop only) -->
+        <!-- <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 overflow-hidden">
+            <img src="images/logo.png" alt="Right Logo" class="w-32 h-32 opacity-80">
+        </div> -->
+        <div class="hidden lg:block">
+                <img src="images/logo.png" alt="" class="translate-x-1/2">
+            </div>
+    </div>
+
+    <!-- service card -->
+    <section class="py-12 px-4 background-color mt-12">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center max-w-7xl mx-auto">
+                <h3 class="text-xl md:text-5xl py-4 font-bold text-black">Editing Solutions We Provide</h3>
+                <p class="mt-2 text-[#343b3c] font-semibold text-lg md:text-2xl italic">"Our image editing services are fully
+                    customized to your business
+                    needs. If you are an e-commerce store Owner,
+                    a Fashion & Apparel Owner, or a photographer business owner, then you are on the right website
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+
+                <!-- Card 1 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Photo Retouching</h3>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Color Correction</h3>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Ecommerce Image Editing</h3>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Fashion Photo Retouching</h3>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Flat Lay Image Editing</h3>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Ghost-mannequin</h3>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Mockup Creation</h3>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Jewelry Photo Retouching</h3>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Clipping Path</h3>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Background Removal</h3>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Shadow Creation</h3>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div
+                    class="card relative rounded-lg shadow-lg overflow-hidden w-full mx-auto transform hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-[3px] rounded-lg bg-white"></div>
+                    <div class="relative py-6 px-4 text-center flex flex-col items-center">
+                        <img src="images/PhotoGraphy-2nd.png" alt=""
+                            class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 object-cover mb-4 rounded-md">
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-blue-700">Image Masking</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Free Trial Button -->
+            <div class="text-center mt-12">
+                <a href="free-trial.html"
+                    class="relative inline-flex items-center gap-2 px-8 py-4 text-lg sm:text-xl font-semibold text-white 
+               bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+
+                    <!-- Overlay effect -->
+                    <span
+                        class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100 transition-transform duration-500 ease-in-out"></span>
+
+                    <!-- Text + Icon -->
+                    <span class="relative flex items-center gap-2 z-10">
+                        Free Trial
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- card -->
+    <div class="px-4 mt-16">
+        <div class="container mx-auto max-w-7xl">
+            <div class="space-y-4 py-4 mb-4">
+                <h2 class="text-xl md:text-4xl font-bold md:font-semibold text-start text-[#030303] mb-4">See Why Thousands of E-commerce Brands and
+                    Photographers Rely on Our Photo Editing Services. Want to Drive More Website Traffic and Hit Your
+                    Your
+                    Mounthly Sales Goals? Need Product Images that Grab Attention at First Glance?</h2>
+                <p class="text-[#030303] text-lg md:text-xl leading-relaxed">
+                    We've got you covered. Our expert photo editing services help you focus on growing your
+                    brand while we handle the visuals. With precision clipping paths, advanced retouching,
+                    and professional color correction, we ensure even the most detailed product photos meet
+                    the high standards of top-tier brands.
+                </p>
+                <p class="text-[#1c17e1] font-semibold text-3xl mt-4">Stand out. Build trust. Sell more.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Humble -->
+                <div
+                    class="transition duration-300 hover:scale-105 bg-white hover:bg-blue-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Humble</h3>
+                    </div>
+                    <p class="text-lg">
+                        We strive to achieve a nice balance between work and life - treating our clients with the utmost
+                        respect while striving for their business success. We believe clients' success is our success.
+                    </p>
+                </div>
+
+                <!-- Card 2: Honesty & Integrity -->
+                <div
+                    class="card bg-white hover:bg-green-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823.922-4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Honesty & Integrity</h3>
+                    </div>
+                    <p class="text-lg">
+                        We view honesty and integrity as a key fundamental of our professional life.
+                    </p>
+                </div>
+
+                <!-- Card 3: Exceptional Service -->
+                <div
+                    class="card bg-white hover:bg-purple-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Exceptional Service</h3>
+                    </div>
+                    <p class="text-lg">
+                        We believe in treating our Photoshop experts, employees, clients, and stakeholders with the
+                        utmost respect. We desire to create a meaningful experience with every interaction of our
+                        business.
+                    </p>
+                </div>
+
+                <!-- Card 4: Professionalism -->
+                <div
+                    class="card bg-white hover:bg-red-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Professionalism</h3>
+                    </div>
+                    <p class="text-lg">
+                        We live for responsibility and accountability as creative professionals.
+                    </p>
+                </div>
+
+                <!-- Card 5: Operational Excellence -->
+                <div
+                    class="card bg-white hover:bg-orange-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Operational Excellence</h3>
+                    </div>
+                    <p class="text-lg">
+                        We value improvement and introspection in everything that we do from image editing to customer
+                        support.
+                    </p>
+                </div>
+
+                <!-- Card 6: Genuine -->
+                <div
+                    class="card bg-white hover:bg-pink-500 hover:text-white p-6 rounded-lg shadow-md text-center transition">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Genuine</h3>
+                    </div>
+                    <p class="text-lg">
+                        Each of our professionals needs to be who we are in addition to our values. Being honest in
+                        combination with our values means that we should live our values both at work and at home.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <section class="background-color mt-16 px-4 py-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Side - Content -->
+                <div class="space-y-8">
+                    <div>
+                        <h1 class="text-4xl lg:text-5xl font-awesome  text-[#000000]">
+                            Bring Your Images to Life —
+                            Start Your Free Trial Now!
+                        </h1>
+                        <p class="text-[#000000] font-awesome text-xl mt-6">
+                            "Just complete the form, share your images, and we'll
+                            deliver your free trial edit in 1 hour!"
+                        </p>
+                    </div>
+
+                    <!-- Features List -->
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 text-xl">
+                            <span>⚡</span>
+                            <span class="text-[#000000] font-family">Super-Fast Delivery</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-xl">
+                            <span>🛒</span>
+                            <span class="text-[#000000] font-family">Easy & Hassle-Free ordering</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-xl">
+                            <span>🎯</span>
+                            <span class="text-[#000000] font-family">Flawless Results Every Time</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-xl">
+                            <span>🤝</span>
+                            <span class="text-[#000000] font-family">Friendly & Reliable Support</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-xl">
+                            <span>💰</span>
+                            <span class="text-[#000000] font-family">Budget-Friendly Packages</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-xl">
+                            <span>🔒</span>
+                            <span class="text-[#000000] font-family">Full Privacy & NDA Assurance</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-xl">
+                            <span>🌎</span>
+                            <span class="text-[#000000] font-family">Trusted by Clients Across the Globe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Form -->
+                <div class="bg-white rounded-2xl shadow-xl py-8 px-5">
+                    <form class="space-y-6">
+
+                        <!-- Name and Phone Row -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <input type="text" placeholder="Your name*"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="Your Phone No.*"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Email and Website Row -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <input type="email" placeholder="Your email ID*"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                            </div>
+                            <div>
+                                <input type="url" placeholder="Your Website URL"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Service Selection -->
+                        <div>
+                            <select
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-gray-500">
+                                <option value="">Select service</option>
+                                <option value="background-removal">Background Removal</option>
+                                <option value="color-correction">Color Correction</option>
+                                <option value="retouching">Photo Retouching</option>
+                                <option value="clipping-path">Clipping Path</option>
+                                <option value="shadow-creation">Shadow Creation</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <textarea placeholder="Your Message" rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"></textarea>
+                        </div>
+
+                        <!-- File Upload Area -->
+                        <div
+                            class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-400 transition-colors cursor-pointer">
+                            <input type="file" multiple accept="image/*" class="hidden" id="file-upload">
+                            <label for="file-upload" class="cursor-pointer">
+                                <div class="space-y-2">
+                                    <div class="text-gray-600">
+                                        <span class="font-semibold">Drag & Drop Files Here</span>
+                                        <br>or<br>
+                                        <span class="text-blue-600 hover:text-blue-700 font-semibold">Browse
+                                            Files</span>
+                                    </div>
+                                    <div class="text-sm text-gray-500" id="file-count">0 of 5</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Cloud Link Note -->
+                        <div class="text-sm text-gray-600 text-center">
+                            If the size is more than 25 MB, share your images via cloud (Google Drive, Dropbox or
+                            WeTransfer)
+                        </div>
+
+                        <!-- Cloud Link Input -->
+                        <div>
+                            <input type="url" placeholder="Paste the link here"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit"
+                            class="w-full relative inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300 ease-out">
+                            SUBMIT
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- faq -->
+    <section class="bg-white py-16 mt-6 relative overflow-hidden">
+        <div class="flex">
+            <div>
+                <img src="images/logo.png" alt="" class="-translate-x-1/2">
+            </div>
+
+            <div class="max-w-5xl mx-auto relative z-10">
+                <!-- Header -->
+                <div class="mb-12 text-center">
+                        <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-2">
+                            Answers to Frequently Asked Questions<br>
+                            From Our Inbox
+                        </h2>
+                        <p class="text-gray-600 text-lg">
+                            Let us know what troubles you. Give us a message; we will get back to you soon.
+                        </p>
+                </div>
+
+                <!-- FAQ Items -->
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <input type="checkbox" id="faq1" class="faq-checkbox">
+                    <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
+                        <label for="faq1"
+                            class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">
+                                1. What are your turnaround times?
+                            </span>
+                            <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq-content">
+                            <div class="px-6 pb-6">
+                                <div class="text-gray-700 leading-relaxed">
+                                    Our standard turnaround time is 24-48 hours for most photo editing projects. Rush
+                                    orders
+                                    can be completed within 12 hours for an additional fee.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <input type="checkbox" id="faq2" class="faq-checkbox">
+                    <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
+                        <label for="faq2"
+                            class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">
+                                2. Do you offer bulk image discounts?
+                            </span>
+                            <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq-content">
+                            <div class="px-6 pb-6">
+                                <div class="text-gray-700 leading-relaxed">
+                                    Yes! We offer attractive discounts for bulk orders. Orders of 50+ images receive a
+                                    15%
+                                    discount, 100+ images get 25% off, and 500+ images receive a 35% discount.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <input type="checkbox" id="faq3" class="faq-checkbox">
+                    <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
+                        <label for="faq3"
+                            class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">
+                                3. What file formats do you accept?
+                            </span>
+                            <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq-content">
+                            <div class="px-6 pb-6">
+                                <div class="text-gray-700 leading-relaxed">
+                                    We accept all major image formats including JPEG, PNG, TIFF, RAW files (CR2, NEF,
+                                    ARW,
+                                    etc.), and PSD files. We can work with images up to 100MB in size.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <input type="checkbox" id="faq4" class="faq-checkbox">
+                    <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
+                        <label for="faq4"
+                            class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">
+                                4. What file formats do you accept?
+                            </span>
+                            <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq-content">
+                            <div class="px-6 pb-6">
+                                <div class="text-gray-700 leading-relaxed">
+                                    We accept all major image formats including JPEG, PNG, TIFF, RAW files (CR2, NEF,
+                                    ARW,
+                                    etc.), and PSD files. We can work with images up to 100MB in size.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <input type="checkbox" id="faq5" class="faq-checkbox">
+                    <div class="faq-item border rounded-lg overflow-hidden transition-all duration-300 border-gray-200">
+                        <label for="faq5"
+                            class="faq-header w-full flex items-center justify-between p-6 cursor-pointer transition-colors duration-200">
+                            <span class="text-lg font-semibold text-gray-900 pr-4">
+                                5. What file formats do you accept?
+                            </span>
+                            <div class="plus-icon flex-shrink-0 w-6 h-6 text-gray-400">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="faq-content">
+                            <div class="px-6 pb-6">
+                                <div class="text-gray-700 leading-relaxed">
+                                    We accept all major image formats including JPEG, PNG, TIFF, RAW files (CR2, NEF,
+                                    ARW,
+                                    etc.), and PSD files. We can work with images up to 100MB in size.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src="images/logo.png" alt="" class="translate-x-1/2">
+            </div>
+        </div>
+    </section>
+
+    <!-- communication -->
+    <section class="bg-gradient-to-r from-[#4c46ff] to-[#56ebfe] py-16 mt-6 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+
+            <!-- Left Side (7 cols) -->
+            <div class="md:col-span-6 text-white space-y-6">
+                <h2 class="text-3xl font-bold leading-tight">Your 24/7 Communication Partner</h2>
+                <p class="text-xl font-semibold leading-relaxed">
+                    "Day or night, we're here for you — <br>
+                    committed to providing nonstop <br>
+                    support and maximum value. — <br>
+                    anytime you need us, we're here."
+                </p>
+                <a href="free-trial.html"
+                    class="relative inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white 
+                    bg-blue-500 rounded-full shadow-lg overflow-hidden group transform transition-all duration-300 ease-out hover:scale-105">
+                    <span class="absolute inset-0 bg-orange-500 scale-y-0 origin-center group-hover:scale-y-100
+                    transition-transform duration-500 ease-in-out"></span>
+                    <span class="relative flex items-center gap-2 z-10">
+                        Contact Us
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="24"
+                            width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Right Side (5 cols) -->
+            <div class="md:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-white p-8 rounded-xl shadow text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Exclusive Perks & Benefits</h3>
+                    <p class="text-lg text-gray-700">
+                        "Enjoy special discounts and rewards that grow with every collaboration."
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Empowering Talent</h3>
+                    <p class="text-lg text-gray-700">
+                        "Every payment goes directly to your dedicated photo editor — skilled professionals working
+                        tirelessly, despite limited opportunities."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Testimonial -->
+
+    <section class="max-w-7xl mx-auto px-4 mt-6 sm:px-6 lg:px-8 py-16">
+        <!-- Header Section -->
+        <div class="max-w-3xl mx-auto text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                What Our Customers Are Saying
+            </h1>
+            <p class="text-lg text-gray-600">
+                Our valued clients worldwide inspire us to improve every day! Discover their thoughts on our photo
+                editing services.
+            </p>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="w-full py-8">
+            <div class="swiper reviewSwiper">
+                <div class="swiper-wrapper mb-10">
+                    <div
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                    <div
+                        class="swiper-slide select-none bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <img class="w-12 h-12 rounded-full mr-4"
+                                src="https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                                alt="Customer Avatar">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Alex Smith</h3>
+                                <p class="text-sm text-gray-500">Product Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic text-sm sm:text-base">"This tool revolutionized our workflow! Its
+                            intuitive interface and robust features are game-changers for productivity."</p>
+                        <div class="flex mt-4">
+                            <span class="text-xl font-bold text-yellow-500">★ ★ ★ ★ ★</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="swiper-button-next"> </div> -->
+                <!-- <div class="swiper-button-prev text-gray-300 hover:text-indigo-800 transition-colors duration-200">
+                </div> -->
+                <div class="swiper-pagination !bottom-0"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- love section -->
+    <section class="py-16 bg-white text-center">
+        <!-- Heart Icon -->
+        <div class="mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-blue-600 mx-auto" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="text-xl md:text-2xl font-semibold text-blue-800 leading-relaxed mb-8">
+            Let Us Handle the Edits — You Focus on Creating.<br>
+            So you can get back to doing what inspires you.
+        </h2>
+
+        <!-- Button -->
+        <a href="#"
+            class="inline-flex items-center gap-2 px-5 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-700 transition-colors">
+            Get started
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+        </a>
+    </section>
+
+    <!-- footer section -->
+
+    <footer class="bg-gray-800 text-white py-10">
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <div>
+                <a class="flex items-center space-x-3" href="#">
+                    <img src="images/logo.png" alt="Logo" class="w-20 h-auto rounded">
+                    <span class="text-2xl font-semibold text-blue-500">
+                        Photo Edit
+                    </span>
+                </a>
+                <p class="text-medium leading-relaxed mt-2">
+                    A digital photo editing platform, fast & efficient, for photographers & businesses.
+                </p>
+            </div>
+
+            <div class="space-y-2">
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Get In Touch</h3>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    40-49 71st St, Woodside, New York NY 11377, United States
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt"></i>
+                    +1 315 636 4807
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fas fa-envelope"></i>
+                    contact@offshoreclipping.com
+                </p>
+
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Useful Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="text-medium hover:text-gray-400 transition">Home</a></li>
+                    <li><a href="about.html" class="text-medium hover:text-gray-400 transition">About</a></li>
+                    <li><a href="contact.html" class="text-medium hover:text-gray-400 transition">Contact</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Services</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Portfolio</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Blog</a></li>
+                    <li><a href="" class="text-medium hover:text-gray-400 transition">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-3 border-b border-gray-700">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="photo-editing-services.html" class="text-medium hover:text-gray-400 transition">Photo
+                            Color Correction</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Photo Retouching</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Background Removal</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">Ghost Mannequin</a></li>
+                    <li><a href="#" class="text-medium hover:text-gray-400 transition">E-commerce Image Editing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class=" max-w-7xl mx-auto border-t flex items-center justify-between border-gray-700 mt-8 pt-4 text-center">
+            <p class="text-medium">A Concern of Danpite Tech | Copyright 2015 - 2025</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="text-medium hover:text-gray-400 transition">Terms & Conditions</a>
+                <a href="#" class="text-medium hover:text-gray-400 transition">Privacy Policy</a>
+            </div>
+            <div class="flex justify-center space-x-4 mt-3 text-lg">
+                <a href="#" class="hover:text-gray-400 transition" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="hover:text-gray-400 transition" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="animation.js"></script>
+    <script src="video-slider.js"></script>
+    <script src="swiper.js"></script>
+
+    <script>
+        // magic card for service card
+        const gradientSize = 200;
+        const gradientFrom = "#9E7AFF";
+        const gradientTo = "#FE8BBB";
+
+        document.querySelectorAll(".magicCard").forEach((magicCard) => {
+            const border = magicCard.querySelector("[data-border]");
+
+            magicCard.addEventListener("mousemove", (e) => {
+                const rect = magicCard.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                border.style.opacity = 1;
+                border.style.background = `radial-gradient(${gradientSize}px circle at ${x}px ${y}px, ${gradientFrom}, ${gradientTo}, transparent 100%)`;
+            });
+
+            magicCard.addEventListener("mouseleave", () => {
+                border.style.opacity = 0;
+                border.style.background = "none";
+            });
+        });
+    </script>
+
+    <script>
+
+        // video slider
+        function videoShow() {
+            let image = document.getElementById('imageShow');
+            let video = document.getElementById('videoShow');
+            let player = document.getElementById('youtubePlayer');
+
+            // hide image
+            image.classList.add('hidden');
+            // show video
+            video.classList.remove('hidden');
+
+            // force autoplay
+            let src = player.getAttribute('src');
+            if (!src.includes('autoplay=1')) {
+                player.setAttribute('src', src + "&autoplay=1&mute=1");
+            }
+        }
+
+
+
+        // number ticker
+        function ticker(el, start, end, duration, decimals = 0) {
+            let startTime;
+            function animate(t) {
+                if (!startTime) startTime = t;
+                let p = Math.min((t - startTime) / duration, 1);
+                let value = start + (end - start) * p;
+                el.textContent = decimals === 0 ? Math.floor(value) : value.toFixed(decimals);
+                if (p < 1) requestAnimationFrame(animate);
+            }
+            requestAnimationFrame(animate);
+        }
+
+        // integers
+        ticker(document.getElementById("num1"), 0, 5, 3000);
+        ticker(document.getElementById("num2"), 0, 13, 3000);
+        ticker(document.getElementById("num3"), 0, 750, 3000);
+
+        // decimal with 1 decimal place
+        ticker(document.getElementById("num4"), 0, 3.5, 3000, 1);
+
+    </script>
+
+
+    <!-- Header -->
+    <script src="header.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1500,      // global default animation duration
+            easing: 'ease-out-quart',
+            once: false,        // repeat animation every scroll
+            mirror: true        // animate out while scrolling past
+        });
+    </script>
+</body>
+
+</html>
